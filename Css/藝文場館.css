@@ -1,0 +1,86 @@
+/*以下是藝文場館的css */ 
+
+    
+ /* navbar下方，四個連結的樣式 */
+ .linkCenter {
+    text-align: center;
+    margin: 20px;
+    background-color: #9EC5AB;
+    border-radius: 260px 260px;
+    /* box-shadow:2px 2px 2px #403F3D ; */
+
+}
+
+.linkCenter a {
+    text-align: center;
+    color: #403F3D;
+    font-weight: 700;
+}
+
+.col {
+
+    margin: 10px;
+}
+
+
+/* 中間四欄的樣式 */
+.jumbotron {
+    padding: 1rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #eff6ee;
+    border-radius: 0.3rem;
+}
+
+/* 中間四欄的標題 */
+h6 {
+    color:  #403F3D;
+    font-weight: 700;
+    margin-top: 10px;
+   
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #ccc5b9;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.2);
+    border-right: 10px solid rgba(0, 0, 0, 0.3);
+
+}
+
+.card-header:first-child {
+    border-radius: 10px;
+
+}
+
+/* 地址icon的Class，上面有link連結 */
+.fi {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: rgb(41, 46, 31);
+    font-style: inherit;
+    text-align: center;
+    line-height: 1;
+}
+
+table thead th {
+    color: #403F3D;
+    font-weight: 700;
+}
+
+tr td {
+    color: #403F3D;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+tr td a {
+    color: #403F3D;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+
+img{
+    width: 20px;
+    height: 20px;
+}

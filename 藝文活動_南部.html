@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藝起來玩</title>
+
+    <!-- 導入Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./Css/首頁.css">
+    <link rel="stylesheet" href="./Css/藝文活動.css">
+
+</head>
+
+<body>
+
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="./首頁.html" title="藝起來玩">藝起來玩</a>
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./首頁.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTravel"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                藝文地圖
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownTravel">
+                                <li><a class="dropdown-item" href="./藝文總覽.html">藝文總覽</a></li>
+                                <li><a class="dropdown-item" href="./藝文場館.html">藝文場館</a></li>
+                                <li><a class="dropdown-item" href="./藝文活動.html">藝文活動</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTicket"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                票券交流
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
+                                <li><a class="dropdown-item" href="#">瀏覽訊息</a></li>
+                                <li><a class="dropdown-item" href="#">我要刊登</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">藝文旅遊</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">關於我們</a>
+                    </li>
+                </ul>
+
+            </div>
+            <ul class="nav navbar-nav navbar-right loginReg">
+                <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
+                <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
+                <li><a href="./登入.html" title="Login"><i class="fi fi-sr-user"></i>登入</a></li>
+                <li><a href="./註冊.html" title="Register"><i class="fi fi-sr-user-add"></i>註冊</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="background">
+        <div class="container">
+            <div class="row flex-nowrap">
+                <div class="bottom-Text">
+                    <div class="col-lg-12">
+                        <h4>南</h4>
+                        <h4>部</h4>
+                        <h4>展</h4>
+                        <h4>覽</h4>
+                        <a href="./藝文活動.html#SouthArea" title="回到藝文活動主頁">
+                            <h4><i class="fi fi-rr-angle-circle-left"></i></h4>
+                        </a>
+                        <h5>回</h5>
+                        <h5>到</h5>
+                        <h5>前</h5>
+                        <h5>頁</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="./Images/A怦然心動.jpeg" alt="Avatar" style="width:250px;height:350px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="card-back-text">
+                                    <h5>臺南國際音樂節 怦然心動</h5>
+                                    <p>2022/10/2 </p>
+                                    <p>展演類型:音樂</p>
+                                    <p>主辦單位:臺南市政府文化局</p>
+                                    <p>展演地點:台南</p>
+                                    <h5><i class="fi fi-rr-download"></i></h5>
+                                    <p><a href="#" title="連結售票網站">購票入口</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

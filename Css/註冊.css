@@ -1,0 +1,71 @@
+/* * {
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+} */
+
+button:focus {
+    outline: 0px dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+
+.btnClick {
+    border-radius: 20px;
+    border: 0px;
+    background-color: #F2eee3;
+    color: #403F3D;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 12px 45px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.sub {
+
+    text-align: center;
+}
+
+.btnClick:active {
+    transform: scale(1.1);
+}
+
+input {
+    background-color: #f2eee3;
+    border: none;
+    padding: 1px 10px;
+    margin: 10px 10px;
+}
+
+label {
+    margin-right: 30px;
+    font-weight: 700;
+}
+
+label.email {
+    margin-right: 18px;
+}
+
+label.radio {
+    margin-right: 34px;
+}
+
+.background {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Noto Sans TC', sans-serif;
+    height: 75vh;
+    width: 100vh;
+}
+
+/* ------0828新增以下----- */
+/* .searchInput{
+    margin-bottom: 30px;
+}
+.loginReg{
+    margin-bottom: -110px;
+} */

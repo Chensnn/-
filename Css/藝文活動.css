@@ -1,0 +1,111 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+/* slider裡面的標題 */
+.carousel-caption h2 {
+    letter-spacing: 6px;
+    color: #fcfdfd;
+}
+
+/* slider的說明文字 */
+.carousel-caption p {
+    letter-spacing: 5px;
+    font-size: 18px;
+    color: #fcfdfd;
+}
+
+/* 最底部的卡片，perspective是將物件變成有3D效果的透視 */
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 350px;
+    perspective: 800px;
+}
+
+/* 內層卡片，設定3D屬性 */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.3s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* 內層卡片，設定3D屬性 */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* 背面是否可視 ，預設是 visible，改成 hidden*/
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #fffff0;
+    transform: rotateY(180deg);
+}
+
+.card-back-text {
+    color: #403F3D;
+    margin-top: 50px;
+}
+
+/* 北中南東的四個大區塊 */
+.background {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224));
+    padding: 25px 10px;
+    height: 350px;
+    margin-bottom: 120px;
+}
+
+/* 左邊精選的標題 */
+.bottom-Text {
+    flex-direction: column;
+    border: 9px #F2CCB5;
+    border-style: none none none solid;
+    border-radius: 3px;
+    margin-left: -30px;
+    height: 160px;
+}
+
+.bottom-Text a {
+    color: #403F3D;
+    text-decoration: none;
+}
+
+/* +icon的連結 */
+.bottom-Text a:hover {
+    color: #fcfcfc;
+}
+
+/* 購票入口 */
+.card-back-text a {
+    color: #403F3D;
+    font-weight: 500;
+    text-decoration: none;
+}
+.fi-rr-download{
+    color: #cad92c;
+}
+
+
+
+/* 本月推薦 */
+.bottom-Text h5 {
+    color: #fcfdfd;
+    opacity: 0.5;
+    margin-left: -30px;
+}
