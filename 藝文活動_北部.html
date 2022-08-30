@@ -21,51 +21,12 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css">
     <link rel="stylesheet" href="./Css/首頁.css">
     <link rel="stylesheet" href="./Css/藝文活動.css">
 
-    <style type="text/css">
-        body {
-            background-color: #fcfdfd;
-            font-family: 'Noto Sans TC', sans-serif;
-            font-weight: 900;
-            color: #403F3D;
-        }
+    <style>
 
-        .tftable {
-            font-size: 12px;
-            color: #333333;
-            width: 100%;
-            border-width: 1px;
-            border-color: #729ea5;
-            border-collapse: collapse;
-        }
-
-        .tftable th {
-            font-size: 12px;
-            background-color: #acc8cc;
-            border-width: 1px;
-            padding: 8px;
-            border-style: solid;
-            border-color: #729ea5;
-            text-align: left;
-        }
-
-        .tftable tr {
-            background-color: transparent;
-        }
-
-        .tftable td {
-            font-size: 12px;
-            border-width: 1px;
-            padding: 8px;
-            border-style: solid;
-            border-color: #729ea5;
-        }
-
-        .tftable tr:hover {
-            background-color: #ffff99;
-        }
     </style>
 
 </head>
@@ -144,62 +105,30 @@
 
 
 
-                <table class="tftable" style="border:1;">
-                    <tr>
-                        <th>展覽圖片</th>
-                        <th>展演名稱</th>
-                        <th>場館名稱</th>
-                        <th>展演類型</th>
-                        <th>開始日期</th>
-                        <th>結束日期</th>
-                        <th>展演時間</th>
-                        <th>票價</th>
-                        <th>展覽介紹</th>
-                    </tr>
-                    <tr>
-                        <td>Row:1 Cell:1</td>
-                        <td>Row:1 Cell:2</td>
-                        <td>Row:1 Cell:3</td>
-                        <td>Row:1 Cell:4</td>
-                        <td>Row:1 Cell:5</td>
-                        <td>Row:1 Cell:6</td>
-                        <td>Row:1 Cell:7</td>
-                        <td>Row:1 Cell:8</td>
-                        <td>Row:1 Cell:8</td>
-                    </tr>
-                    <tr>
-                        <td>Row:2 Cell:1</td>
-                        <td>Row:2 Cell:2</td>
-                        <td>Row:2 Cell:3</td>
-                        <td>Row:2 Cell:4</td>
-                        <td>Row:2 Cell:5</td>
-                        <td>Row:2 Cell:6</td>
-                        <td>Row:2 Cell:7</td>
-                        <td>Row:2 Cell:8</td>
-                        <td>Row:2 Cell:9</td>
-                    </tr>
-                    <tr>
-                        <td>Row:3 Cell:1</td>
-                        <td>Row:3 Cell:2</td>
-                        <td>Row:3 Cell:3</td>
-                        <td>Row:3 Cell:4</td>
-                        <td>Row:3 Cell:5</td>
-                        <td>Row:3 Cell:6</td>
-                        <td>Row:3 Cell:7</td>
-                        <td>Row:3 Cell:8</td>
-                        <td>Row:3 Cell:9</td>
-                    </tr>
-                    <tr>
-                        <td>Row:4 Cell:1</td>
-                        <td>Row:4 Cell:2</td>
-                        <td>Row:4 Cell:3</td>
-                        <td>Row:4 Cell:4</td>
-                        <td>Row:4 Cell:5</td>
-                        <td>Row:4 Cell:6</td>
-                        <td>Row:4 Cell:7</td>
-                        <td>Row:4 Cell:8</td>
-                        <td>Row:4 Cell:9</td>
-                    </tr>
+                <table class="table table-responsive" data-toggle="table" data-sortable="true" data-sort-class="table-active"
+                    data-pagination="true" data-search="true" data-show-search-clear-button="true"
+                    data-show-refresh="true" data-show-toggle="true" data-show-columns="true"
+                    data-show-columns-toggle-all="true">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th data-sortable="true">展演圖片</th>
+                            <th>展演名稱</th>
+                            <th>場館名稱</th>
+                            <th>展演類型</th>
+                            <th>開始日期</th>
+                            <th>結束日期</th>
+                            <th>展演時間</th>
+                            <th>票價</th>
+                            <th>展演介紹</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                    </tbody>
                 </table>
 
 
@@ -223,14 +152,14 @@
                         </div>
                     </div>
                 </div> -->
-
-
-
-
             </div>
-
         </div>
     </div>
+
+
+
+
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
 </body>
 
 </html>
