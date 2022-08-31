@@ -26,7 +26,67 @@
     <link rel="stylesheet" href="./Css/藝文活動.css">
 
     <style>
+        tr td:first-child {
+            max-width: 200px;
+            max-height: 300px;
+            background-color: #fcfcfc;
+        }
 
+        img {
+            width: 100%;
+        }
+
+        .bootstrap-table {
+            /* background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224)); */
+           
+            height: 100px;
+            margin-right: -45px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+
+        /* 切換檢視模式的按鈕，從預設的條列式改為區塊顯示模式。 */
+        .btn-secondary {
+            background-color: #fcfcfc;
+            box-shadow: 1px 1px 10px #403F3D;
+            border: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            margin-top: 2px;
+        }
+
+        .fa-toggle-off {
+            color: #403F3D;
+        }
+
+        
+
+        /* input的框 */
+        .form-control {
+            height: calc(1.75rem + 2px);
+            font-size: 0.7rem;
+            font-weight: 500;
+            line-height: 1;
+            color: #403F3D;
+            background-color: transparent;
+            border: 1px solid grey;
+            border-radius: 20px;
+            transition: border-color .35s ease-in-out, box-shadow .55s ease-in-out;
+            margin-bottom: 5px;
+        }
+        
+        /* 藝文活動裡的class */
+        .background {
+            background: #fcfcfc;
+        }
+
+        .bottom-Text h5 {
+            color: #403F3D;
+            opacity: 0.5;
+            margin-left: -30px;
+        }
     </style>
 
 </head>
@@ -103,12 +163,40 @@
                     </div>
                 </div>
 
+                <table class="table table-responsive" data-toggle="table" data-flat="true" data-search="true" data-show-toggle="true">
+                    <thead>
+                        <tr>
+                            <th>展演圖片</th>
+                            <th>展演名稱</th>
+                            <th>場館名稱</th>
+                            <th>展演類型</th>
+                            <th data-sortable="true">開始日期</th>
+                            <th data-sortable="true">結束日期</th>
+                            <th data-sortable="true">展演時間</th>
+                            <th data-sortable="true">票價</th>
+                            <th>展覽介紹</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="./Images/A.jpeg" alt=""></td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
 
-
-                <table class="table table-responsive" data-toggle="table" data-sortable="true" data-sort-class="table-active"
-                    data-pagination="true" data-search="true" data-show-search-clear-button="true"
-                    data-show-refresh="true" data-show-toggle="true" data-show-columns="true"
-                    data-show-columns-toggle-all="true">
+                <!-- <table class="table table-responsive" data-toggle="table" data-sortable="true"
+                    data-sort-class="table-active" data-pagination="true" data-search="true"
+                    data-show-search-clear-button="true" data-show-refresh="true" data-show-toggle="true"
+                    data-show-columns="true" data-show-columns-toggle-all="true">
                     <thead class="thead-dark">
                         <tr>
                             <th data-sortable="true">展演圖片</th>
@@ -124,37 +212,25 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>John</td>
+                            <td><img src="./Images/A.jpeg"></td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/A.搖滾兒歌｜呼叫！夏天戰隊jpeg.jpeg"></td>
                             <td>Doe</td>
                             <td>john@example.com</td>
                         </tr>
                     </tbody>
                 </table>
+ -->
 
 
-                <!-- <div class="col-lg-3">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="./Images/A宮崎駿.jpeg" alt="Avatar" style="width:250px;height:350px;">
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="card-back-text">
-                                    <h3>宮崎駿動畫配樂</h3>
-                                    <p>2022/9/12-2022/9/30</p>
-                                    <p>展演類型:音樂</p>
-                                    <p>主辦單位:</br>狂美交響管樂團</p>
-                                    <p>展演地點:台中、基隆、新竹</p>
-                                    <h5><i class="fi fi-rr-download"></i></h5>
-                                    <p><a href="#" title="連結售票網站">購票入口</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+
             </div>
         </div>
     </div>
+
 
 
 
