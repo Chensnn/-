@@ -33,6 +33,10 @@
             min-height: 250px;
             background-color: #fcfcfc;
         }
+        tr td:nth-child(2){
+            background-color: #a42828;
+            color: aliceblue;
+        }
 
         img {
             width: 100%;
@@ -40,7 +44,7 @@
 
         .bootstrap-table {
             /* background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224)); */
-
+            /* min-width: 100%; */
             height: 100px;
             margin-right: -45px;
             margin-left: 10px;
@@ -116,7 +120,7 @@
 
     <div class="background">
         <div class="container">
-            <div class="row flex-nowrap">
+            <div class="row">
                 <div class="bottom-Text">
                     <div class="col-lg-12">
                         <h4>北</h4>
@@ -133,56 +137,57 @@
                     </div>
                 </div>
 
-                <!-- <table id="table" data-toggle="table" data-flat="true" data-search="true">
-                    <thead>
-                        <tr>
-                            <th>展演圖片</th>
-                            <th>展演名稱</th>
-                            <th>場館名稱</th>
-                            <th>票價</th>
-                            <th data-sortable="true">開始日期</th>
-                            <th data-sortable="true">結束日期</th>
-                            <th>展演介紹</th>
-                        </tr>
-                    </thead>
-                </table> -->
-
                 <table id="table" class="table table-responsive" data-toggle="table" data-sortable="true"
-                    data-sort-class="table-active" data-search="true">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>展演圖片</th>
-                            <th>展演名稱</th>
-                            <th>場館名稱</th>
-                            <th>展演類型</th>
-                            <th data-sortable="true">開始日期</th>
-                            <th data-sortable="true">結束日期</th>
-                            <th>展演時間</th>
-                            <th data-sortable="true">票價</th>
-                            <th>展演介紹</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- <tr>
-                            <td><img src="./Images/A.jpeg"></td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <td><img src="./Images/A.jpeg"></td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <td><img src="./Images/A.jpeg"></td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                        </tr> -->
-                    </tbody>
+                data-sort-class="table-active">
+                <thead class="">
+                    <tr>
+                        <th>展演圖片</th>
+                        <th>展演名稱</th>
+                        <th>場館名稱</th>
+                        <th>展演類型</th>
+                        <th data-sortable="true">開始日期</th>
+                        <th data-sortable="true">結束日期</th>
+                        <th>展演時間</th>
+                        <th data-sortable="true">票價</th>
+                        <th>展演介紹</th>
+                    </tr>
+                </thead>
+                <tbody class="tboby">
+                    <!-- <tr>
+                        <td><img src="./Images/A.jpeg"></td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td></td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td></td>
+                        <td>133</td>
+                        <td>john@example.com</td>
+                    </tr> -->
+                    <!-- <tr>
+                        <td><img src="./Images/A.jpeg"></td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td></td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td></td>
+                        <td>13</td>
+                        <td>john@example.com</td>
+                    </tr> -->
+                </tbody>
                 </table>
+                
+
+               
             </div>
         </div>
     </div>
 
 
+    
 
-<!-- 
+
     <script>
 
         fetch('./text.json')
@@ -192,7 +197,7 @@
             .then(function (myJson) {
                 console.log(myJson);
 
-                const table = document.querySelector('#table')
+                const tbody = document.querySelector('.tbody')
 
                 //一個一個拿出來 
                 let html = ''
@@ -211,14 +216,14 @@
                              </tr>
                             `;
                 });
-                table.innerHTML = html;
+                tbody.innerHTML = html;
             });
 
 
 
 
 
-    </script> -->
+    </script>
 
     <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
 </body>
