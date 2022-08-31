@@ -27,8 +27,10 @@
 
     <style>
         tr td:first-child {
-            max-width: 200px;
-            max-height: 300px;
+            max-width: 150px;
+            max-height: 250px;
+            min-width: 150px;
+            min-height: 250px;
             background-color: #fcfcfc;
         }
 
@@ -38,7 +40,7 @@
 
         .bootstrap-table {
             /* background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224)); */
-           
+
             height: 100px;
             margin-right: -45px;
             margin-left: 10px;
@@ -61,7 +63,7 @@
             color: #403F3D;
         }
 
-        
+
 
         /* input的框 */
         .form-control {
@@ -76,7 +78,7 @@
             transition: border-color .35s ease-in-out, box-shadow .55s ease-in-out;
             margin-bottom: 5px;
         }
-        
+
         /* 藝文活動裡的class */
         .background {
             background: #fcfcfc;
@@ -163,7 +165,7 @@
                     </div>
                 </div>
 
-                <table class="table table-responsive" data-toggle="table" data-flat="true" data-search="true" data-show-toggle="true">
+                <table id="table" class="table table-responsive" data-flat="true" data-search="true" data-show-toggle="true">
                     <thead>
                         <tr>
                             <th>展演圖片</th>
@@ -177,9 +179,9 @@
                             <th>展覽介紹</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <!-- <tbody>
                         <tr>
-                            <td><img src="./Images/A.jpeg" alt=""></td>
+                            <td><img src="./Images/韋禮安.jpg" alt=""></td>
                             <td>Lorem ipsum dolor sit amet consectetur.</td>
                             <td>Lorem ipsum dolor sit amet consectetur.</td>
                             <td>Lorem ipsum dolor sit amet consectetur.</td>
@@ -189,8 +191,7 @@
                             <td>Lorem ipsum dolor sit amet consectetur.</td>
                             <td>Lorem ipsum dolor sit amet consectetur.</td>
                         </tr>
-                       
-                    </tbody>
+                    </tbody> -->
                 </table>
 
                 <!-- <table class="table table-responsive" data-toggle="table" data-sortable="true"
@@ -234,6 +235,44 @@
 
 
 
+    <script>
+
+        fetch('./text.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log(myJson);
+
+                const table = document.querySelector('#table')
+
+                //一個一個拿出來 
+                let html = '';
+                myJson.forEach(element => {
+                    html += `
+                        <tbody>
+                            <tr>
+                                <td><img src="${element.展演圖片}"></td>
+                                <td>${element.展演名稱}</td>
+                                <td>${element.場館名稱}</td>
+                                <td>${element.展演類型}</td>
+                                <td>${element.開始日期}</td>
+                                <td>${element.結束日期}</td>
+                                <td>${element.展演時間}</td>
+                                <td>${element.票價}</td>
+                                <td>${element.展演介紹}</td>
+                             </tr>
+                        </tbody>
+                            `;
+                });
+                table.innerHTML = html;
+            });
+
+
+
+
+
+    </script>
 
     <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
 </body>
