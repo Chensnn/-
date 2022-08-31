@@ -26,34 +26,27 @@
     <link rel="stylesheet" href="./Css/藝文活動.css">
 
     <style>
-        tr td:first-child {
-            max-width: 150px;
-            max-height: 250px;
-            min-width: 150px;
-            min-height: 250px;
-            background-color: #fcfcfc;
+      
+        /* --------------------- */
+        .divPic {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            left: 900px;
+            /* top:130px; */
         }
-        tr td:nth-child(2){
-            background-color: #a42828;
-            color: aliceblue;
-        }
-
-        img {
+        .divPic img {
             width: 100%;
         }
-
-        .bootstrap-table {
-            /* background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224)); */
-            /* min-width: 100%; */
-            height: 100px;
-            margin-right: -45px;
-            margin-left: 10px;
-            margin-top: 5px;
+        p {
+            font-size: 16px;
         }
 
+        /* ---------------------------- */
         /* 藝文活動裡的class */
         .background {
             background: #fcfcfc;
+
         }
 
         .bottom-Text h5 {
@@ -136,56 +129,17 @@
                         <h5>頁</h5>
                     </div>
                 </div>
+                <div id="test1"></div>
 
-                <table id="table" class="table table-responsive" data-toggle="table" data-sortable="true"
-                data-sort-class="table-active">
-                <thead class="">
-                    <tr>
-                        <th>展演圖片</th>
-                        <th>展演名稱</th>
-                        <th>場館名稱</th>
-                        <th>展演類型</th>
-                        <th data-sortable="true">開始日期</th>
-                        <th data-sortable="true">結束日期</th>
-                        <th>展演時間</th>
-                        <th data-sortable="true">票價</th>
-                        <th>展演介紹</th>
-                    </tr>
-                </thead>
-                <tbody class="tboby">
-                    <!-- <tr>
-                        <td><img src="./Images/A.jpeg"></td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
-                        <td></td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
-                        <td></td>
-                        <td>133</td>
-                        <td>john@example.com</td>
-                    </tr> -->
-                    <!-- <tr>
-                        <td><img src="./Images/A.jpeg"></td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
-                        <td></td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
-                        <td></td>
-                        <td>13</td>
-                        <td>john@example.com</td>
-                    </tr> -->
-                </tbody>
-                </table>
-                
+            
 
-               
+
             </div>
         </div>
     </div>
 
 
-    
+
 
 
     <script>
@@ -197,26 +151,33 @@
             .then(function (myJson) {
                 console.log(myJson);
 
-                const tbody = document.querySelector('.tbody')
+                const table = document.querySelector('#test1')
 
                 //一個一個拿出來 
                 let html = ''
                 myJson.forEach(element => {
                     html += `
-                            <tr>
-                                <td><img src="${element.展演圖片}"></td>
-                                <td>${element.展演名稱}</td>
-                                <td>${element.場館名稱}</td>
-                                <td>${element.展演類型}</td>
-                                <td>${element.開始日期}</td>
-                                <td>${element.結束日期}</td>
-                                <td>${element.展演時間}</td>
-                                 <td>${element.票價}</td>
-                                <td>${element.展演介紹}</td>
-                             </tr>
+                            <div class="container">
+                                <div class="column">
+                                    <div class="divPic">
+                                        <img src="${element.展演圖片}">
+                                    </div>
+                                    <div class="col-12">
+                                        <p>展演名稱:${element.展演名稱}</p>
+                                        <p>場館名稱:${element.場館名稱}</p>
+                                        <p>展演類型:${element.展演類型}</p>
+                                        <p>開始日期:${element.開始日期}</p>
+                                        <p>結束日期:${element.結束日期}</p>
+                                        <p>展演時間:${element.展演時間}</p>
+                                        <p>票價:${element.票價}</p>
+                                        <hr>
+                                    </div>
+                                </div>
+                             </div>
                             `;
                 });
-                tbody.innerHTML = html;
+
+                table.innerHTML += html;
             });
 
 
