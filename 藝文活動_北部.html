@@ -21,33 +21,43 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css">
+   
     <link rel="stylesheet" href="./Css/首頁.css">
     <link rel="stylesheet" href="./Css/藝文活動.css">
+    <link rel="stylesheet" href="./Css/藝文活動_北部.css">
 
     <style>
       
-        /* --------------------- */
+        /* 圖片的外層卡片，設定長寬 */
         .divPic {
             width: 200px;
             height: 300px;
             position: absolute;
             left: 900px;
-            box-shadow: 2px 10px 500px rgb(207, 217, 162,0.5);
+            box-shadow: 1px 10px 15px #403F3D;
         }
+        /* 圖片縮放 */
         .divPic img {
             width: 100%;
-           
         }
+       
+        /* 資料的說明文字*/
         p {
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 300;
+            
         }
-
-        /* ---------------------------- */
+        .fi-brands-patreon{
+            font-size: 15px;
+            color:rgb(207, 217, 162,0.8);
+            position: relative;
+            right: 5px;
+            bottom: -2px;
+            margin-left: 12px;
+        }
         /* 藝文活動裡的class */
         .background {
             background: #fcfcfc;
-
         }
 
         .bottom-Text h5 {
@@ -130,11 +140,7 @@
                         <h5>頁</h5>
                     </div>
                 </div>
-                <div id="test1"></div>
-
-            
-
-
+                <div id="showInfo"></div>
             </div>
         </div>
     </div>
@@ -152,25 +158,25 @@
             .then(function (myJson) {
                 console.log(myJson);
 
-                const table = document.querySelector('#test1')
+                const table = document.querySelector('#showInfo')
 
-                //一個一個拿出來 
+               
                 let html = ''
                 myJson.forEach(element => {
                     html += `
                             <div class="container">
                                 <div class="column">
                                     <div class="divPic">
-                                        <img src="${element.展演圖片}">
+                                        <a href="#"><img src="${element.展演圖片}"></a>
                                     </div>
                                     <div class="col-12">
-                                        <p>展演名稱:${element.展演名稱}</p>
-                                        <p>場館名稱:${element.場館名稱}</p>
-                                        <p>展演類型:${element.展演類型}</p>
-                                        <p>開始日期:${element.開始日期}</p>
-                                        <p>結束日期:${element.結束日期}</p>
-                                        <p>展演時間:${element.展演時間}</p>
-                                        <p>票價:${element.票價}</p>
+                                        <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.展演名稱}</p>
+                                        <p>場館名稱<i class="fi fi-brands-patreon"></i>${element.場館名稱}</p>
+                                        <p>展演類型<i class="fi fi-brands-patreon"></i>${element.展演類型}</p>
+                                        <p>開始日期<i class="fi fi-brands-patreon"></i>${element.開始日期}</p>
+                                        <p>結束日期<i class="fi fi-brands-patreon"></i>${element.結束日期}</p>
+                                        <p>展演時間<i class="fi fi-brands-patreon"></i>${element.展演時間}</p>
+                                        <p>展演票價<i class="fi fi-brands-patreon"></i>${element.票價}</p>
                                         <hr>
                                     </div>
                                 </div>
@@ -187,7 +193,7 @@
 
     </script>
 
-    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+
 </body>
 
 </html>
