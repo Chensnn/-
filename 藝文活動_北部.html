@@ -21,51 +21,11 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
-   
+
     <link rel="stylesheet" href="./Css/首頁.css">
     <link rel="stylesheet" href="./Css/藝文活動.css">
     <link rel="stylesheet" href="./Css/藝文活動_北部.css">
-
-    <style>
-      
-        /* 圖片的外層卡片，設定長寬 */
-        .divPic {
-            width: 200px;
-            height: 300px;
-            position: absolute;
-            left: 900px;
-            box-shadow: 1px 10px 15px #403F3D;
-        }
-        /* 圖片縮放 */
-        .divPic img {
-            width: 100%;
-        }
-       
-        /* 資料的說明文字*/
-        p {
-            font-size: 15px;
-            font-weight: 300;
-            
-        }
-        .fi-brands-patreon{
-            font-size: 15px;
-            color:rgb(207, 217, 162,0.8);
-            position: relative;
-            right: 5px;
-            bottom: -2px;
-            margin-left: 12px;
-        }
-        /* 藝文活動裡的class */
-        .background {
-            background: #fcfcfc;
-        }
-
-        .bottom-Text h5 {
-            color: #403F3D;
-            opacity: 0.5;
-            margin-left: -30px;
-        }
-    </style>
+    <script src="./JavaScript/藝文活動_北部.js"></script>
 
 </head>
 
@@ -138,62 +98,14 @@
                         <h5>到</h5>
                         <h5>前</h5>
                         <h5>頁</h5>
+                        <a href="#" title="回到前面" class="top"><i class="fi fi-ss-comment-arrow-up"></i>
+                        </a>
                     </div>
                 </div>
                 <div id="showInfo"></div>
             </div>
         </div>
     </div>
-
-
-
-
-
-    <script>
-
-        fetch('./text.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (myJson) {
-                console.log(myJson);
-
-                const table = document.querySelector('#showInfo')
-
-               
-                let html = ''
-                myJson.forEach(element => {
-                    html += `
-                            <div class="container">
-                                <div class="column">
-                                    <div class="divPic">
-                                        <a href="#"><img src="${element.展演圖片}"></a>
-                                    </div>
-                                    <div class="col-12">
-                                        <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.展演名稱}</p>
-                                        <p>場館名稱<i class="fi fi-brands-patreon"></i>${element.場館名稱}</p>
-                                        <p>展演類型<i class="fi fi-brands-patreon"></i>${element.展演類型}</p>
-                                        <p>開始日期<i class="fi fi-brands-patreon"></i>${element.開始日期}</p>
-                                        <p>結束日期<i class="fi fi-brands-patreon"></i>${element.結束日期}</p>
-                                        <p>展演時間<i class="fi fi-brands-patreon"></i>${element.展演時間}</p>
-                                        <p>展演票價<i class="fi fi-brands-patreon"></i>${element.票價}</p>
-                                        <hr>
-                                    </div>
-                                </div>
-                             </div>
-                            `;
-                });
-
-                table.innerHTML += html;
-            });
-
-
-
-
-
-    </script>
-
-
 </body>
 
 </html>

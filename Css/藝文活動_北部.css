@@ -1,2 +1,65 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
 @import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+
+
+/* 圖片的外層卡片，設定長寬 */
+.divPic {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 900px;
+    box-shadow: 1px 10px 15px #403F3D;
+}
+
+/* 圖片縮放 */
+.divPic img {
+    width: 100%;
+}
+
+/* 資料的說明文字*/
+p {
+    font-size: 15px;
+    font-weight: 300;
+
+}
+
+.fi-brands-patreon {
+    font-size: 15px;
+    color: rgb(207, 217, 162, 0.8);
+    position: relative;
+    right: 5px;
+    bottom: -2px;
+    margin-left: 12px;
+}
+
+.top {
+    position: fixed;
+    right: 50px;
+    bottom: 10px;
+}
+
+/* 回到上面的icon */
+.fi-ss-comment-arrow-up {
+    font-size: 30px;
+}
+
+.fi-ss-comment-arrow-up:hover {
+    color: #CAD9A2;
+}
+
+/* 回上頁icon */
+.fi-rr-angle-circle-left:hover {
+    color: #403F3D;
+}
+
+/* 藝文活動裡的class */
+.background {
+    background: #fcfcfc;
+    margin-left: 30px;
+}
+
+.bottom-Text h5 {
+    color: #403F3D;
+    opacity: 0.5;
+    margin-left: -30px;
+}
