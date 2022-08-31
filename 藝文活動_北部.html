@@ -47,38 +47,6 @@
             margin-top: 5px;
         }
 
-
-        /* 切換檢視模式的按鈕，從預設的條列式改為區塊顯示模式。 */
-        .btn-secondary {
-            background-color: #fcfcfc;
-            box-shadow: 1px 1px 10px #403F3D;
-            border: none;
-            height: 24px;
-            width: 24px;
-            border-radius: 50%;
-            margin-top: 2px;
-        }
-
-        .fa-toggle-off {
-            color: #403F3D;
-        }
-
-
-
-        /* input的框 */
-        .form-control {
-            height: calc(1.75rem + 2px);
-            font-size: 0.7rem;
-            font-weight: 500;
-            line-height: 1;
-            color: #403F3D;
-            background-color: transparent;
-            border: 1px solid grey;
-            border-radius: 20px;
-            transition: border-color .35s ease-in-out, box-shadow .55s ease-in-out;
-            margin-bottom: 5px;
-        }
-
         /* 藝文活動裡的class */
         .background {
             background: #fcfcfc;
@@ -165,8 +133,23 @@
                     </div>
                 </div>
 
-                <table id="table" class="table table-responsive" data-flat="true" data-search="true" data-show-toggle="true">
+                <!-- <table id="table" data-toggle="table" data-flat="true" data-search="true">
                     <thead>
+                        <tr>
+                            <th>展演圖片</th>
+                            <th>展演名稱</th>
+                            <th>場館名稱</th>
+                            <th>票價</th>
+                            <th data-sortable="true">開始日期</th>
+                            <th data-sortable="true">結束日期</th>
+                            <th>展演介紹</th>
+                        </tr>
+                    </thead>
+                </table> -->
+
+                <table id="table" class="table table-responsive" data-toggle="table" data-sortable="true"
+                    data-sort-class="table-active" data-search="true">
+                    <thead class="thead-dark">
                         <tr>
                             <th>展演圖片</th>
                             <th>展演名稱</th>
@@ -174,67 +157,32 @@
                             <th>展演類型</th>
                             <th data-sortable="true">開始日期</th>
                             <th data-sortable="true">結束日期</th>
-                            <th data-sortable="true">展演時間</th>
-                            <th data-sortable="true">票價</th>
-                            <th>展覽介紹</th>
-                        </tr>
-                    </thead>
-                    <!-- <tbody>
-                        <tr>
-                            <td><img src="./Images/韋禮安.jpg" alt=""></td>
-                            <td>Lorem ipsum dolor sit amet consectetur.</td>
-                            <td>Lorem ipsum dolor sit amet consectetur.</td>
-                            <td>Lorem ipsum dolor sit amet consectetur.</td>
-                            <td>Lorem ipsum dolor sit amet consectetur.</td>
-                            <td>Lorem ipsum dolor sit amet consectetur.</td>
-                            <td>Lorem ipsum dolor sit amet consectetur.</td>
-                            <td>Lorem ipsum dolor sit amet consectetur.</td>
-                            <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        </tr>
-                    </tbody> -->
-                </table>
-
-                <!-- <table class="table table-responsive" data-toggle="table" data-sortable="true"
-                    data-sort-class="table-active" data-pagination="true" data-search="true"
-                    data-show-search-clear-button="true" data-show-refresh="true" data-show-toggle="true"
-                    data-show-columns="true" data-show-columns-toggle-all="true">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th data-sortable="true">展演圖片</th>
-                            <th>展演名稱</th>
-                            <th>場館名稱</th>
-                            <th>展演類型</th>
-                            <th>開始日期</th>
-                            <th>結束日期</th>
                             <th>展演時間</th>
-                            <th>票價</th>
+                            <th data-sortable="true">票價</th>
                             <th>展演介紹</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <td><img src="./Images/A.jpeg"></td>
                             <td>Doe</td>
                             <td>john@example.com</td>
-                        </tr>
-                        <tr>
-                            <td><img src="./Images/A.搖滾兒歌｜呼叫！夏天戰隊jpeg.jpeg"></td>
+                            <td><img src="./Images/A.jpeg"></td>
                             <td>Doe</td>
                             <td>john@example.com</td>
-                        </tr>
+                            <td><img src="./Images/A.jpeg"></td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr> -->
                     </tbody>
                 </table>
- -->
-
-
-
             </div>
         </div>
     </div>
 
 
 
-
+<!-- 
     <script>
 
         fetch('./text.json')
@@ -247,10 +195,9 @@
                 const table = document.querySelector('#table')
 
                 //一個一個拿出來 
-                let html = '';
+                let html = ''
                 myJson.forEach(element => {
                     html += `
-                        <tbody>
                             <tr>
                                 <td><img src="${element.展演圖片}"></td>
                                 <td>${element.展演名稱}</td>
@@ -259,10 +206,9 @@
                                 <td>${element.開始日期}</td>
                                 <td>${element.結束日期}</td>
                                 <td>${element.展演時間}</td>
-                                <td>${element.票價}</td>
+                                 <td>${element.票價}</td>
                                 <td>${element.展演介紹}</td>
                              </tr>
-                        </tbody>
                             `;
                 });
                 table.innerHTML = html;
@@ -272,7 +218,7 @@
 
 
 
-    </script>
+    </script> -->
 
     <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
 </body>
