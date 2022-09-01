@@ -25,7 +25,8 @@
 
 
     <style>
-        button {
+      
+        .openBox {
             width: 100px;
             height: 100px;
             position: relative;
@@ -34,16 +35,11 @@
             margin: 10px;
         }
 
-        button img {
+        .openBox img {
             width: 100%;
         }
 
-        /* -------popup的視窗 */
-        /* html,
-        body {
-            height: 100%;
-        } */
-
+      
         .overlay {
             position: fixed;
             display: none;
@@ -53,10 +49,12 @@
             left: 0;
             background: rgba(0, 0, 0, 0.5);
             z-index: 2;
+            
+            
         }
 
         .popup {
-            position: fixed;
+            position: absolute;
             width: 50%;
             height: 50%;
             top: 25%;
@@ -75,6 +73,9 @@
         .CloseIcon {
             cursor: pointer;
         }
+
+      
+      
     </style>
 
 
@@ -217,22 +218,22 @@
             </div>
 
             <div class="d-flex">
-                <div class="col-lg-2"><button onclick="OpenModal()"><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox" onclick="OpenModal()"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
             </div>
             <div class="d-flex">
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
-                <div class="col-lg-2"><button><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
+                <div class="col-lg-2"><button class="openBox"><img src="./Images/小地方展演空間.png"></button></div>
             </div>
-            
+
             <div class="overlay" id="overlay">
                 <div class="popup">
                     <div onclick="CloseModal()" class="CloseIcon">close</div>
