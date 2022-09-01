@@ -4,6 +4,7 @@
 .carousel-caption h2 {
     letter-spacing: 6px;
     color: #fcfdfd;
+    text-shadow: 5px 4px 1px #000;
 }
 
 /* slider的說明文字 */
@@ -11,6 +12,7 @@
     letter-spacing: 5px;
     font-size: 18px;
     color: #fcfdfd;
+    text-shadow: 3px 3px 1px #000;
 }
 
 /* 最底部的卡片，perspective是將物件變成有3D效果的透視 */

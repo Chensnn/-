@@ -27,22 +27,31 @@
 
     <style>
         .openBox {
-
             position: relative;
             left: 30px;
             top: -170px;
             margin: 10px;
             cursor: pointer;
             border: none;
-            background-color: rgba(136, 156, 155, 0.5);
+            background-color: transparent;
+
+            /* 如果要有圓底背景 */
+            /* background-color: rgba(136, 156, 155, 0.5);
             box-shadow: 3px 3px 5px rgb(67, 65, 65);
             border-radius: 50%;
             width: 130px;
-            height: 130px;
-
+            height: 130px; */
 
         }
 
+        p {
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+        p::first-letter{
+            font-size: 15px;
+        }
         .openBox:focus {
             outline: 0;
         }
@@ -52,8 +61,8 @@
             border-radius: 50%;
             width: 120px;
             height: 120px;
-            filter: saturate(150%);     
-         }
+            filter: saturate(150%);
+        }
 
 
         .overlay {
@@ -65,8 +74,6 @@
             left: 0;
             background: rgba(26, 25, 25, 0.5);
             z-index: 2;
-
-
         }
 
         .popup {
@@ -100,6 +107,11 @@
             color: #403F3D;
             opacity: 0.5;
             margin-left: -30px;
+        }
+
+        /* +++++*/
+        .fi-rr-plus-small:hover {
+            color: #403F3D;
         }
     </style>
 
@@ -222,7 +234,7 @@
         </div>
     </div>
 
-    
+
     <div class="background" id="NorthArea">
         <div class="container">
             <div class="row ">
@@ -290,7 +302,7 @@
                     </div>
                 </div>
             </div>
-              <!-- 動態新增的位置 -->
+            <!-- 動態新增的位置 -->
         </div>
     </div>
 
@@ -313,12 +325,12 @@
                     </div>
                 </div>
             </div>
-              <!-- 動態新增的位置 -->
+            <!-- 動態新增的位置 -->
         </div>
     </div>
 
 
-    
+
     <div class="overlay" id="overlay">
         <div class="popup">
             <div onclick="CloseModal()" class="CloseIcon">close</div>
@@ -343,15 +355,14 @@
                         <div class="col-lg-2">
                             <button class="openBox" onclick="OpenModal()">
                                 <img src="${element.場館圖片}" title="${element.場館名稱}">
+                                <p>${element.場館名稱}</p>
                             </button>
                         </div>
+                        
                         `;
                 });
                 showVenueNorth.innerHTML += html;
             });
-
-
-
         function OpenModal() {
             let element = document.getElementById('overlay')
             element.style.display = 'block'
