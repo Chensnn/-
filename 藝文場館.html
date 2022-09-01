@@ -6,23 +6,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>藝起來玩</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
     <!-- 導入Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <!-- 地址icon -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-
     <link rel="stylesheet" href="./Css/首頁.css">
-    <link rel="stylesheet" href="./Css/藝文場館.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./Css/藝文活動.css">
+    <script src="./JavaScript/首頁.js"></script>
 
+
+    <style>
+        .openBox {
+
+            position: relative;
+            left: 30px;
+            top: -170px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: rgba(136, 156, 155, 0.5);
+            box-shadow: 3px 3px 5px rgb(67, 65, 65);
+            border-radius: 50%;
+            width: 130px;
+            height: 130px;
+
+
+        }
+
+        .openBox:focus {
+            outline: 0;
+        }
+
+        .openBox img {
+
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            filter: saturate(150%);     
+         }
+
+
+        .overlay {
+            position: fixed;
+            display: none;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(26, 25, 25, 0.5);
+            z-index: 2;
+
+
+        }
+
+        .popup {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 25%;
+            left: 25%;
+            text-align: center;
+            background: white;
+        }
+
+        .popup h3 {
+            font-size: 15px;
+            height: 50px;
+            line-height: 50px;
+            color: black;
+        }
+
+        .CloseIcon {
+            cursor: pointer;
+        }
+
+        /* 藝文活動裡的class */
+        .background {
+            background: #fcfcfc;
+            margin-left: 30px;
+        }
+
+        .bottom-Text h5 {
+            color: #403F3D;
+            opacity: 0.5;
+            margin-left: -30px;
+        }
+    </style>
 
 
 </head>
 
 <body>
-
     <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top ">
         <div class="container-fluid">
             <a class="navbar-brand " href="./首頁.html" title="藝起來玩">藝起來玩</a>
@@ -75,295 +159,212 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="container-fluid ">
-            <div class="linkCenter">
-                <div class="row">
-                    <div class="col"><a href="#northern">北部推薦</a></div>
-                    <div class="col"><a href="#south">南部推薦</a></div>
-                    <div class="col"><a href="#Central">中部推薦</a></div>
-                    <div class="col"><a href="#east">東部推薦</a></div>
+    <div class="">
+        <div id="demo" class="carousel slide " data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#" data-slide-to="0" class="active"></li>
+                <li data-target="#" data-slide-to="1"></li>
+                <li data-target="#" data-slide-to="2"></li>
+                <li data-target="#" data-slide-to="3"></li>
+                <li data-target="#" data-slide-to="4"></li>
+                <li data-target="#" data-slide-to="5"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#" title="李友廷《冷身操》2022 LIVE TOUR"> <img src="./Images/李友廷-冷身操.jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="2022國語作業簿：台北歡樂耶誕城"> <img src="./Images/國語作業簿(廣告輪播).jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="高流系：超營養學分"><img src="./Images/高流系.png"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="蔡健雅 Tanya’s Live《DEPART to RETURN》"><img src="./Images/蔡健雅(廣告).jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="爛泥發芽2022台北場"><img src="./Images/爛泥發芽.jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="《 NUWA五色石 》蘭花刀 New Album Release 2022 Tour"><img src="./Images/NUWA五色石.jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
     </div>
 
-    <section>
-        <div class=" container">
-            <div id="accordion">
-                <div class="jumbotron">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col">
-                                <!--原本有card的class-->
-                                <div class="card-header">
-                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseNorth">
-                                        <h6 id="northern">北部<br>場館</h6>
-                                    </a>
-                                </div>
-
-
-                                <div id="collapseNorth" class="collapse" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover">
-                                                <thead class="">
-                                                    <tr>
-                                                        <th>場館名稱</th>
-                                                        <th>電話</th>
-                                                        <th>地址</th>
-                                                        <th>場館介紹</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>城市舞台</td>
-                                                        <td>(02)2577-5931</td>
-                                                        <td><a href="#">台北市松山區八德路三段25號
-                                                                <i class="fi fi-br-marker"></i></a>
-                                                        </td>
-                                                        <td>
-                                                            音樂、舞蹈、戲劇活動場地
-                                                            展覽、場地租借
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>大稻埕戲苑</td>
-                                                        <td>(02)2556-9101</td>
-                                                        <td><a href="#">台北市大同區迪化街一段21號
-                                                                <i class="fi fi-br-marker"></i></a>
-                                                        </td>
-                                                        <td>
-                                                            京劇、歌仔戲、地方戲曲
-                                                            布袋戲、場地租借
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>文山劇場</td>
-                                                        <td>(02)2933-2199</td>
-                                                        <td><a href="#">台北市文山區景文街32號
-                                                                <i class="fi fi-br-marker"></i></a>
-                                                        </td>
-                                                        <td>故事劇場、魔術、喜劇
-                                                            親子互動</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    
+    <div class="background" id="NorthArea">
+        <div class="container">
+            <div class="row ">
+                <div class="bottom-Text ">
+                    <div class="col-lg-12">
+                        <h4>北</h4>
+                        <h4>部</h4>
+                        <h4>場</h4>
+                        <h4>館</h4>
+                        <a href="./藝文活動_北部.html" title="更多活動資訊">
+                            <h4><i class="fi fi-rr-plus-small"></i></h4>
+                        </a>
+                        <h5>本</h5>
+                        <h5>月</h5>
+                        <h5>推</h5>
+                        <h5>薦</h5>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
 
-        <div class=" container">
-            <div class="jumbotron">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col">
-                            <!--原本有card的class-->
-                            <div class="card-header">
-                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseSouth">
-                                    <h6 id="south">南部<br>場館</h6>
-                                </a>
-                            </div>
-                            <div id="collapseSouth" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            <thead class="">
-                                                <tr>
-                                                    <th>場館名稱</th>
-                                                    <th>電話</th>
-                                                    <th>地址</th>
-                                                    <th>場館介紹</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>臺南市美術館1館</td>
-                                                    <td>(06)221-8881</td>
-                                                    <td><a href="#">台南市中西區南門路37號
-                                                            <i class="fi fi-br-marker"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        展覽、當代台灣藝術、雕塑
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>台南市立文化中心</td>
-                                                    <td>(06)269-2864</td>
-                                                    <td><a href="#">台南市東區中華東路三段332號
-                                                            <i class="fi fi-br-marker"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        藝廊供本地藝術家展示當代作品，提供國際級藝文活動類的展出
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>高雄巨蛋</td>
-                                                    <td>(07)9749-888</td>
-                                                    <td><a href="#">高雄市左營區博愛二路757號
-                                                            <i class="fi fi-br-marker"></i></a>
-                                                    </td>
-                                                    <td>大型展覽、演唱會、體育、藝文
-                                                        、演講等大型活動</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row tag" id="showVenueNorth"></div>
+
+        </div>
+    </div>
+
+    <div class="background" id="CentralArea">
+        <div class="container">
+            <div class="row flex-nowrap">
+                <div class="bottom-Text">
+                    <div class="col-lg-12">
+                        <h4>中</h4>
+                        <h4>部</h4>
+                        <h4>場</h4>
+                        <h4>館</h4>
+                        <a href="./藝文活動_中部.html" title="更多活動資訊">
+                            <h4><i class="fi fi-rr-plus-small"></i></h4>
+                        </a>
+                        <h5>本</h5>
+                        <h5>月</h5>
+                        <h5>推</h5>
+                        <h5>薦</h5>
                     </div>
                 </div>
             </div>
+            <!-- 動態新增的位置 -->
         </div>
-        <div class=" container">
-            <div class="jumbotron">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col">
-                            <!--原本有card的class-->
-                            <div class="card-header">
-                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseCentral">
-                                    <h6 id="Central">中部<br>場館</h6>
-                                </a>
-                            </div>
-                            <div id="collapseCentral" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            <thead class="">
-                                                <tr>
-                                                    <th>場館名稱</th>
-                                                    <th>電話</th>
-                                                    <th>地址</th>
-                                                    <th>場館介紹</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>臺中國家歌劇院</td>
-                                                    <td>(04)2251-1777</td>
-                                                    <td><a href="#">台中市西屯區惠來路二段101號
-                                                            <i class="fi fi-br-marker"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        音樂劇、劇場、發表會、演講
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>港區藝術中心</td>
-                                                    <td>(04)2627-4568</td>
-                                                    <td><a href="#"> 台中市清水區忠貞路21號
-                                                            <i class="fi fi-br-marker"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        展覽、藝文活動、演講、美術、劇場
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>屯區藝文中心</td>
-                                                    <td>(04)2392-1122</td>
-                                                    <td><a href="#">台中市太平區大興路201號
-                                                            <i class="fi fi-br-marker"></i></a>
-                                                    </td>
-                                                    <td>展覽、藝文活動、演講、
-                                                        魔術、劇場、特技、舞蹈</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    </div>
 
-
+    <div class="background" id="EastArea">
+        <div class="container">
+            <div class="row flex-nowrap">
+                <div class="bottom-Text">
+                    <div class="col-lg-12">
+                        <h4>東</h4>
+                        <h4>部</h4>
+                        <h4>場</h4>
+                        <h4>館</h4>
+                        <a href="./藝文活動_東部.html" title="更多活動資訊">
+                            <h4><i class="fi fi-rr-plus-small"></i></h4>
+                        </a>
+                        <h5>本</h5>
+                        <h5>月</h5>
+                        <h5>推</h5>
+                        <h5>薦</h5>
                     </div>
                 </div>
             </div>
+              <!-- 動態新增的位置 -->
         </div>
-        <div class=" container">
-            <div class="jumbotron">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col">
-                            <!--原本有card的class-->
-                            <div class="card-header">
-                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                                    <h6 id="east">東部<br>場館</h6>
-                                </a>
-                            </div>
-                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            <thead class="">
-                                                <tr>
-                                                    <th>場館名稱</th>
-                                                    <th>電話</th>
-                                                    <th>地址</th>
-                                                    <th>場館介紹</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>臺東表演藝術館</td>
-                                                    <td>(08)9346-709</td>
-                                                    <td><a href="#">台東縣台東市開封街671號
-                                                            <i class="fi fi-br-marker"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        劇場、展演、互動式演出
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>鐵花村音樂聚落慢市集</td>
-                                                    <td>(08) 9343 393</td>
-                                                    <td><a href="#">台東縣台東市新生路135巷26號
-                                                            <i class="fi fi-br-marker"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        市集、裝置藝術、藝文展示、音樂
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>臺東生活美學館</td>
-                                                    <td>(08)932-2248</td>
-                                                    <td><a href="#">台東縣台東市大同路254號
-                                                            <i class="fi fi-br-marker"></i></a>
-                                                    </td>
-                                                    <td>音樂季、展演、百老匯、電影、個展、展覽</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    </div>
+
+    <div class="background" id="SouthArea">
+        <div class="container">
+            <div class="row flex-nowrap">
+                <div class="bottom-Text">
+                    <div class="col-lg-12">
+                        <h4>南</h4>
+                        <h4>部</h4>
+                        <h4>場</h4>
+                        <h4>館</h4>
+                        <a href="./藝文活動_南部.html" title="更多活動資訊">
+                            <h4><i class="fi fi-rr-plus-small"></i></h4>
+                        </a>
+                        <h5>本</h5>
+                        <h5>月</h5>
+                        <h5>推</h5>
+                        <h5>薦</h5>
                     </div>
                 </div>
             </div>
+              <!-- 動態新增的位置 -->
         </div>
-    </section>
+    </div>
+
+
+    
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <div onclick="CloseModal()" class="CloseIcon">close</div>
+            <div id="vVenueText">從資料庫撈資料</div>
+        </div>
+    </div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-        crossorigin="anonymous"></script>
+    <script>
+        fetch('./text場館.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log(myJson);
+                const showVenueNorth = document.querySelector('#showVenueNorth')
+                let html = ''
+                myJson.forEach(element => {
+
+                    html += `
+                        <div class="col-lg-2">
+                            <button class="openBox" onclick="OpenModal()">
+                                <img src="${element.場館圖片}" title="${element.場館名稱}">
+                            </button>
+                        </div>
+                        `;
+                });
+                showVenueNorth.innerHTML += html;
+            });
+
+
+
+        function OpenModal() {
+            let element = document.getElementById('overlay')
+            element.style.display = 'block'
+        }
+        function CloseModal() {
+            let element = document.getElementById('overlay')
+            element.style.display = 'none'
+        }
+
+
+    </script>
 
 </body>
+
 
 </html>

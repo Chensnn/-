@@ -14,7 +14,7 @@ function doFirst(){
 
                 let html = ''
                 myJson.forEach(element => {
-                    console.log(element.length);
+                   
                     html += `
                             <div class="container">
                                 <div class="column">
