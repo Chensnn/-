@@ -6,6 +6,11 @@
     color: #fcfdfd;
     text-shadow: 5px 4px 1px #000;
 }
+/* 旋轉盤 */
+.carousel-item img{
+    opacity: 0.3;
+}
+
 
 /* slider的說明文字 */
 .carousel-caption p {
