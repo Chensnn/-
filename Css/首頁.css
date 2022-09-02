@@ -658,3 +658,13 @@ li {
         margin-bottom: 20px;
     }
 }
+
+footer{
+    margin-top: 30px;
+    background-color: #CAD9A2;
+
+}
+
+footer p{
+    margin-top: 10px;
+}

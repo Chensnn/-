@@ -1,0 +1,96 @@
+/* 旋轉盤 */
+.carousel-item img{
+    opacity: 0.3;
+}
+
+.carousel caption{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.carousel-caption h1{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.background {
+    padding: 40px 40px;
+    background:#fffff0;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+
+/* 留言區 */
+
+.message {
+    padding: 40px 40px;
+    background: #fffff0;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.message .page-header {
+    margin: 5px 0;
+    padding: 0;
+    border-bottom: 4px solid #F2CCB5;
+    margin-bottom: 50px;
+}
+
+.message h3 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.message .page-header a {
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-end;
+    color: #333;
+    line-height: 10px;
+    margin-bottom: 5px;
+
+}
+
+.message a {
+    color: #333;
+}
+
+
+footer{
+    margin-top: 30px;
+    background-color: #CAD9A2;
+
+}
+
+footer p{
+    margin-top: 10px;
+}
+
+.page-item.active .page-link {
+    background-color: #CAD9A2;
+    border-color: #CAD9A2;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #F2CCB5;
+    border-color: #F2CCB5;
+}
+
+.card body{
+    background-color: #CAD9A2;
+    
+}
+
+.badge-info {
+    color: #fff;
+    background-color: #CAD9A2;
+}
+
+
