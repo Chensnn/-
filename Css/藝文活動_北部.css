@@ -20,7 +20,11 @@
 p {
     font-size: 15px;
     font-weight: 300;
-
+}
+a{
+    font-size: 15px;
+    font-weight: 300;
+    color: #403F3D;
 }
 
 .fi-brands-patreon {

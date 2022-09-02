@@ -29,7 +29,7 @@ function doFirst(){
                                         <p>結束日期<i class="fi fi-brands-patreon"></i>${element.結束日期}</p>
                                         <p>展演時間<i class="fi fi-brands-patreon"></i>${element.展演時間}</p>
                                         <p>展演票價<i class="fi fi-brands-patreon"></i>${element.票價}</p>
-                                        <p>購票連結<i class="fi fi-brands-patreon"></i><a href="">${element.購票連結}</a></p>
+                                        <p>購票連結<i class="fi fi-brands-patreon"></i><a href="${element.購票連結}" title="前往購票">${element.購票連結}</a></p>
                                         <hr>
                                     </div>
                                 </div>

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./Css/藝文活動.css">
     <link rel="stylesheet" href="./Css/藝文場館.css">
     <script src="./JavaScript/首頁.js"></script>
-    <script src="./JavaScript/藝文場館.js"></script>
+   
 
 </head>
 
@@ -164,9 +164,7 @@
                     </div>
                 </div>
             </div>
-
             <div class="row tag" id="showVenueNorth"></div>
-
         </div>
     </div>
 
@@ -240,11 +238,40 @@
     </div>
 
 
-
+<!-- onclick="CloseModal()" -->
     <div class="overlay" id="overlay">
         <div class="popup">
-            <div onclick="CloseModal()" class="CloseIcon">close</div>
-            <div id="vVenueText">放資料</div>
+            <div  class="CloseIcon" id="Closebox"><i class="fi fi-ss-cross-circle"></i></div>
+            <div id="vVenueText">
+                <!-- <span><img src="./Images/大稻埕戲苑.jpg"></span>
+                <p>場館名稱<i class="fi fi-brands-patreon"></i>大稻埕戲苑</p>
+                <p>場館地區<i class="fi fi-brands-patreon"></i>北部</p>
+                <p>聯絡方式<i class="fi fi-brands-patreon"></i>(02)2556-9101</p>
+                <p>場館地址<i class="fi fi-brands-patreon"></i>台北市大同區迪化街一段21號</p>
+                <p>場館介紹<i class="fi fi-brands-patreon"></i>京劇、歌仔戲、地方戲曲、布袋戲、場地租借</p>
+                <p>營業時間<i class="fi fi-brands-patreon"></i>
+                <div class="relativeForLabel">
+                    <select class="selectDay" id="selectDay">
+                        <option value="營業時間查詢" autofocus>請選擇</option>
+                        <option value="#tab_Mon">星期一</option>
+                        <option value="#tab_Tue">星期二</option>
+                        <option value="#tab_Wed">星期三</option>
+                        <option value="#tab_Thr">星期四</option>
+                        <option value="#tab_Fri">星期五</option>
+                        <option value="#tab_Sat">星期六</option>
+                        <option value="#tab_Sun">星期日</option>
+                    </select>
+
+                    <div id="tab_Mon"><label>休館</label></div>
+                    <div id="tab_Tue"><label>0900-1700</label></div>
+                    <div id="tab_Wed"><label>0900-1700</label></div>
+                    <div id="tab_Thr"><label>0900-1700</label></div>
+                    <div id="tab_Fri"><label>0900-1700</label></div>
+                    <div id="tab_Sat"><label>0900-1700</label></div>
+                    <div id="tab_Sun"><label>0900-1700</label></div>
+                </div>
+                </p> -->
+            </div>
         </div>
     </div>
 
@@ -260,9 +287,7 @@
         </div>
     </footer>
 
-
-
-
+    <script src="./JavaScript/藝文場館.js"></script>
 </body>
 
 

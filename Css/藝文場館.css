@@ -1,93 +1,163 @@
- /* img的背景框 */
- .openBox {
-     position: relative;
-     left: 30px;
-     top: -170px;
-     margin: 10px;
-     cursor: pointer;
-     border: none;
-     background-color: transparent;
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
 
-     /* 如果要有圓底背景 */
-     /* background-color: rgba(136, 156, 155, 0.5);
+/* img的背景框 */
+.openBox {
+    position: relative;
+    left: 30px;
+    top: -170px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    /* 如果要有圓底背景 */
+    /* background-color: rgba(136, 156, 155, 0.5);
     box-shadow: 3px 3px 5px rgb(67, 65, 65);
     border-radius: 50%;
     width: 130px;
     height: 130px; */
 
- }
+}
 
- /* img下的標題文字 */
- p {
-     font-size: 13px;
-     letter-spacing: 1px;
-     margin-top: 2px;
- }
+/* 取消butoon的預設邊框 */
+.openBox:focus {
+    outline: 0;
+}
 
- p::first-letter {
-     font-size: 15px;
- }
+/* 調整img樣式 */
+.openBox img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    filter: saturate(150%);
+}
 
- /* 取消butoon的預設邊框 */
- .openBox:focus {
-     outline: 0;
- }
+/* img下的標題文字 */
+.openBox p {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
 
- /* 調整img樣式 */
- .openBox img {
-     border-radius: 50%;
-     width: 120px;
-     height: 120px;
-     filter: saturate(150%);
- }
+.openBox p::first-letter {
+    font-size: 13px;
+}
 
- /* 彈出視窗的背景 */
- .overlay {
-     position: fixed;
-     display: none;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     background: rgba(26, 25, 25, 0.5);
-     z-index: 2;
- }
 
- /* 彈出視窗 */
- .popup {
-     position: absolute;
-     width: 50%;
-     height: 50%;
-     top: 25%;
-     left: 25%;
-     text-align: center;
-     background: white;
- }
+/* 彈出視窗的背景 */
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(26, 25, 25, 0.5);
+    z-index: 2;
+}
 
- .popup h3 {
-     font-size: 15px;
-     height: 50px;
-     line-height: 50px;
-     color: black;
- }
+.overlay p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 2px;
+}
 
- .CloseIcon {
-     cursor: pointer;
- }
 
- /* 藝文活動裡的class */
- .background {
-     background: #fcfcfc;
-     margin-left: 30px;
- }
+/* 彈出視窗 */
+.popup {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    background: #fcfcfc;
+}
 
- .bottom-Text h5 {
-     color: #403F3D;
-     opacity: 0.5;
-     margin-left: -30px;
- }
+.CloseIcon {
+    cursor: pointer;
+    float: right;
+    margin-right: 13px;
+    margin-top: 8px;
+    font-size: 1.6rem;
+}
 
- /* +++++*/
- .fi-rr-plus-small:hover {
-     color: #403F3D;
- }
+/* 彈出視窗的img處理 */
+.popup img {
+    width: 150px;
+    height: 150px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    border-radius: 50%;
+    filter: saturate(150%);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+
+
+/* select選單 */
+.selectDay {
+    border: none;
+    background-color: #F2F2F2;
+    padding: 2px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.selectDay:focus {
+    outline: none;
+}
+
+/* 幫label設一個相對定位 */
+.relativeForLabel {
+    position: relative;
+    left: 105px;
+    top: -27px;
+}
+
+label {
+    position: absolute;
+    left: 80px;
+    top: 2px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.overlay p::first-letter {
+    font-size: 15px;
+}
+
+
+
+
+/* 藝文活動裡的class */
+.background {
+    background: #fcfcfc;
+    margin-left: 30px;
+}
+
+.bottom-Text h5 {
+    color: #403F3D;
+    opacity: 0.5;
+    margin-left: -30px;
+}
+
+/* +++++*/
+.fi-rr-plus-small:hover {
+    color: #403F3D;
+}
+
+.fi-brands-patreon {
+    font-size: 15px;
+    color: rgb(207, 217, 162, 0.8);
+    position: relative;
+    right: 5px;
+    bottom: -2px;
+    margin-left: 12px;
+}
