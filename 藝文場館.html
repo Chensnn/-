@@ -22,99 +22,9 @@
 
     <link rel="stylesheet" href="./Css/首頁.css">
     <link rel="stylesheet" href="./Css/藝文活動.css">
+    <link rel="stylesheet" href="./Css/藝文場館.css">
     <script src="./JavaScript/首頁.js"></script>
-
-
-    <style>
-        .openBox {
-            position: relative;
-            left: 30px;
-            top: -170px;
-            margin: 10px;
-            cursor: pointer;
-            border: none;
-            background-color: transparent;
-
-            /* 如果要有圓底背景 */
-            /* background-color: rgba(136, 156, 155, 0.5);
-            box-shadow: 3px 3px 5px rgb(67, 65, 65);
-            border-radius: 50%;
-            width: 130px;
-            height: 130px; */
-
-        }
-
-        p {
-            font-size: 13px;
-            letter-spacing: 1px;
-            margin-top: 2px;
-        }
-        p::first-letter{
-            font-size: 15px;
-        }
-        .openBox:focus {
-            outline: 0;
-        }
-
-        .openBox img {
-
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            filter: saturate(150%);
-        }
-
-
-        .overlay {
-            position: fixed;
-            display: none;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(26, 25, 25, 0.5);
-            z-index: 2;
-        }
-
-        .popup {
-            position: absolute;
-            width: 50%;
-            height: 50%;
-            top: 25%;
-            left: 25%;
-            text-align: center;
-            background: white;
-        }
-
-        .popup h3 {
-            font-size: 15px;
-            height: 50px;
-            line-height: 50px;
-            color: black;
-        }
-
-        .CloseIcon {
-            cursor: pointer;
-        }
-
-        /* 藝文活動裡的class */
-        .background {
-            background: #fcfcfc;
-            margin-left: 30px;
-        }
-
-        .bottom-Text h5 {
-            color: #403F3D;
-            opacity: 0.5;
-            margin-left: -30px;
-        }
-
-        /* +++++*/
-        .fi-rr-plus-small:hover {
-            color: #403F3D;
-        }
-    </style>
-
+    <script src="./JavaScript/藝文場館.js"></script>
 
 </head>
 
@@ -352,40 +262,6 @@
 
 
 
-    <script>
-        fetch('./text場館.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (myJson) {
-                console.log(myJson);
-                const showVenueNorth = document.querySelector('#showVenueNorth')
-                let html = ''
-                myJson.forEach(element => {
-
-                    html += `
-                        <div class="col-lg-2">
-                            <button class="openBox" onclick="OpenModal()">
-                                <img src="${element.場館圖片}" title="${element.場館名稱}">
-                                <p>${element.場館名稱}</p>
-                            </button>
-                        </div>
-                        
-                        `;
-                });
-                showVenueNorth.innerHTML += html;
-            });
-        function OpenModal() {
-            let element = document.getElementById('overlay')
-            element.style.display = 'block'
-        }
-        function CloseModal() {
-            let element = document.getElementById('overlay')
-            element.style.display = 'none'
-        }
-
-
-    </script>
 
 </body>
 

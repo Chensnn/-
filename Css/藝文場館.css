@@ -1,0 +1,93 @@
+ /* img的背景框 */
+ .openBox {
+     position: relative;
+     left: 30px;
+     top: -170px;
+     margin: 10px;
+     cursor: pointer;
+     border: none;
+     background-color: transparent;
+
+     /* 如果要有圓底背景 */
+     /* background-color: rgba(136, 156, 155, 0.5);
+    box-shadow: 3px 3px 5px rgb(67, 65, 65);
+    border-radius: 50%;
+    width: 130px;
+    height: 130px; */
+
+ }
+
+ /* img下的標題文字 */
+ p {
+     font-size: 13px;
+     letter-spacing: 1px;
+     margin-top: 2px;
+ }
+
+ p::first-letter {
+     font-size: 15px;
+ }
+
+ /* 取消butoon的預設邊框 */
+ .openBox:focus {
+     outline: 0;
+ }
+
+ /* 調整img樣式 */
+ .openBox img {
+     border-radius: 50%;
+     width: 120px;
+     height: 120px;
+     filter: saturate(150%);
+ }
+
+ /* 彈出視窗的背景 */
+ .overlay {
+     position: fixed;
+     display: none;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: rgba(26, 25, 25, 0.5);
+     z-index: 2;
+ }
+
+ /* 彈出視窗 */
+ .popup {
+     position: absolute;
+     width: 50%;
+     height: 50%;
+     top: 25%;
+     left: 25%;
+     text-align: center;
+     background: white;
+ }
+
+ .popup h3 {
+     font-size: 15px;
+     height: 50px;
+     line-height: 50px;
+     color: black;
+ }
+
+ .CloseIcon {
+     cursor: pointer;
+ }
+
+ /* 藝文活動裡的class */
+ .background {
+     background: #fcfcfc;
+     margin-left: 30px;
+ }
+
+ .bottom-Text h5 {
+     color: #403F3D;
+     opacity: 0.5;
+     margin-left: -30px;
+ }
+
+ /* +++++*/
+ .fi-rr-plus-small:hover {
+     color: #403F3D;
+ }
