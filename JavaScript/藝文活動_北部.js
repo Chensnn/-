@@ -1,20 +1,14 @@
-function doFirst(){
-
-
 
     fetch('./text.json')
             .then(function (response) {
                 return response.json();
             })
             .then(function (myJson) {
-                console.log(myJson);
-
+              
                 const table = document.querySelector('#showInfo')
-
 
                 let html = ''
                 myJson.forEach(element => {
-                   
                     html += `
                             <div class="container">
                                 <div class="column">
@@ -37,19 +31,9 @@ function doFirst(){
                             `;
                 });
                 table.innerHTML += html;
-
-
-
-
-
-
             });
 
 
 
 
 
-
-}
-
-window.addEventListener('load',doFirst)
