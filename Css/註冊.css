@@ -1,71 +1,95 @@
-/* * {
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+body{
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
-} */
+    color: #403F3D;
+    background-color: #fcfdfd;
+}
+.fi-rr-caret-down{
+    font-size: 18px;
+}
 
 button:focus {
-    outline: 0px dotted;
+    outline: 0px ;
     outline: 0px auto -webkit-focus-ring-color;
 }
 
 
 .btnClick {
-    border-radius: 20px;
+    border-radius: 5px;
     border: 0px;
-    background-color: #F2eee3;
-    color: #403F3D;
-    font-size: 15px;
-    font-weight: 700;
-    margin-top: 10px;
-    padding: 12px 45px;
+    background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224));
+    box-shadow: 1px 1px 5px #403F3D;
+
+    font-size: 17px;
+    font-weight: 300;
+
+    position: relative;
+    right: -205px;
+    bottom: -10px;
+    padding: 10px;
+
     letter-spacing: 2px;
     cursor: pointer;
 }
-
-.sub {
-
-    text-align: center;
-}
-
-.btnClick:active {
+.btnClick:hover {
     transform: scale(1.1);
 }
 
-input {
-    background-color: #f2eee3;
+.background input {
+
+    font-weight: 300;
+    height: 30px;
+    padding: 5px 10px;
+    background-color: rgba(64, 63, 61, 0.3);
+    /* box-shadow: 1px 1px 5px #403F3D; */
     border: none;
-    padding: 1px 10px;
-    margin: 10px 10px;
+    border-radius: 5px;
+}
+.background input:focus{
+   outline: none;
+   font-weight: 700;
+}
+::placeholder{
+    font-size: 13px;
+	color: #97A6A2;
+	/* text-align: center; */
 }
 
 label {
-    margin-right: 30px;
-    font-weight: 700;
+    margin-right: 20px;
+    margin-top:10px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
 }
 
 label.email {
-    margin-right: 18px;
+    margin-right: 7px;
 }
 
-label.radio {
-    margin-right: 34px;
+
+.background span{
+    position: relative;
+    right: 5px;
+    font-weight: 300;
+}
+input[type="radio"]{
+    margin-right: 10px;
+    position: relative;
+    top:10px
 }
 
 .background {
-    background: #f6f5f7;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    font-family: 'Noto Sans TC', sans-serif;
     height: 75vh;
-    width: 100vh;
+   
+    width: 30%;
+    background: #fffff0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #403F3D;
+
+    margin-right: 250px;
 }
 
-/* ------0828新增以下----- */
-/* .searchInput{
-    margin-bottom: 30px;
-}
-.loginReg{
-    margin-bottom: -110px;
-} */
