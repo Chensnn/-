@@ -1,6 +1,9 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
 @import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
 
+*{
+    color: #403F3D;
+}
 /* img的背景框 */
 .openBox {
     position: relative;
@@ -31,6 +34,7 @@
     width: 120px;
     height: 120px;
     filter: saturate(150%);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 /* img下的標題文字 */
@@ -41,7 +45,7 @@
 }
 
 .openBox p::first-letter {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 
@@ -53,8 +57,9 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(26, 25, 25, 0.5);
+    background: rgba(26, 25, 25, 0.8);
     z-index: 2;
+
 }
 
 .overlay p {
@@ -69,12 +74,16 @@
 
 /* 彈出視窗 */
 .popup {
-    position: absolute;
+    position: fixed;
     width: 50%;
     height: 50%;
     top: 25%;
     left: 25%;
     background: #fcfcfc;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+
 }
 
 .CloseIcon {
@@ -133,6 +142,10 @@ label {
     font-size: 15px;
 }
 
+
+label {
+    display: none;
+}
 
 
 
