@@ -26,78 +26,6 @@
     <link rel="stylesheet" href="./Css/註冊.css">
 
 
-    <style>
-
-        /* 左邊的區塊的主要div */
-        .leftBox {
-            width: 25%;
-            height: 45vh;
-            /* background: linear-gradient(169deg, rgb(242, 204, 181), rgb(240, 246, 224)); */
-            /* box-shadow: 1px 1px 10px #403F3D; */
-            float: left;
-            border-radius: 5px;
-            margin-left: 200px;
-            margin-top: 30px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* 裡面icon的調整 */
-        .memberIcon {
-            width: 70px;
-            height: 70px;
-            margin: 10px auto;
-            opacity: 0.7;
-        }
-
-        /* 左區塊大標和小標 */
-        .leftBox h4,
-        .leftBox p {
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-
-        p {
-            font-size: 16px;
-            margin-left: 13px;
-        }
-
-        /* 小標區塊的內容 */
-        .text {
-            position: absolute;
-            margin-top: 33%;
-        }
-
-        .text button {
-            padding: 10px 8px;
-            border: none;
-            font-size: 15px;
-            letter-spacing: 2px;
-
-            background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224));
-            box-shadow: 1px 1px 10px #403F3D;
-
-            border-radius: 5px;
-            margin-left: -1px;
-            margin-top: 5px;
-        }
-        .text button:hover{
-            background: #CAD9A2;
-            text-decoration: none;
-        }
-        .text a {
-            color: #403F3D;
-            text-decoration: none;
-        }
-        form{
-            /* background-color:rgb(244, 246, 248); */
-            /* border-radius: 10px; */
-            padding: 30px;
-            
-        }
-    </style>
 </head>
 
 <body>
@@ -171,43 +99,47 @@
 
     <div class="container background">
         <div class="row">
-            <form action="#">
-                <div><i class="fi fi-rr-caret-down"></i>
-                    <label for="name">姓名</label>
-                    <input type="text" id="name" placeholder="Name" size="9" required>
-                </div>
-                <div><i class="fi fi-rr-caret-down"></i>
-                    <label for="">性別</label>
-                    <input type="radio" name="gender" value="male" id=""><span>男</span>
-                    <input type="radio" name="gender" value="female" id=""><span>女</span>
-                </div>
-                <div><i class="fi fi-rr-caret-down"></i>
-                    <label for="birthdayDate">生日</label>
-                    <input type="date" id="birthdayDate" required>
-                </div>
-                <div><i class="fi fi-rr-caret-down"></i>
-                    <label for="address">地址</label>
-                    <input type="text" id="address" placeholder="Address" required>
-                </div>
-                <div><i class="fi fi-rr-caret-down"></i>
-                    <label for="email" class="email">Email</label>
-                    <input type="email" id="email" placeholder="Email" required>
-                </div>
-                <div><i class="fi fi-rr-caret-down"></i>
-                    <label for="phone">電話</label>
-                    <input type="tel" id="phone" placeholder="Phone" required>
-                </div>
-                <div><i class="fi fi-rr-caret-down"></i>
-                    <label for="account">帳號</label>
-                    <input type="text" id="account" placeholder="Account" required>
-                </div>
-                <div><i class="fi fi-rr-caret-down"></i>
-                    <label for="password">密碼</label>
-                    <input type="password" id="password" placeholder="Password" required>
-                </div>
-                <div>
-                    <button class="btnClick" id="signUpMem">註冊會員</button>
-                </div>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>會員資料填寫</legend>
+                    <div><i class="fi fi-rr-caret-down"></i>
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="Name" size="9" required>
+                    </div>
+                    <div><i class="fi fi-rr-caret-down"></i>
+                        <label for="">性別</label>
+                        <input type="radio" name="gender" value="male" id=""><span>男</span>
+                        <input type="radio" name="gender" value="female" id=""><span>女</span>
+                    </div>
+                    <div><i class="fi fi-rr-caret-down"></i>
+                        <label for="birthdayDate">生日</label>
+                        <input type="date" id="birthdayDate" required>
+                    </div>
+                    <div><i class="fi fi-rr-caret-down"></i>
+                        <label for="address">地址</label>
+                        <input type="text" id="address" placeholder="Address" required>
+                    </div>
+                    <div><i class="fi fi-rr-caret-down"></i>
+                        <label for="email" class="email">Email</label>
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div><i class="fi fi-rr-caret-down"></i>
+                        <label for="phone">電話</label>
+                        <input type="tel" id="phone" placeholder="Phone" required>
+                    </div>
+                    <div><i class="fi fi-rr-caret-down"></i>
+                        <label for="account">帳號</label>
+                        <input type="text" id="account" placeholder="Account" required>
+                    </div>
+                    <div><i class="fi fi-rr-caret-down"></i>
+                        <label for="password">密碼</label>
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div>
+                        <button class="btnClick" id="signUpMem">註冊會員</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
     </div>

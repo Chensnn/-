@@ -1,16 +1,18 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
-body{
+
+body {
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
     color: #403F3D;
     background-color: #fcfdfd;
 }
-.fi-rr-caret-down{
+
+.fi-rr-caret-down {
     font-size: 18px;
 }
 
 button:focus {
-    outline: 0px ;
+    outline: 0px;
     outline: 0px auto -webkit-focus-ring-color;
 }
 
@@ -18,23 +20,26 @@ button:focus {
 .btnClick {
     border-radius: 5px;
     border: 0px;
-    background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224));
+    background-color: rgba(64, 63, 61, 0.3);
     box-shadow: 1px 1px 5px #403F3D;
 
     font-size: 17px;
     font-weight: 300;
-
+    width: 220px;
     position: relative;
-    right: -205px;
+    right: -80px;
     bottom: -10px;
-    padding: 10px;
+    padding: 5px;
 
     letter-spacing: 2px;
     cursor: pointer;
 }
+
 .btnClick:hover {
     transform: scale(1.1);
 }
+
+
 
 .background input {
 
@@ -46,19 +51,20 @@ button:focus {
     border: none;
     border-radius: 5px;
 }
-.background input:focus{
-   outline: none;
-   font-weight: 700;
+
+.background input:focus {
+    outline: none;
+    font-weight: 700;
 }
-::placeholder{
+
+::placeholder {
     font-size: 13px;
-	color: #97A6A2;
-	/* text-align: center; */
+    color: #97A6A2;
 }
 
 label {
     margin-right: 20px;
-    margin-top:10px;
+    margin-top: 10px;
     font-weight: 300;
     letter-spacing: 1.5px;
 }
@@ -68,28 +74,109 @@ label.email {
 }
 
 
-.background span{
+.background span {
     position: relative;
     right: 5px;
     font-weight: 300;
 }
-input[type="radio"]{
+
+input[type="radio"] {
     margin-right: 10px;
     position: relative;
-    top:10px
+    top: 10px
 }
 
 .background {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
-   
-    width: 30%;
+    height: 80vh;
+
+    width: 40%;
     background: #fffff0;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 1px 1px 10px #403F3D;
 
-    margin-right: 250px;
+    margin-right: 220px;
 }
 
+/* 左邊的區塊的主要div */
+.leftBox {
+    width: 25%;
+    height: 45vh;
+    /* background: linear-gradient(169deg, rgb(242, 204, 181), rgb(240, 246, 224)); */
+    box-shadow: 0px 9px 0px #CAD9A2;
+    float: left;
+    border-radius: 60%;
+    margin-left: 130px;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 裡面icon的調整 */
+.memberIcon {
+    width: 70px;
+    height: 70px;
+    margin: 10px auto;
+    opacity: 0.7;
+}
+
+/* 左區塊大標和小標 */
+.leftBox h4,
+.leftBox p {
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 16px;
+    margin-left: 13px;
+}
+
+/* 小標區塊的內容 */
+.text {
+    position: absolute;
+    margin-top: 33%;
+}
+
+.text button {
+    padding: 10px 8px;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 2px;
+
+    /* background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224)); */
+    /* box-shadow: 1px 1px 10px #403F3D; */
+
+    border-radius: 5px;
+    margin-left: -1px;
+    margin-top: 5px;
+}
+.text button:hover{
+    transform: scale(1.1);
+    text-decoration: none;
+}
+.text a {
+    color: #403F3D;
+    text-decoration: none;
+}
+/* 表格標籤 */
+form{
+    /* background-color:rgb(244, 246, 248); */
+    /* border-radius: 10px; */
+    padding: 40px;
+    
+}
+/* 表格標題 */
+legend{
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 10px;
+    text-align: center;
+    background:linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224));
+    border-radius: 5px;
+    padding: 3px;
+}
