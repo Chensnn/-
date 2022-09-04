@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +16,35 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
-     <!-- 導入Bootstrap -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- 導入Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-     <link rel="stylesheet" href="./Css/首頁.css">
+    <link rel="stylesheet" href="./Css/首頁.css">
+    <link rel="stylesheet" href="./Css/藝文活動.css">
+
+
+    <style>
+        .selectbackground {
+            font-family: 'Noto Sans TC', sans-serif;
+            color: #403F3D;
+            width: 100%;
+            height: 100px;
+            background-color: #fcfdfd;
+            box-shadow: 1px 1px 10px #403F3D;
+            border-radius: 15px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        select {
+            padding: 6px 4px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+    </style>
 </head>
+
 <body>
     <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top ">
         <div class="container-fluid">
@@ -75,6 +99,113 @@
     </nav>
 
 
+    
+    <div class="">
+        <div id="demo" class="carousel slide " data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#" data-slide-to="0" class="active"></li>
+                <li data-target="#" data-slide-to="1"></li>
+                <li data-target="#" data-slide-to="2"></li>
+                <li data-target="#" data-slide-to="3"></li>
+                <li data-target="#" data-slide-to="4"></li>
+                <li data-target="#" data-slide-to="5"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#" title="李友廷《冷身操》2022 LIVE TOUR"> <img src="./Images/李友廷-冷身操.jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文總覽</h2>
+                        <p>藝起來看展吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="2022國語作業簿：台北歡樂耶誕城"> <img src="./Images/國語作業簿(廣告輪播).jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文總覽</h2>
+                        <p>藝起來看展吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="高流系：超營養學分"><img src="./Images/高流系.png"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文總覽</h2>
+                        <p>藝起來看展吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="蔡健雅 Tanya’s Live《DEPART to RETURN》"><img src="./Images/蔡健雅(廣告).jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文總覽</h2>
+                        <p>藝起來看展吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="爛泥發芽2022台北場"><img src="./Images/爛泥發芽.jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文總覽</h2>
+                        <p>藝起來看展吧</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#" title="《 NUWA五色石 》蘭花刀 New Album Release 2022 Tour"><img src="./Images/NUWA五色石.jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文總覽</h2>
+                        <p>藝起來看展吧</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row selectbackground">
+            <div>
+                <select>
+                    <option>請選擇地區</option>
+                    <option>北部</option>
+                    <option>中部</option>
+                    <option>南部</option>
+                    <option>東部</option>
+                </select>
+            </div>
+            <div>
+                <select>
+                    <option>請選擇展覽類型</option>
+                    <option>樂團表演</option>
+                    <option>歌劇欣賞</option>
+                    <option>劇團演出</option>
+                    <option>藝文講座</option>
+                    <option>創意市集</option>
+                    <option>相聲</option>
+                    <option>音樂會</option>
+                    <option>舞台劇</option>
+                    <option>音樂祭</option>
+                    <option>美術類</option>
+                    <option>布袋戲</option>
+                    <option>藝文靜態展覽</option>
+                </select>
+            </div>
+            <div>
+                <input type="date" class="form-control">
+            </div>
+            <div>
+                <input type="date" class="form-control">
+            </div>
+            <div>
+                <button class="btn btn-outline-dark">Search</button>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
     <footer class="">
@@ -88,6 +219,7 @@
         </div>
     </footer>
 
-    
+
 </body>
+
 </html>
