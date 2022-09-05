@@ -5,7 +5,7 @@
             })
             .then(function (myJson) {
               
-                const table = document.querySelector('#showInfoNorth')
+                const table = document.querySelector('#showInfoSouth')
 
                 let html = ''
                 myJson.forEach(element => {

@@ -72,8 +72,14 @@
     color: #403F3D;
     margin-top: 50px;
 }
-.card-back-text h6,
+.card-back-text h5
+{
+    
+    margin-top: 10px;
+    font-size: 15px;
+}
 .card-back-text p{
+    margin-top: 15px;
     font-size: 15px;
 }
 
