@@ -20,8 +20,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+
+    <link href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+
+
     <link rel="stylesheet" href="./Css/首頁.css">
     <link rel="stylesheet" href="./Css/藝文活動.css">
+    <link rel="stylesheet" href="./Css/藝文總覽.css">
+    <script src="./JavaScript/藝文總覽.js"></script>
 
 
     <style>
@@ -35,12 +43,65 @@
             border-radius: 15px;
             justify-content: space-evenly;
             align-items: center;
+            margin: 50px auto;
         }
 
         select {
             padding: 6px 4px;
             border: 1px solid #ced4da;
             border-radius: 5px;
+        }
+
+        .showInfoBk {
+            width: 100%;
+            margin: 50px auto;
+
+        }
+
+        .imgCard {
+            width: 160px;
+            height: 160px;
+            position: relative;
+        }
+
+        .imgCard img {
+            width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        figcaption {
+            font-size: 10px;
+            background-color: #222;
+            color: #fcfdfd;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .6s ease;
+            background-color: #403F3D;
+        }
+
+        .imgCard:hover .overlay {
+            opacity: 0.9;
+        }
+
+        .text {
+            color: #fcfdfd;
+            font-size: 10px;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -99,7 +160,7 @@
     </nav>
 
 
-    
+
     <div class="">
         <div id="demo" class="carousel slide " data-ride="carousel">
             <ul class="carousel-indicators">
@@ -164,7 +225,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="container ">
         <div class="row selectbackground">
             <div>
                 <select>
@@ -203,6 +264,43 @@
             </div>
         </div>
     </div>
+
+
+    <div class="container showInfoBk">
+        <div class="row">
+            <div class="col-lg-2">
+                <figure>
+                    <div class="imgCard">
+                        <a href="#"><img src="./Images/A.搖滾兒歌｜呼叫！夏天戰隊jpeg.jpeg"></a>
+                        <div class="overlay">
+                            <div class="text">Hello World</div>
+                        </div>
+                        <figcaption>陪你長大工作室劇團</br>搖滾兒歌｜呼叫！夏天戰隊</figcaption>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-2">
+                <figure>
+                    <div class="imgCard">
+                        <a href="#"><img src="./Images/A.搖滾兒歌｜呼叫！夏天戰隊jpeg.jpeg"></a>
+                        <div class="overlay">
+                            <div class="text">Hello World</div>
+                        </div>
+                        <figcaption>陪你長大工作室劇團</br>搖滾兒歌｜呼叫！夏天戰隊</figcaption>
+                    </div>
+                </figure>
+            </div>
+        </div>
+        <!-- <div class="row">要新增的下一排位置</div>
+        <div class="row">要新增的下一排位置</div> -->
+
+    </div>
+
+
+
+
+
+
 
 
 
