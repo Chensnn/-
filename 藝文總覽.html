@@ -29,81 +29,10 @@
     <link rel="stylesheet" href="./Css/首頁.css">
     <link rel="stylesheet" href="./Css/藝文活動.css">
     <link rel="stylesheet" href="./Css/藝文總覽.css">
+    <link rel="icon" type="image/x-icon" href="./Images/A.png">
     <script src="./JavaScript/藝文總覽.js"></script>
+   
 
-
-    <style>
-        .selectbackground {
-            font-family: 'Noto Sans TC', sans-serif;
-            color: #403F3D;
-            width: 100%;
-            height: 100px;
-            background-color: #fcfdfd;
-            box-shadow: 1px 1px 10px #403F3D;
-            border-radius: 15px;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 50px auto;
-        }
-
-        select {
-            padding: 6px 4px;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-        }
-
-        .showInfoBk {
-            width: 100%;
-            margin: 50px auto;
-
-        }
-
-        .imgCard {
-            width: 160px;
-            height: 160px;
-            position: relative;
-        }
-
-        .imgCard img {
-            width: 100%;
-            max-height: 100%;
-            display: block;
-        }
-
-        figcaption {
-            font-size: 10px;
-            background-color: #222;
-            color: #fcfdfd;
-            padding: 3px;
-            text-align: center;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .6s ease;
-            background-color: #403F3D;
-        }
-
-        .imgCard:hover .overlay {
-            opacity: 0.9;
-        }
-
-        .text {
-            color: #fcfdfd;
-            font-size: 10px;
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
 </head>
 
 <body>
@@ -240,6 +169,7 @@
                 <select>
                     <option>請選擇展覽類型</option>
                     <option>樂團表演</option>
+                    <option>演唱會</option>
                     <option>歌劇欣賞</option>
                     <option>劇團演出</option>
                     <option>藝文講座</option>
@@ -265,44 +195,26 @@
         </div>
     </div>
 
-
-    <div class="container showInfoBk">
-        <div class="row">
-            <div class="col-lg-2">
-                <figure>
-                    <div class="imgCard">
-                        <a href="#"><img src="./Images/A.搖滾兒歌｜呼叫！夏天戰隊jpeg.jpeg"></a>
-                        <div class="overlay">
-                            <div class="text">Hello World</div>
+    
+        <div class="container showInfoBk">
+            <div class="row" id="showInfoBk">
+                <!-- <div class="col-lg-3">
+                    <figure>
+                        <div class="imgCard">
+                            <img src="./Images/韋禮安.jpg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <p>如果可以，我想和你明天再見，好像隨時某一刻就會被剝奪的相聚，在約定再見之前踏實地預習相見時的光影，如果可以，我想和你明天再見，無關期盼，是我們之間的約定。</p>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <figcaption>台北小巨蛋</br>如果可以，我想和你明天再見</figcaption>
+                            </a>
                         </div>
-                        <figcaption>陪你長大工作室劇團</br>搖滾兒歌｜呼叫！夏天戰隊</figcaption>
-                    </div>
-                </figure>
-            </div>
-            <div class="col-lg-2">
-                <figure>
-                    <div class="imgCard">
-                        <a href="#"><img src="./Images/A.搖滾兒歌｜呼叫！夏天戰隊jpeg.jpeg"></a>
-                        <div class="overlay">
-                            <div class="text">Hello World</div>
-                        </div>
-                        <figcaption>陪你長大工作室劇團</br>搖滾兒歌｜呼叫！夏天戰隊</figcaption>
-                    </div>
-                </figure>
+                    </figure>
+                </div> -->
             </div>
         </div>
-        <!-- <div class="row">要新增的下一排位置</div>
-        <div class="row">要新增的下一排位置</div> -->
-
-    </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -317,7 +229,7 @@
         </div>
     </footer>
 
-
+    
 </body>
 
 </html>

@@ -57,11 +57,15 @@ a{
 .fi-rr-angle-circle-left:hover {
     color: #403F3D;
 }
+/* #showInfo{
+    width: 80%;
+} */
 
 /* 藝文活動裡的class */
 .background {
     background: #fcfcfc;
     margin-left: 30px;
+    min-width: 100%;
 }
 
 .bottom-Text h5 {
