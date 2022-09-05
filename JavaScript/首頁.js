@@ -14,3 +14,16 @@ $(document).on("scroll", function () {
     }
 });
 
+
+// rwd的Js
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+

@@ -25,12 +25,10 @@
 
     <!-- icon -->
     <script src="https://kit.fontawesome.com/a32b9111be.js" crossorigin="anonymous"></script>
-
-
-
     <link rel="stylesheet" href="./Css/首頁.css">
     <script type="text/javascript" src="./JavaScript/首頁.js"></script>
 
+    
 
 </head>
 
@@ -38,7 +36,7 @@
 
     <!-- sticky-top讓navbar固定在上方 nav-tabs是會有下底線 -->
 
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top ">
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light setRwdNav">
         <div class="container-fluid">
             <a class="navbar-brand " href="./首頁.html" title="藝起來玩">藝起來玩</a>
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
@@ -90,6 +88,31 @@
         </div>
     </nav>
 
+    <!-- 目前只有首頁有Rwd -->
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h6>藝文地圖</h6>
+        <a href="./藝文總覽.html"><i class="fi fi-br-copy"></i>藝文總覽</a>
+        <a href="./藝文場館.html"><i class="fi fi-br-copy"></i>藝文場館</a>
+        <a href="./藝文活動.html"><i class="fi fi-br-copy"></i>藝文活動</a>
+        <hr>
+        <h6>票券交流</h6>
+        <a href="./瀏覽訊息.html"><i class="fi fi-br-copy"></i>瀏覽訊息</a>
+        <a href="./我要刊登.html"><i class="fi fi-br-copy"></i>我要刊登</a>
+        <hr>
+        <a href="#"><i class="fi fi-br-copy"></i>藝文旅遊</a>
+        <a href="./登入.html"><i class="fi fi-br-copy"></i>會員專區</a>
+        <a href="#"><i class="fi fi-br-copy"></i>關於我們</a>
+
+    </div>
+
+
+    <div class="closeIcon">
+        <span onclick="openNav()">&#9776;</span>
+    </div>
+
+    <!-- Slider -->
     <div class="">
         <div id="demo" class="carousel slide " data-ride="carousel">
             <ul class="carousel-indicators">
@@ -464,7 +487,6 @@
             </div>
         </div>
     </footer>
-
 
 
 </body>

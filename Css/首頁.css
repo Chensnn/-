@@ -67,6 +67,7 @@ body {
 }
 
 
+
 .dropdown-menu li:hover .sub-menu {
     visibility: visible;
 }
@@ -149,16 +150,18 @@ body {
     color: #403F3D;
 
 }
-/* 首頁右上角RWD(未完成) */
+/* 首頁右上角RWD*/
 @media screen and (max-width:576px) {
-    .loginReg a {
-        
-        margin-left: 10px;
-        font-size: 6px;
+    .loginReg{
+        display: none;
+    }
+    .navbar-light .navbar-brand {
+        font-size: 18px;
         font-weight: 300;
-        text-decoration: none;
-        opacity: 1;
-
+        color: #403F3D;
+        margin: 3px auto;
+        margin-top: 7px;
+        letter-spacing: 6px;
     }
 }
 
@@ -229,10 +232,88 @@ body {
 }
 
 nav {
-    margin-bottom: 50px;
-    /* margin-top: 10px; */
+    margin-bottom: 40px;
     box-shadow: 1px 3px 30px #c1bfb9;
-    
+}
+/* 因為一直跑版，用給rwd的class來調整nav距離，只有首頁要新增這個class*/
+.setRwdNav{
+    margin-bottom:-180px;
+}
+/* nav的RWd */
+@media screen and (max-width: 576px) {
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(100px);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        font-family: 'Noto Sans TC', sans-serif;
+
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 300;
+        color: #403F3D;
+        display: block;
+        transition: 0.5s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 45px;
+        color: #fcfdfd;
+    }
+
+    .sidenav h6 {
+        margin-left: 40px;
+        letter-spacing: 10px;
+        font-weight: 500;
+    }
+
+    .fi-br-copy {
+        margin-right: 10px;
+    }
+
+    .closeIcon span {
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .setRwdNav {
+        margin-bottom: 20px;
+    }
+
+
+
+}
+
+/* 超過就隱藏 */
+@media screen and (min-width:577px) {
+    .sidenav {
+        visibility: hidden;
+    }
+
+    .closeIcon {
+        visibility: hidden;
+    }
 }
 
 
@@ -668,3 +749,5 @@ footer{
 footer p{
     margin-top: 10px;
 }
+
+
