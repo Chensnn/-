@@ -24,6 +24,6 @@ fetch('./text.json')
                     </div>
                 </figure>
             </div>`
-});
+        });
         table.innerHTML += html;
     });
