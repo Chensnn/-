@@ -1,28 +1,7 @@
-// ===================================================================================北部
-// 網頁載入先跑出圖片圖片有加一個click事件
-fetch('./text場館.json')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (myJson) {
-        console.log(myJson);
-        const showVenueNorth = document.querySelector('#showVenueNorth')
-        let html = ''
-        myJson.forEach(element => {
+// 場館資料:各地區最多12筆
 
-            // 在這邊先找出第幾張照片被點擊
-            html += `
-            <div class="col-lg-2">
-                <button class="openBox" onclick="OpenModal(${element.場館編號})">
-                    <img src="${element.場館圖片}" title="${element.場館名稱}">
-                    <p>${element.場館名稱}</p>
-                </button>
-            </div>
-            `;
-        });
-        showVenueNorth.innerHTML += html;
-    });
 
+// ======================================================================openModal()和主頁的close是共用的
 
 function OpenModal(el) {
 
@@ -121,8 +100,32 @@ Closebox.addEventListener('click', function () {
     let element = document.getElementById('overlay')
     element.style.display = 'none'
 })
+// ======================================================================openModal()和主頁的close是共用的
 
+// ===================================================================================北部
+// 網頁載入先跑出圖片圖片有加一個click事件
+fetch('./text場館.json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
+        console.log(myJson);
+        const showVenueNorth = document.querySelector('#showVenueNorth')
+        let html = ''
+        myJson.forEach(element => {
 
+            // 在這邊先找出第幾張照片被點擊
+            html += `
+            <div class="col-lg-2">
+                <button class="openBox" onclick="OpenModal(${element.場館編號})">
+                    <img src="${element.場館圖片}" title="${element.場館名稱}">
+                    <p>${element.場館名稱}</p>
+                </button>
+            </div>
+            `;
+        });
+        showVenueNorth.innerHTML += html;
+    });
 // ===================================================================================北部
 
 // ===================================================================================中部
@@ -147,6 +150,55 @@ fetch('./text場館.json')
             </div>
             `;
         });
-        showVenueNorth.innerHTML += html;
+        showVenueCentral.innerHTML += html;
     });
 
+// ===================================================================================南部
+
+fetch('./text場館.json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
+        console.log(myJson);
+        const showVenueNorth = document.querySelector('#showVenueSouth')
+        let html = ''
+        myJson.forEach(element => {
+
+
+            html += `
+            <div class="col-lg-2">
+                <button class="openBox" onclick="OpenModal(${element.場館編號})">
+                    <img src="${element.場館圖片}" title="${element.場館名稱}">
+                    <p>${element.場館名稱}</p>
+                </button>
+            </div>
+            `;
+        });
+        showVenueSouth.innerHTML += html;
+    });
+
+// ===================================================================================東部
+
+fetch('./text場館.json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
+        console.log(myJson);
+        const showVenueNorth = document.querySelector('#showVenueEast')
+        let html = ''
+        myJson.forEach(element => {
+
+
+            html += `
+            <div class="col-lg-2">
+                <button class="openBox" onclick="OpenModal(${element.場館編號})">
+                    <img src="${element.場館圖片}" title="${element.場館名稱}">
+                    <p>${element.場館名稱}</p>
+                </button>
+            </div>
+            `;
+        });
+        showVenueEast.innerHTML += html;
+    });
