@@ -173,7 +173,7 @@ form{
 /* 表格標題 */
 legend{
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: 10px;
     text-align: center;
     background:linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224));
