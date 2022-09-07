@@ -29,8 +29,8 @@
     <link rel="stylesheet" href="./Css/首頁.css">
     <link rel="stylesheet" href="./Css/藝文活動.css">
     <link rel="stylesheet" href="./Css/藝文總覽.css">
-    <link rel="icon" type="image/x-icon" href="./Images/A.png">
-    <script src="./JavaScript/藝文總覽.js"></script>
+    <!-- <link rel="icon" type="image/x-icon" href="./Images/A.png"> -->
+    
 
 
 </head>
@@ -157,44 +157,45 @@
     <div class="container ">
         <div class="row selectbackground">
             <div>
-                <select>
-                    <option>請選擇地區</option>
-                    <option>北部</option>
-                    <option>中部</option>
-                    <option>南部</option>
-                    <option>東部</option>
+                <select id="selectSection" onchange="changeVenvu(this.selectedIndex)">
+                    <!-- <option selected disabled>請選擇地區</option>
+                    <option value="北部">北部</option>
+                    <option value="中部">中部</option>
+                    <option value="南部">南部</option>
+                    <option value="東部">東部</option> -->
                 </select>
             </div>
             <div>
-                <select>
-                    <option>請選擇展覽類型</option>
-                    <option>樂團表演</option>
-                    <option>演唱會</option>
-                    <option>歌劇欣賞</option>
-                    <option>劇團演出</option>
-                    <option>藝文講座</option>
-                    <option>創意市集</option>
-                    <option>相聲</option>
-                    <option>音樂會</option>
-                    <option>舞台劇</option>
-                    <option>音樂祭</option>
-                    <option>美術類</option>
-                    <option>布袋戲</option>
-                    <option>藝文靜態展覽</option>
+                <select id="selectExhibition">
+                    <!-- <option selected disabled>請選擇展覽類型</option>
+                    <option value="樂團表演">樂團表演</option>
+                    <option value="演唱會">演唱會</option>
+                    <option value="歌劇欣賞">歌劇欣賞</option>
+                    <option value="劇團演出">劇團演出</option>
+                    <option value="藝文講座">藝文講座</option>
+                    <option value="創意市集">創意市集</option>
+                    <option value="相聲">相聲</option>
+                    <option value="音樂會">音樂會</option>
+                    <option value="舞台劇">舞台劇</option>
+                    <option value="音樂祭">音樂祭</option>
+                    <option value="美術類">美術類</option>
+                    <option value="布袋戲">布袋戲</option>
+                    <option value="藝文靜態展覽">藝文靜態展覽</option> -->
                 </select>
             </div>
             <div>
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" id="startTime">
             </div>
             <div>
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" id="endTime">
             </div>
             <div>
-                <button class="btn btn-outline-dark">Search</button>
+                <button class="btn btn-outline-dark" id="searchbtn">Search</button>
             </div>
         </div>
     </div>
 
+    
 
     <div class="container showInfoBk">
         <div class="row" id="showInfoBk">
@@ -229,7 +230,8 @@
         </div>
     </footer>
 
-
+    <!-- 要放這邊 -->
+    <script src="./JavaScript/藝文總覽.js"></script>
 </body>
 
 </html>
