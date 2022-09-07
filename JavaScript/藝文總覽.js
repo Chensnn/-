@@ -36,7 +36,7 @@ fetch('./text.json')
 
 let searchbtn = document.getElementById('searchbtn')
 
-let area = ["北部", "中部", "南部", "東部"]
+let area = ["北部", "中部", "南部", "東部"];
 
 let vVenue = new Array();
 
@@ -56,22 +56,34 @@ vVenue[3] = ["金車文藝中心", "宜蘭傳藝園區", "維納斯藝廊", "臺
 
 // let eastVenue = ["金車文藝中心", "宜蘭傳藝園區", "維納斯藝廊", "臺東表演藝術館", "鐵花村音樂聚落慢市集", "臺東生活美學館", "台東藝文活動中心"]
 
-
+$(document).ready(function(){
+    
+})
 
 
 // 先選地區後select選單跳出場館名稱
-
-
+// 1.要先找出area點的是第幾筆
+let areaclick ='';
 const selectSection = document.getElementById('selectSection')
+selectSection.addEventListener('change',()=>{
+    areaclick=selectSection.selectedIndex
+    // console.log(areaclick); 得到第幾筆
+    // console.log(area[areaclick]); //得到點擊那一筆的值
+    // console.log(selectSection.options[selectSection.selectedIndex].text);
+})
+
+
+
+
 var inner = "";
 for (var i = 0; i < area.length; i++) {
 
     inner = inner + '<option value=' + i + '>' + area[i] + '</option>';
+   
 }
 selectSection.innerHTML = inner;
 
 // 在html裡有幫第一個select加change事件，發生後就會執行以下的函式
-// 問題 為什麼函式都先寫在前面，後面才寫事件
 
 function changeVenvu(index) {
 
@@ -79,6 +91,7 @@ function changeVenvu(index) {
     for (var i = 0; i < vVenue[index].length; i++) {
 
         Sinner = Sinner + '<option value=' + i + '>' + vVenue[index][i] + '</option>';
+        // console.log(vVenue[0][1]);
     }
 
     const selectExhibition = document.getElementById('selectExhibition')
@@ -87,9 +100,18 @@ function changeVenvu(index) {
 
 changeVenvu(document.getElementById('selectSection').selectedIndex);
 
+// 2.找出vVenue是第幾筆   
 
+let exhibitionclick = '';   let selectContent = '';
+const selectExhibition = document.getElementById('selectExhibition')
+selectExhibition.addEventListener('change',()=>{
 
+    exhibitionclick = selectExhibition.selectedIndex
+    // console.log(exhibitionclick);  //得到第幾筆
+    // console.log(vVenue[areaclick][exhibitionclick]);  //得到點擊那一筆的值
+    
 
+})
 
 // =====================================================
 
