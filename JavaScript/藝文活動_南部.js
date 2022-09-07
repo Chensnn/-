@@ -1,4 +1,5 @@
 
+//藝文活動南部 All展覽 tExHibition db
     fetch('./text.json')
             .then(function (response) {
                 return response.json();
@@ -13,16 +14,16 @@
                             <div class="container">
                                 <div class="column">
                                     <div class="divPic">
-                                        <a href="#"><img src="${element.展演圖片}"></a>
+                                        <a href="#"><img src="${element.eImage1}"></a>
                                     </div>
                                     <div class="col-12">
-                                        <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.展演名稱}</p>
-                                        <p>場館名稱<i class="fi fi-brands-patreon"></i>${element.場館名稱}</p>
-                                        <p>展演類型<i class="fi fi-brands-patreon"></i>${element.展演類型}</p>
-                                        <p>開始日期<i class="fi fi-brands-patreon"></i>${element.開始日期}</p>
-                                        <p>結束日期<i class="fi fi-brands-patreon"></i>${element.結束日期}</p>
-                                        <p>展演時間<i class="fi fi-brands-patreon"></i>${element.展演時間}</p>
-                                        <p>展演票價<i class="fi fi-brands-patreon"></i>${element.票價}</p>
+                                        <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.eName}</p>
+                                        <p>場館名稱<i class="fi fi-brands-patreon"></i>${element.eVenue}</p>
+                                        <p>展演類型<i class="fi fi-brands-patreon"></i>${element.eGenre}</p>
+                                        <p>開始日期<i class="fi fi-brands-patreon"></i>${element.eStartTime}</p>
+                                        <p>結束日期<i class="fi fi-brands-patreon"></i>${element.eEndTime}</p>
+                                        <p>展演時間<i class="fi fi-brands-patreon"></i>${element.eTime}</p>
+                                        <p>展演票價<i class="fi fi-brands-patreon"></i>${element.ePrice}</p>
                                         <p>購票連結<i class="fi fi-brands-patreon"></i><a href="${element.購票連結}" title="前往購票">${element.購票連結}</a></p>
                                         <hr>
                                     </div>

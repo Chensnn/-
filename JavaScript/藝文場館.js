@@ -22,12 +22,12 @@ function OpenModal(el) {
             for (let i = 0; i < 1; i++) {
                 html +=
 
-                    `<span><img src="${myJson[el - 1].場館圖片}"></span>
-                    <p>場館名稱<i class="fi fi-brands-patreon"></i>${myJson[el - 1].場館名稱}</p>
-                    <p>場館地區<i class="fi fi-brands-patreon"></i>${myJson[el - 1].所在地區}</p>
-                    <p>聯絡方式<i class="fi fi-brands-patreon"></i>${myJson[el - 1].聯絡方式}</p>
-                    <p>場館地址<i class="fi fi-brands-patreon"></i>${myJson[el - 1].場館地址}</p>
-                    <p>場館介紹<i class="fi fi-brands-patreon"></i>${myJson[el - 1].場館介紹}</p>
+                    `<span><img src="${myJson[el - 1].vImage1}"></span>
+                    <p>場館名稱<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vVenue}</p>
+                    <p>場館地區<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vArea}</p>
+                    <p>聯絡方式<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vPhone}</p>
+                    <p>場館地址<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vAddress}</p>
+                    <p>場館介紹<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vIntroduce}</p>
                     <p>營業時間<i class="fi fi-brands-patreon"></i>
             <div class="relativeForLabel">
                     <select class="selectDay" id="selectDay">
@@ -62,25 +62,25 @@ function OpenModal(el) {
 
                 switch (item) {
                     case "tab_Mon":
-                        label.innerHTML = `${myJson[el - 1].星期一}`
+                        label.innerHTML = `${myJson[el - 1].vMonday}`
                         break;
                     case "tab_Tue":
-                        label.innerHTML = `${myJson[el - 1].星期二}`
+                        label.innerHTML = `${myJson[el - 1].vTuesday}`
                         break;
                     case "tab_Wed":
-                        label.innerHTML = `${myJson[el - 1].星期三}`
+                        label.innerHTML = `${myJson[el - 1].vWednesday}`
                         break;
                     case "tab_Thr":
-                        label.innerHTML = `${myJson[el - 1].星期四}`
+                        label.innerHTML = `${myJson[el - 1].vThursday}`
                         break;
                     case "tab_Fri":
-                        label.innerHTML = `${myJson[el - 1].星期五}`
+                        label.innerHTML = `${myJson[el - 1].vFriday}`
                         break;
                     case "tab_Sat":
-                        label.innerHTML = `${myJson[el - 1].星期六}`
+                        label.innerHTML = `${myJson[el - 1].vSaturday}`
                         break;
                     case "tab_Sun":
-                        label.innerHTML = `${myJson[el - 1].星期日}`
+                        label.innerHTML = `${myJson[el - 1].vSunday}`
                         break;
                     default:
                         label.innerHTML = ``
@@ -117,9 +117,9 @@ fetch('./text場館.json')
             // 在這邊先找出第幾張照片被點擊
             html += `
             <div class="col-lg-2">
-                <button class="openBox" onclick="OpenModal(${element.場館編號})">
-                    <img src="${element.場館圖片}" title="${element.場館名稱}">
-                    <p>${element.場館名稱}</p>
+                <button class="openBox" onclick="OpenModal(${element.vId})">
+                    <img src="${element.vImage1}" title="${element.vVenue}">
+                    <p>${element.vVenue}</p>
                 </button>
             </div>
             `;
@@ -143,9 +143,9 @@ fetch('./text場館.json')
 
             html += `
             <div class="col-lg-2">
-                <button class="openBox" onclick="OpenModal(${element.場館編號})">
-                    <img src="${element.場館圖片}" title="${element.場館名稱}">
-                    <p>${element.場館名稱}</p>
+                <button class="openBox" onclick="OpenModal(${element.vId})">
+                    <img src="${element.vImage1}" title="${element.vVenue}">
+                    <p>${element.vVenue}</p>
                 </button>
             </div>
             `;
@@ -168,9 +168,9 @@ fetch('./text場館.json')
 
             html += `
             <div class="col-lg-2">
-                <button class="openBox" onclick="OpenModal(${element.場館編號})">
-                    <img src="${element.場館圖片}" title="${element.場館名稱}">
-                    <p>${element.場館名稱}</p>
+                <button class="openBox" onclick="OpenModal(${element.vId})">
+                    <img src="${element.vImage1}" title="${element.vVenue}">
+                    <p>${element.vVenue}</p>
                 </button>
             </div>
             `;
@@ -193,9 +193,9 @@ fetch('./text場館.json')
 
             html += `
             <div class="col-lg-2">
-                <button class="openBox" onclick="OpenModal(${element.場館編號})">
-                    <img src="${element.場館圖片}" title="${element.場館名稱}">
-                    <p>${element.場館名稱}</p>
+                <button class="openBox" onclick="OpenModal(${element.vId})">
+                    <img src="${element.vImage1}" title="${element.vVenue}">
+                    <p>${element.vVenue}</p>
                 </button>
             </div>
             `;

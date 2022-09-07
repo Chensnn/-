@@ -1,5 +1,4 @@
-// 各地區各四筆資料即可
-
+// 北中東南各四筆資料  tExHibition db
 
 // ====================================================================================北
 fetch('./text.json')
@@ -18,14 +17,14 @@ fetch('./text.json')
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="${element.展演圖片}">
+                        <img src="${element.eImage1}">
                     </div>
                     <div class="flip-card-back">
                         <div class="card-back-text">
-                            <h5>${element.展演名稱}</br>${element.展演類型}</h5>
-                            <p>${element.開始日期}</p>
-                            <p>${element.結束日期}</p>
-                            <p>${element.場館名稱}</p>
+                            <h5>${element.eName}</br>${element.eVenue}</h5>
+                            <p>${element.eStartTime}</p>
+                            <p>${element.eEndTime}</p>
+                            <p>${element.eVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.購票連結}" title="連結售票網站">購票入口</a></p>
                         </div>
@@ -57,14 +56,14 @@ fetch('./text.json')
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="${element.展演圖片}">
+                        <img src="${element.eImage1}">
                     </div>
                     <div class="flip-card-back">
                         <div class="card-back-text">
-                            <h5>${element.展演名稱}</br>${element.展演類型}</h5>
-                            <p>${element.開始日期}</p>
-                            <p>${element.結束日期}</p>
-                            <p>${element.場館名稱}</p>
+                            <h5>${element.eName}</br>${element.eVenue}</h5>
+                            <p>${element.eStartTime}</p>
+                            <p>${element.eEndTime}</p>
+                            <p>${element.eVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.購票連結}" title="連結售票網站">購票入口</a></p>
                         </div>
@@ -97,14 +96,14 @@ fetch('./text.json')
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="${element.展演圖片}">
+                        <img src="${element.eImage1}">
                     </div>
                     <div class="flip-card-back">
                         <div class="card-back-text">
-                            <h5>${element.展演名稱}</br>${element.展演類型}</h5>
-                            <p>${element.開始日期}</p>
-                            <p>${element.結束日期}</p>
-                            <p>${element.場館名稱}</p>
+                            <h5>${element.eName}</br>${element.eVenue}</h5>
+                            <p>${element.eStartTime}</p>
+                            <p>${element.eEndTime}</p>
+                            <p>${element.eVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.購票連結}" title="連結售票網站">購票入口</a></p>
                         </div>
@@ -136,14 +135,14 @@ fetch('./text.json')
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="${element.展演圖片}">
+                        <img src="${element.eImage1}">
                     </div>
                     <div class="flip-card-back">
                         <div class="card-back-text">
-                            <h5>${element.展演名稱}</br>${element.展演類型}</h5>
-                            <p>${element.開始日期}</p>
-                            <p>${element.結束日期}</p>
-                            <p>${element.場館名稱}</p>
+                            <h5>${element.eName}</br>${element.eVenue}</h5>
+                            <p>${element.eStartTime}</p>
+                            <p>${element.eEndTime}</p>
+                            <p>${element.eVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.購票連結}" title="連結售票網站">購票入口</a></p>
                         </div>

@@ -1,3 +1,5 @@
+
+// 總覽頁面點進去會有所有展覽(北中東南)的資料  tExHibition db
 fetch('./text.json')
     .then(function (response) {
         return response.json();
@@ -14,13 +16,13 @@ fetch('./text.json')
             <div class="col-lg-3">
                 <figure>
                     <div class="imgCard">
-                        <img src="${element.展演圖片}">
+                        <img src="${element.eImage1}">
                         <div class="overlay">
                             <div class="text">
-                                <p>${element.展演介紹}</p>
+                                <p>${element.eIntroduce}</p>
                             </div>
                         </div>
-                        <a href="${element.購票連結}" title="前往購票"><figcaption>${element.場館名稱}</br>${element.展演名稱}</figcaption></a>
+                        <a href="${element.購票連結}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
                     </div>
                 </figure>
             </div>`
