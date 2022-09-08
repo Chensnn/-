@@ -1,34 +1,34 @@
 
 // 總覽頁面點進去會有所有展覽(北中東南)的資料  tExHibition db
-// fetch('./text.json')
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (myJson) {
+fetch('./text.json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
 
-//         const table = document.querySelector('#showInfoBk')
+        const table = document.querySelector('#showInfoBk')
 
-//         let html = ''
-//         myJson.forEach(element => {
-//             html += `
+        let html = ''
+        myJson.forEach(element => {
+            html += `
 
 
-//             <div class="col-lg-3">
-//                 <figure>
-//                     <div class="imgCard">
-//                         <img src="${element.eImage1}">
-//                         <div class="overlay">
-//                             <div class="text">
-//                                 <p>${element.eIntroduce}</p>
-//                             </div>
-//                         </div>
-//                         <a href="${element.購票連結}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
-//                     </div>
-//                 </figure>
-//             </div>`
-//         });
-//         table.innerHTML += html;
-//     });
+            <div class="col-lg-3">
+                <figure>
+                    <div class="imgCard">
+                        <img src="${element.eImage1}">
+                        <div class="overlay">
+                            <div class="text">
+                                <p>${element.eIntroduce}</p>
+                            </div>
+                        </div>
+                        <a href="${element.購票連結}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
+                    </div>
+                </figure>
+            </div>`
+        });
+        table.innerHTML += html;
+    });
 
 
 
@@ -130,12 +130,63 @@ function sectionText() {
                 else {
                     table.innerHTML = '';
                 }
-
-
             });
             table.innerHTML += html;
-        }); //fetch結束點
-};  //sectionText結束點
+        })//; //fetch結束點
+
+
+    let clearbtn = document.querySelector('#clearbtn')
+    clearbtn.addEventListener('click', () => {
+
+        // 1.恢復地區選單
+        $("#selectSection").html(`${inner}`);
+
+        // 2.恢復類型選單
+        var genre = "";
+        const selectGenre = document.getElementById('selectGenre')
+        let selectgenre = ["樂團表演", "演唱會", "歌劇欣賞", "劇團演出", "藝文講座", "創意市集", "相聲", "音樂會", "舞台劇", "音樂祭", "美術類", "布袋戲", "藝文靜態展覽"]
+
+        for (var i = 0; i < selectgenre.length; i++) {
+            genre = genre + '<option value=' + i + '>' + selectgenre[i] + '</option>';
+        }
+        selectGenre.innerHTML = genre;
+
+        // 3.恢復場館選單
+        changeVenue(this.selectedIndex)
+
+        // 4.清除完後恢復北中東南所有資料
+        fetch('./text.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+
+                const table = document.querySelector('#showInfoBk')
+
+                let text = ''
+                myJson.forEach(element => {
+                    text += `
+                        <div class="col-lg-3">
+                            <figure>
+                                <div class="imgCard">
+                                    <img src="${element.eImage1}">
+                                    <div class="overlay">
+                                        <div class="text">
+                                            <p>${element.eIntroduce}</p>
+                                        </div>
+                                    </div>
+                                     <a href="${element.購票連結}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
+                                </div>
+                            </figure>
+                        </div>`
+                        });
+                        table.innerHTML = text;
+        });     //fetch結束點
+    });      //clearbtn事件結束
+};        //sectionText結束點
+
+
+
 
 
 // 展覽資料日期格式不一樣，要用spilt進行分割，用正規表達式把不要的符號去掉

@@ -1,0 +1,31 @@
+.idPhoto{
+    background-color: #403F3D;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    right: -55px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+}
+.idPhoto img {
+    max-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+}
+ .idSection{
+    margin-bottom: 54px;
+}
+.idSection span{
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 2px 5px;
+    /* background-color:  rgba(64, 63, 61, 0.3); */
+}
+.loginReg .searchInput,
+.loginReg .fi-rs-search-alt{
+    position: relative;
+    bottom: -60px;
+    left: 1px;
+}

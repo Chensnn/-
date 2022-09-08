@@ -1,29 +1,37 @@
-
-
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
 
 
 .selectbackground {
     font-family: 'Noto Sans TC', sans-serif;
     color: #403F3D;
-    width: 80%;
+    width: 100%;
     height: 100px;
-    background-color: #fcfdfd;
-    box-shadow: 1px 1px 10px #403F3D;
-    border-radius: 15px;
-    justify-content: space-evenly;
+    background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224));
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+    border-radius: 5px;
+    justify-content: center;
     align-items: center;
     margin: -10px auto 25px 0px;
 }
 
 select {
-    padding: 6px 4px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
+    padding: 1px 6px;
+    border: 1px none #ced4da;
+    border-radius: 3px;
+    margin-right: 50px;
+    background: #F2F2F2;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.2);
+    font-size: 14px;
+    letter-spacing: 2px;
 }
+
 /* 動態新增那一塊 */
 .showInfoBk {
     width: 100%;
     margin: -10px auto 50px auto;
+
 
 }
 
@@ -42,15 +50,16 @@ select {
 
 figcaption {
     font-size: 10px;
-    
+
     font-weight: 500;
-    background-color: #818274;;
+    background-color: #818274;
+    ;
     color: #fcfdfd;
     padding: 3px;
     text-align: center;
     border-radius: 0px 0px 8px 8px;
     box-shadow: 0px 5px 4px 1px rgba(64, 63, 61, 0.6);
-    
+
 }
 
 .overlay {
@@ -66,10 +75,12 @@ figcaption {
     /* background-color: #403F3D; */
     backdrop-filter: blur(150px);
 }
+
 /* 調整成1以下可以看得到背景圖 */
 .imgCard:hover .overlay {
     opacity: 0.9;
 }
+
 /* hover後的文字 */
 .text p {
     color: #fff;
@@ -83,13 +94,69 @@ figcaption {
     width: 200px;
     height: 260px;
 }
+
 /* 購票連結 */
-.showInfoBk a{
+.showInfoBk a {
     text-decoration: none;
 }
 
 
-.selectbackground label{
-    margin-right: 10px;
+/* 中間搜尋區塊 */
+.selectbackground label {
+    margin-right: 2px;
+    margin-left: 2px;
     letter-spacing: 2px;
+
+}
+
+.fi-sr-list {
+    font-size: 1.2rem;
+    position: relative;
+    bottom: -3.5px;
+
+}
+
+.btn-outline-dark {
+    color: #403F3D;
+    font-weight: 500;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 2px;
+    border: 0.1rem solid rgba(52, 58, 64, 0.1);
+    letter-spacing: 3px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+
+
+    position: relative;
+    transition: all .5s linear;
+}
+
+.btn-outline-dark:hover{
+    color: #403F3D;
+    background-color: transparent;
+    border: transparent;
+}
+.btn-outline-dark:focus{
+    box-shadow: 0 0 0 0.1rem rgba(52, 58, 64, 0.1);
+}
+  
+.btn-outline-dark span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-outline-dark::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    display: block;
+    background-color: #Cad9a2;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .6s ease;
+}
+.btn-outline-dark:hover::before{
+    width: 100%;
 }

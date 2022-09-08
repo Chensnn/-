@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>藝起來玩</title>
 
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -18,26 +17,24 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
+
+
     <!-- 導入Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-
-
-    <link rel="stylesheet" href="./Css/登入.css">
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/a32b9111be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Css/首頁.css">
-    <script src="./JavaScript/首頁.js"></script>
-
-
-
-    <!-- 這個看我們要不要做google串接，現在先不要^_^ -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"> -->
-    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'> -->
-
+    <link rel="stylesheet" href="./Css/登入後的畫面.css">
+    <link rel="stylesheet" href="./Css/會員查看個人資訊頁面.css">
 
 </head>
 
 <body>
+
+    <!-- sticky-top讓navbar固定在上方 nav-tabs是會有下底線 -->
+
     <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand " href="./首頁.html" title="藝起來玩">藝起來玩</a>
@@ -84,62 +81,48 @@
             <ul class="nav navbar-nav navbar-right loginReg">
                 <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
                 <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
-                <li><a href="./登入.html" title="Login"><i class="fi fi-sr-user"></i>登入</a></li>
-                <li><a href="./註冊.html" title="Register"><i class="fi fi-sr-user-add"></i>註冊</a></li>
+                <li class="idSection">
+                    <a href="#" title="點我查看個人資訊">
+                        <div class="idPhoto"></div>
+                    </a><span id="memberName">陳思穎會員 你好</span>
+                </li>
+                <li></li>
             </ul>
         </div>
     </nav>
 
-    
 
-    <div class="background container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h2>廠商登入</h2>
-                <!-- <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                </div> -->
-                <input type="text" placeholder="帳號 Account" />
-                <input type="password" placeholder="密碼 Password" class="pwdLogin" />
-                <a href="#"><sapn class="forgetPWD">忘記密碼?</span></a>
-                <button class="btnSignInUp"><a href="#">登入</a></button>
-            </form>
-        </div>
-
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h2>登入會員</h2>
-                <!-- <div class="social-container">這邊要看我們要不要做google和facebook的串接
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                </div> -->
-                <input type="text" placeholder="帳號 Account" />
-                <input type="password" placeholder="密碼 Password" />
-                <a href="#"><sapn class="forgetPWD">忘記密碼?</span></a>
-                <button class="btnSignInUp"><a href="./登入後的畫面.html">登入</a></button>
-            </form>
-        </div>
-        
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                   <img src="./Images/diversity.png" class="memberImg" width="100">
-                    <h2>Welcome Back!</h2>
-                    <p>登入會員即可獲得相關藝文訊息</p>
-                    <button class="btnSignInUp " id="signIn">一般會員登入</button>
-                    
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h3>需要上架新活動嗎?</h3>
-                    <button class="btnSignInUp " id="signUp">廠商專區</button>
-                    <img src="./Images/mail.png" class="manufacturerImg" width="100">
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12"
+                style="text-align:end; font-size: 10px; position: relative; right:-64px; top:-55px; letter-spacing: 2px; ">
+                點選頭像即可查看個人資訊
             </div>
         </div>
     </div>
-   
-    <footer class="tag">
+
+
+
+    <div class="container">
+        <div class="row backgroundDiv">
+            <div class="col-6 memberInfo"><img src="./Images/會員個人資訊頁面bk.jpg">
+                <a href="#">
+                    <h3>修改及查看個人資料</h3>
+                </a>
+            </div>
+            <div class="col-6 membercollect"><img src="./Images/會員個人資訊頁面bk.jpg">
+                <a href="#">
+                    <h3>查看我的收藏</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="" style="position: fixed; bottom:0px; left:0px; right:0px;">
         <div class="container">
             <div class="row">
                 <div class="">
@@ -150,7 +133,7 @@
         </div>
     </footer>
 
-    <script src="./JavaScript/登入.js"></script>
+
 </body>
 
 </html>

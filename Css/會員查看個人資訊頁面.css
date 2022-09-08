@@ -1,0 +1,86 @@
+.memberInfo,
+.membercollect {
+
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.memberInfo h3 {
+    color: #fcfdfd;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 130px;
+    right: 45px;
+    bottom: 21px;
+    padding: 37px;
+    backdrop-filter: blur(3px);
+    z-index: 10;
+    text-shadow: 5px 5px 1px rgba(64, 63, 61, 0.8);
+}
+
+
+.membercollect h3 {
+    color: #fcfdfd;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 130px;
+    right: 45px;
+    bottom: 21px;
+    padding: 35px 84px;
+    backdrop-filter: blur(3px);
+    z-index: 10;
+    text-shadow: 5px 5px 1px rgba(64, 63, 61, 0.8);
+}
+
+.backgroundDiv {
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    transition: all .7s linear;
+
+
+}
+
+.backgroundDiv img {
+    width: 100%;
+    padding: 30px;
+    filter: grayscale(15%);
+}
+
+
+
+
+.backgroundDiv::before {
+    content: "";
+    width: 300px;
+    height: 200px;
+    display: block;
+    border-top: 5px solid #818274;
+    border-left: 5px solid #818274;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .7s linear;
+}
+
+.backgroundDiv::after {
+    content: "";
+    width: 300px;
+    height: 200px;
+    display: block;
+    border-bottom: 5px solid #818274;
+    border-right: 5px solid #818274;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all .7s linear;
+}
+
+.backgroundDiv:hover::before,
+.backgroundDiv:hover::after {
+    width: 100%;
+    height: 100%;
+
+}
