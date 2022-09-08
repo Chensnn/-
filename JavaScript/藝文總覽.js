@@ -74,22 +74,30 @@ function changeVenue(index) {
         // console.log(vVenue[0][1]);
     }
 
-    const selectExhibition = document.getElementById('selectExhibition')
-    selectExhibition.innerHTML = Sinner;
+    const selectVenue = document.getElementById('selectVenue')
+    selectVenue.innerHTML = Sinner;
 }
 changeVenue(document.getElementById('selectSection').selectedIndex);
 
 
 
 let searchbtn = document.getElementById('searchbtn')
+let selectGenre = document.getElementById('selectGenre')
+
+// searchbtn.addEventListener('click', showText)
 selectSection.addEventListener('change', sectionText)
-selectExhibition.addEventListener('change', sectionText)
-searchbtn.addEventListener('click', showText)
+selectVenue.addEventListener('change', sectionText)
+selectGenre.addEventListener('change', sectionText)
+
+
+
+
 function sectionText() {
 
     areaclick = selectSection.options[selectSection.selectedIndex].text
-    exhibitionclick = selectExhibition.options[selectExhibition.selectedIndex].text
-    // console.log(`${areaclick} ${exhibitionclick}`);
+    venueclick = selectVenue.options[selectVenue.selectedIndex].text
+    genreclick = selectGenre.options[selectGenre.selectedIndex].text
+    console.log(`${areaclick} ${venueclick} ${genreclick}`);
 
 
     fetch('./text.json')
@@ -103,7 +111,7 @@ function sectionText() {
             let html = ''
             myJson.forEach(element => {
 
-                if (exhibitionclick === element.eVenue) {
+                if (venueclick === element.eVenue && genreclick === element.eGenre) {
                     html += `
                     <div class="col-lg-3">
                         <figure>
@@ -130,23 +138,36 @@ function sectionText() {
 };  //sectionText結束點
 
 
-function showText() {
+// 展覽資料日期格式不一樣，要用spilt進行分割，用正規表達式把不要的符號去掉
 
-    const selectSection = document.querySelector('#selectSection')
-    const selectExhibition = document.querySelector('#selectExhibition')
-    const startTime = document.querySelector('#startTime')
-    const endTime = document.querySelector('#endTime')
+// function showText() {
 
-    
-    //開始日期
-    let textStartTime = startTime.value
-    console.log(textStartTime);
+//     const startTime = document.querySelector('#startTime')
+//     const endTime = document.querySelector('#endTime')
+//     startTime.addEventListener('change', showText)
+//     endTime.addEventListener('change', showText)
 
-    //結束日期
-    let textEndTime = endTime.value
-    console.log(textEndTime);
 
-}
+//     //開始日期
+//     let textStartTime = startTime.value
+//     //結束日期
+//     let textEndTime = endTime.value
+
+//     textStartTime = textStartTime.split("-");
+//     textEndTime = textEndTime.split("-");
+
+//     startY = textStartTime[0];
+//     startM = textStartTime[1];
+//     startD = textStartTime[2];
+
+//     endY = textEndTime[0];
+//     endM = textEndTime[1];
+//     endM = textEndTime[2];
+
+
+//     console.log(`${startY} ${startM} ${startD}`);
+//     console.log(`${endY} ${endM} ${endM}`);
+// }
 
 
 // =====================================================
@@ -164,12 +185,12 @@ function showText() {
 // })
 
 
-// 2.找出vVenue是第幾筆   
-// let exhibitionclick = ''; 
-// const selectExhibition = document.getElementById('selectExhibition')
-// selectExhibition.addEventListener('change', () => {
+// 2.找出vVenue是第幾筆
+// let venueclick = '';
+// const selectVenue = document.getElementById('selectVenue')
+// selectVenue.addEventListener('change', () => {
 
-//     exhibitionclick = selectExhibition.selectedIndex
-//     console.log(exhibitionclick);  //得到第幾筆
-//     console.log(vVenue[areaclick][exhibitionclick]);  //得到點擊那一筆的值
+//     venueclick = selectVenue.selectedIndex
+//     console.log(venueclick);  //得到第幾筆
+//     console.log(vVenue[areaclick][venueclick]);  //得到點擊那一筆的值
 // })

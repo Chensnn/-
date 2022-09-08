@@ -157,17 +157,15 @@
     <div class="container ">
         <div class="row selectbackground">
             <div>
+                <label for="">地區</label>
                 <select id="selectSection" onchange="changeVenue(this.selectedIndex)">
-                    <!-- <option selected disabled>請選擇地區</option>
-                    <option value="北部">北部</option>
-                    <option value="中部">中部</option>
-                    <option value="南部">南部</option>
-                    <option value="東部">東部</option> -->
+                    <!-- <option selected disabled>請選擇地區</option> -->
                 </select>
             </div>
             <div>
-                <select id="selectExhibition">
-                    <!-- <option selected disabled>請選擇展覽類型</option>
+                <label for="">展覽類型</label>
+                <select id="selectGenre">
+                     <!-- <option selected disabled>請選擇展覽類型</option> -->
                     <option value="樂團表演">樂團表演</option>
                     <option value="演唱會">演唱會</option>
                     <option value="歌劇欣賞">歌劇欣賞</option>
@@ -180,18 +178,22 @@
                     <option value="音樂祭">音樂祭</option>
                     <option value="美術類">美術類</option>
                     <option value="布袋戲">布袋戲</option>
-                    <option value="藝文靜態展覽">藝文靜態展覽</option> -->
+                    <option value="藝文靜態展覽">藝文靜態展覽</option> 
                 </select>
             </div>
             <div>
+                <label for="">場館名稱</label>
+                <select id="selectVenue"></select>
+            </div>
+            <!-- <div>
                 <input type="date" class="form-control" id="startTime">
             </div>
             <div>
                 <input type="date" class="form-control" id="endTime">
-            </div>
-            <div>
+            </div> -->
+            <!-- <div>
                 <button class="btn btn-outline-dark" id="searchbtn">Search</button>
-            </div>
+            </div> -->
         </div>
     </div>
 
