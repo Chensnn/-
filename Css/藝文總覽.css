@@ -150,7 +150,7 @@ figcaption {
     width: 0%;
     height: 100%;
     display: block;
-    background-color: #Cad9a2;
+    background: linear-gradient(-47deg, rgb(202, 217, 162), rgb(242, 204, 181));
     border-radius: 2px;
     position: absolute;
     top: 0;

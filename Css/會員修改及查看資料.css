@@ -1,0 +1,127 @@
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* 個人資料 */
+h4 {
+    text-shadow: none;
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+    position: relative;
+    left: -290px;
+    top: 10px;
+    color: #818274;
+}
+
+/* 左邊頭像區文字 */
+.upload_img span {
+    position: relative;
+    bottom: -221px;
+    right: -10px;
+    color: #403F3D;
+    background: linear-gradient(-47deg, rgb(202, 217, 162), rgb(242, 204, 181));
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* 頭像區 */
+.upload_img {
+    margin-left: 50px;
+    position: relative;
+    left: 100px;
+}
+
+/* 頭像區icon */
+.fi-br-portrait {
+    color: #403F3D;
+    margin-right: 2px;
+    position: relative;
+    top: 224px;
+    color: #403F3D;
+}
+
+/* 頭像區img處理 */
+.showImgPic {
+    position: relative;
+    left: -50px;
+    top: 50px;
+    left: -170px;
+
+    width: 150px;
+    height: 150px;
+}
+
+/* 頭像區img處理 */
+.showImgPic img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+
+.inFoSection input[type=text],
+.inFoSection input[type=tel],
+.inFoSection input[type=password],
+.inFoSection input[type=email] {
+    width: 600px;
+    display: inline-block;
+    padding: 7px;
+    margin: 5px 0 15px 18px;
+    border: none;
+    background: #E6DDCB;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+    font-size: 14px;
+}
+
+.inFoSection input[type=email] {
+    margin-left: 5px;
+}
+
+.inFoSection input[type=text]:focus,
+.inFoSection input[type=tel]:focus,
+.inFoSection input[type=password]:focus,
+.inFoSection input[type=email]:focus {
+    outline: none;
+}
+
+/* radiobutton區 */
+.inFoGender {
+    position: relative;
+    right: -60px;
+    top: -45px
+}
+
+.inFoGender input[type=radio] {
+    margin-left: 8px;
+}
+
+.inFoGender span {
+    margin-right: 7px;
+    margin-left: -3px;
+}
+
+.inFoGenderDiv {
+    margin-bottom: -23px;
+}
+
+/* 註冊按鈕 */
+.registerbtn {
+    background: linear-gradient(-47deg, rgb(202, 217, 162), rgb(242, 204, 181));
+    color: #403F3D;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    margin-left: 60px;
+    border-radius: 2px;
+
+}
+
+.registerbtn:hover {
+    transform: scale(1.1);
+    transition: all 1s ease-out;
+}
