@@ -73,3 +73,13 @@ a{
     opacity: 0.5;
     margin-left: -30px;
 }
+
+
+.divPic .heart{
+    width: 13px;
+    height: 13px;
+    position: relative;
+    left:220px;
+    top:-10px;
+    cursor: pointer;
+}

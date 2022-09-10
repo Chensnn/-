@@ -40,9 +40,10 @@ function OpenModal(el) {
                         <option value="tab_Sat">星期六</option>
                         <option value="tab_Sun">星期日</option>
                     </select>
-                <div><label>這邊要發生change事件後才會被新增</label></div>
+                    <div><label>這邊要發生change事件後才會被新增</label></div>
             </div>
-            </p>`
+            </p>
+           `
 
 
             }

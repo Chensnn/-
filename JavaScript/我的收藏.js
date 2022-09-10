@@ -32,4 +32,6 @@ fetch('./text.我的收藏.json')
             heart.src = "./Images/heart.png";
         })
 
+        
+
     });

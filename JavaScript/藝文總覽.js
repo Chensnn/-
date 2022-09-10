@@ -179,9 +179,9 @@ function sectionText() {
                                 </div>
                             </figure>
                         </div>`
-                        });
-                        table.innerHTML = text;
-        });     //fetch結束點
+                });
+                table.innerHTML = text;
+            });     //fetch結束點
     });      //clearbtn事件結束
 };        //sectionText結束點
 
