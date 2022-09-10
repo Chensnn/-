@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>藝起來玩</title>
 
+    <!-- 導入Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -17,25 +21,30 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
-
-
-    <!-- 導入Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-    <!-- icon -->
-    <script src="https://kit.fontawesome.com/a32b9111be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Css/首頁.css">
+    <link rel="stylesheet" href="./Css/藝文活動.css">
+    <link rel="stylesheet" href="./Css/藝文活動_北部.css">
     <link rel="stylesheet" href="./Css/登入後的畫面.css">
-    <link rel="stylesheet" href="./Css/會員查看個人資訊頁面.css">
+    <script src="./JavaScript/藝文活動_中部.js"></script>
+
+    <style>
+        /* 藝文活動裡的class */
+        .background {
+            background: #fcfcfc;
+        }
+
+        .bottom-Text h5 {
+            color: #403F3D;
+            opacity: 0.5;
+            margin-left: -30px;
+        }
+    </style>
 
 </head>
 
 <body>
 
-    <!-- sticky-top讓navbar固定在上方 nav-tabs是會有下底線 -->
-
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top ">
         <div class="container-fluid">
             <a class="navbar-brand " href="./登入後的畫面.html" title="藝起來玩">藝起來玩</a>
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
@@ -82,71 +91,49 @@
                 <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
                 <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
                 <li class="idSection">
-                    <a href="#" title="點我查看個人資訊">
+                    <a href="./會員查看個人資訊頁面.html" title="點我查看個人資訊">
                         <div class="idPhoto"><img src="#" id="idPhoto"></div>
                     </a><span id="memberName">陳思穎會員 你好</span>
                 </li>
-                <li></li>
             </ul>
         </div>
     </nav>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12"
-                style="text-align:end; font-size: 10px; position: relative; right:-64px; top:-55px; letter-spacing: 2px; ">
-                點選頭像即可查看個人資訊
-            </div>
-        </div>
-    </div>
 
-
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-12 title"><h3><i class="fi fi-ss-users"></i>會員專區</h3></div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row backgroundDiv">
-            <div class="col-6 memberInfo"><img src="./Images/會員個人資訊頁面bk.jpg">
-                <a href="./會員修改及查看資料.html">
-                    <h3>修改及查看個人資料</h3>
-                </a>
-            </div>
-            <div class="col-6 membercollect"><img src="./Images/會員個人資訊頁面bk.jpg">
-                <a href="./我的收藏.html">
-                    <h3>查看我的收藏</h3>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <footer class="" style="position: fixed; bottom:0px; left:0px; right:0px;">
+    <div class="background">
         <div class="container">
-            <div class="row">
-                <div class="">
-                    <p>© 藝起來玩 版權所有</p>
+            <div class="row flex-nowrap">
+                <div class="bottom-Text">
+                    <div class="col-lg-12">
+                        <h4>中</h4>
+                        <h4>部</h4>
+                        <h4>展</h4>
+                        <h4>覽</h4>
+                        <a href="./登入後的藝文活動.html#CentralArea" title="回到藝文活動主頁">
+                            <h4><i class="fi fi-rr-angle-circle-left"></i></h4>
+                        </a>
+                        <h5>回</h5>
+                        <h5>到</h5>
+                        <h5>前</h5>
+                        <h5>頁</h5>
+                        <a href="#" title="回到前面" class="top"><i class="fi fi-ss-comment-arrow-up"></i>
+                        </a>
+                    </div>
                 </div>
-
+                <div id="showInfoCentral"></div>
             </div>
         </div>
-    </footer>
+    </div>
 
 
     <script src="./JavaScript/登入.js"></script>
     <script>
-      const memberName = document.querySelector('#memberName')
-      memberName.innerHTML = window.localStorage.getItem('user')+'會員 你好';
+        const memberName = document.querySelector('#memberName')
+        memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
 
-      const idPhoto = document.querySelector('#idPhoto')
-      idPhoto.src = window.localStorage.getItem('userPhoto');
+        const idPhoto = document.querySelector('#idPhoto')
+        idPhoto.src = window.localStorage.getItem('userPhoto');
 
     </script>
 

@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>藝起來玩</title>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -17,17 +16,15 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
-
-
     <!-- 導入Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <!-- icon -->
-    <script src="https://kit.fontawesome.com/a32b9111be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Css/首頁.css">
+    <link rel="stylesheet" href="./Css/藝文活動.css">
+    <link rel="stylesheet" href="./Css/藝文場館.css">
     <link rel="stylesheet" href="./Css/登入後的畫面.css">
-    <script type="text/javascript" src="./JavaScript/首頁.js"></script>
+    <script src="./JavaScript/首頁.js"></script>
 
 
 
@@ -35,9 +32,7 @@
 
 <body>
 
-    <!-- sticky-top讓navbar固定在上方 nav-tabs是會有下底線 -->
-
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light setRwdNav">
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top ">
         <div class="container-fluid">
             <a class="navbar-brand " href="./登入後的畫面.html" title="藝起來玩">藝起來玩</a>
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
@@ -92,41 +87,6 @@
         </div>
     </nav>
 
-
-    <!-- 目前只有首頁有Rwd -->
-
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <h6>藝文地圖</h6>
-        <a href="./藝文總覽.html"><i class="fi fi-br-copy"></i>藝文總覽</a>
-        <a href="./藝文場館.html"><i class="fi fi-br-copy"></i>藝文場館</a>
-        <a href="./藝文活動.html"><i class="fi fi-br-copy"></i>藝文活動</a>
-        <hr>
-        <h6>票券交流</h6>
-        <a href="./瀏覽訊息.html"><i class="fi fi-br-copy"></i>瀏覽訊息</a>
-        <a href="./我要刊登.html"><i class="fi fi-br-copy"></i>我要刊登</a>
-        <hr>
-        <a href="#"><i class="fi fi-br-copy"></i>藝文旅遊</a>
-        <a href="./登入.html"><i class="fi fi-br-copy"></i>會員專區</a>
-        <a href="#"><i class="fi fi-br-copy"></i>關於我們</a>
-
-    </div>
-
-
-    <div class="closeIcon">
-        <span onclick="openNav()">&#9776;</span>
-    </div>
-    <!-- 以上是RWD -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12"
-                style="text-align:end; font-size: 10px; position: relative; right:-64px; top:-55px; letter-spacing: 2px; ">
-                點選頭像即可查看個人資訊
-            </div>
-        </div>
-    </div>
-    <!-- Slider -->
     <div class="">
         <div id="demo" class="carousel slide " data-ride="carousel">
             <ul class="carousel-indicators">
@@ -140,21 +100,45 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="#" title="李友廷《冷身操》2022 LIVE TOUR"> <img src="./Images/李友廷-冷身操.jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <a href="#" title="2022國語作業簿：台北歡樂耶誕城"> <img src="./Images/國語作業簿(廣告輪播).jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <a href="#" title="高流系：超營養學分"><img src="./Images/高流系.png"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <a href="#" title="蔡健雅 Tanya’s Live《DEPART to RETURN》"><img src="./Images/蔡健雅(廣告).jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <a href="#" title="爛泥發芽2022台北場"><img src="./Images/爛泥發芽.jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <a href="#" title="《 NUWA五色石 》蘭花刀 New Album Release 2022 Tour"><img src="./Images/NUWA五色石.jpg"></a>
+                    <div class="carousel-caption">
+                        <h2>藝文場館</h2>
+                        <p>藝起挑選你喜歡的場館吧</p>
+                    </div>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -167,161 +151,136 @@
     </div>
 
 
-    <!-- 最新消息 -->
-    <div class="newsSection tag">
+    <div class="background" id="NorthArea">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12">
-                    <h3>最新消息
-                        <a href="#">
-                            <i class="fa fa-caret-right">更多</i>
+            <div class="row ">
+                <div class="bottom-Text ">
+                    <div class="col-lg-12">
+                        <h4>北</h4>
+                        <h4>部</h4>
+                        <h4>場</h4>
+                        <h4>館</h4>
+                        <a href="./藝文活動_北部.html" title="更多活動資訊">
+                            <h4><i class="fi fi-rr-plus-small"></i></h4>
                         </a>
-                        <hr>
-                    </h3>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="newsSectionText">
-                        <a href="#"><i class="fi fi-rr-megaphone"></i>
-                            <span class="announcement">系統公告<i class="fi fi-br-menu-burger"></i></span><span
-                                class="announcementText">【2022/09/30/系統更新日】</span></a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="newsSectionText">
-                        <a href="#"><i class="fi fi-rr-megaphone"></i>
-                            <span class="announcement">系統公告<i class="fi fi-br-menu-burger"></i></span><span
-                                class="announcementText">【藝FUN券使用說明】
-                            </span></a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-6">
-                    <div class="newsSectionText">
-                        <a href="#"><i class="fi fi-rr-megaphone"></i>
-                            <span class="announcement">延期及退票公告<i class="fi fi-br-menu-burger"></i></span><span
-                                class="announcementText">國語作業簿運動會</span></a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="newsSectionText">
-                        <a href="#"><i class="fi fi-rr-megaphone"></i>
-                            <span class="announcement">開演時間異動<i class="fi fi-br-menu-burger"></i></span><span
-                                class="announcementText">赤聲躁動 2022—BOOM OUT 轟之谷</span></a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-6">
-                    <div class="newsSectionText">
-                        <a href="#"><i class="fi fi-rr-megaphone"></i>
-                            <span class="announcement">推薦行程<i class="fi fi-br-menu-burger"></i></span><span
-                                class="announcementText">Lorem ipsum dolor sit amet</span></a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="newsSectionText">
-                        <a href="#"><i class="fi fi-rr-megaphone"></i>
-                            <span class="announcement">在地美食<i class="fi fi-br-menu-burger"></i></span><span
-                                class="announcementText">Lorem ipsum dolor sit amet</span></a>
+                        <h5>本</h5>
+                        <h5>月</h5>
+                        <h5>推</h5>
+                        <h5>薦</h5>
                     </div>
                 </div>
             </div>
+            <div class="row tag" id="showVenueNorth"></div>
         </div>
     </div>
 
-    <section class="tag activity">
+    <div class="background" id="CentralArea">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="page-header">
-                        <h3>最新活動資訊</h3>
-                        <a href="#">
-                            <i class="fa fa-caret-right"> </i>
-                            更多
+            <div class="row flex-nowrap">
+                <div class="bottom-Text">
+                    <div class="col-lg-12">
+                        <h4>中</h4>
+                        <h4>部</h4>
+                        <h4>場</h4>
+                        <h4>館</h4>
+                        <a href="./藝文活動_中部.html" title="更多活動資訊">
+                            <h4><i class="fi fi-rr-plus-small"></i></h4>
                         </a>
+                        <h5>本</h5>
+                        <h5>月</h5>
+                        <h5>推</h5>
+                        <h5>薦</h5>
                     </div>
                 </div>
             </div>
-            <div id="activity" class="row">
+            <div class="row tag" id="showVenueCentral"></div>
+        </div>
+    </div>
+
+    <div class="background" id="EastArea">
+        <div class="container">
+            <div class="row flex-nowrap">
+                <div class="bottom-Text">
+                    <div class="col-lg-12">
+                        <h4>東</h4>
+                        <h4>部</h4>
+                        <h4>場</h4>
+                        <h4>館</h4>
+                        <a href="./藝文活動_東部.html" title="更多活動資訊">
+                            <h4><i class="fi fi-rr-plus-small"></i></h4>
+                        </a>
+                        <h5>本</h5>
+                        <h5>月</h5>
+                        <h5>推</h5>
+                        <h5>薦</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row tag" id="showVenueEast"></div>
+        </div>
+    </div>
+
+    <div class="background" id="SouthArea">
+        <div class="container">
+            <div class="row flex-nowrap">
+                <div class="bottom-Text">
+                    <div class="col-lg-12">
+                        <h4>南</h4>
+                        <h4>部</h4>
+                        <h4>場</h4>
+                        <h4>館</h4>
+                        <a href="./藝文活動_南部.html" title="更多活動資訊">
+                            <h4><i class="fi fi-rr-plus-small"></i></h4>
+                        </a>
+                        <h5>本</h5>
+                        <h5>月</h5>
+                        <h5>推</h5>
+                        <h5>薦</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row tag" id="showVenueSouth"></div>
+        </div>
+    </div>
+
+
+
+    <!-- 彈跳視窗 -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <div class="CloseIcon" id="Closebox"><i class="fi fi-ss-cross-circle"></i></div>
+            <div id="vVenueText">
+                <!-- <span><img src="./Images/大稻埕戲苑.jpg"></span>
+                <p>場館名稱<i class="fi fi-brands-patreon"></i>大稻埕戲苑</p>
+                <p>場館地區<i class="fi fi-brands-patreon"></i>北部</p>
+                <p>聯絡方式<i class="fi fi-brands-patreon"></i>(02)2556-9101</p>
+                <p>場館地址<i class="fi fi-brands-patreon"></i>台北市大同區迪化街一段21號</p>
+                <p>場館介紹<i class="fi fi-brands-patreon"></i>京劇、歌仔戲、地方戲曲、布袋戲、場地租借</p>
+                <p>營業時間<i class="fi fi-brands-patreon"></i>
+                <div class="relativeForLabel">
+                    <select class="selectDay" id="selectDay">
+                        <option value="營業時間查詢" autofocus>請選擇</option>
+                        <option value="#tab_Mon">星期一</option>
+                        <option value="#tab_Tue">星期二</option>
+                        <option value="#tab_Wed">星期三</option>
+                        <option value="#tab_Thr">星期四</option>
+                        <option value="#tab_Fri">星期五</option>
+                        <option value="#tab_Sat">星期六</option>
+                        <option value="#tab_Sun">星期日</option>
+                    </select>
+
+                    <div id="tab_Mon"><label>休館</label></div>
+                    <div id="tab_Tue"><label>0900-1700</label></div>
+                    <div id="tab_Wed"><label>0900-1700</label></div>
+                    <div id="tab_Thr"><label>0900-1700</label></div>
+                    <div id="tab_Fri"><label>0900-1700</label></div>
+                    <div id="tab_Sat"><label>0900-1700</label></div>
+                    <div id="tab_Sun"><label>0900-1700</label></div>
+                </div>
+                </p> -->
             </div>
         </div>
-    </section>
-
-    <section class="tag venue">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="page-header">
-                        <h3>推薦場館</h3>
-                        <a href="#">
-                            <i class="fa fa-caret-right"> </i>
-                            更多
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div id="place" class="row">
-            </div>
-        </div>
-
-    </section>
-
-    <section class="tag message">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="page-header">
-                        <h3>票券交流版</h3>
-                        <a href="#">
-                            <i class="fa fa-caret-right"> </i>
-                            更多
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col  col-md-4">
-                    <div class="media border p-3">
-                        <div class="media-body">
-                            <a href="">
-                                <h4>鄭琬玲<small><i>Posted on February 19, 2016</i></small></h4>
-                                <p>Lorem ipsum...</p>
-                            </a>
-                        </div>
-                        <img src="./Images/woman.png" alt="" class="ml-3 mt-3 rounded-circle" style="width:60px;">
-                    </div>
-                </div>
-                <div class="col col-md-4">
-                    <div class="media border p-3">
-                        <div class="media-body">
-                            <a href="">
-                                <h4>陳思穎<small><i>Posted on February 19, 2016</i></small></h4>
-                                <p>Lorem ipsum...</p>
-                            </a>
-                        </div>
-                        <img src="./Images/woman.png" alt="" class="ml-3 mt-3 rounded-circle" style="width:60px;">
-                    </div>
-                </div>
-                <div class="col col-md-4 ">
-                    <div class="media border p-3">
-                        <div class="media-body">
-                            <a href="">
-                                <h4>陳莘元<small><i>Posted on February 19, 2016</i></small></h4>
-                                <p>Lorem ipsum...</p>
-                            </a>
-                        </div>
-                        <img src="./Images/man.png" alt="" class="ml-3 mt-3 rounded-circle" style="width:60px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
 
     <footer class="">
@@ -335,6 +294,10 @@
         </div>
     </footer>
 
+
+    
+    <!-- 網頁渲染問題，這個js檔要放這邊 -->
+    <script src="./JavaScript/藝文場館.js"></script>
     <script src="./JavaScript/登入.js"></script>
     <script>
         const memberName = document.querySelector('#memberName')
@@ -344,7 +307,7 @@
         idPhoto.src = window.localStorage.getItem('userPhoto');
 
     </script>
-
 </body>
+
 
 </html>
