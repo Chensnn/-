@@ -104,8 +104,10 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-12 title">
+                <h3><i class="fi fi-ss-users"></i>會員專區</h3>
+            </div>
             
-            <div class="col-12 title"><h3><i class="fi fi-ss-users"></i>會員專區</h3></div>
         </div>
     </div>
 
@@ -142,11 +144,11 @@
 
     <script src="./JavaScript/登入.js"></script>
     <script>
-      const memberName = document.querySelector('#memberName')
-      memberName.innerHTML = window.localStorage.getItem('user')+'會員 你好';
+        const memberName = document.querySelector('#memberName')
+        memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
 
-      const idPhoto = document.querySelector('#idPhoto')
-      idPhoto.src = window.localStorage.getItem('userPhoto');
+        const idPhoto = document.querySelector('#idPhoto')
+        idPhoto.src = window.localStorage.getItem('userPhoto');
 
     </script>
 
