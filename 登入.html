@@ -17,7 +17,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
-
+    <!-- sweetAler -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- 導入Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -27,6 +28,7 @@
     <link rel="stylesheet" href="./Css/登入.css">
     <link rel="stylesheet" href="./Css/首頁.css">
     <script src="./JavaScript/首頁.js"></script>
+
 
 
 </head>
@@ -84,15 +86,17 @@
         </div>
     </nav>
 
-    
+
 
     <div class="background container" id="container">
         <div class="form-container sign-up-container">
             <form action="#">
                 <h2>廠商登入</h2>
-                <input type="text" placeholder="帳號 Account"/>
-                <input type="password" placeholder="密碼 Password" class="pwdLogin"/>
-                <a href="#"><sapn class="forgetPWD">忘記密碼?</span></a>
+                <input type="text" placeholder="帳號 Account" />
+                <input type="password" placeholder="密碼 Password" class="pwdLogin" />
+                <a href="#">
+                    <sapn class="forgetPWD">忘記密碼?</span>
+                </a>
                 <button class="btnSignInUp"><a href="#">登入</a></button>
             </form>
         </div>
@@ -100,21 +104,23 @@
         <div class="form-container sign-in-container">
             <form action="#">
                 <h2>登入會員</h2>
-                <input type="text" placeholder="帳號 Account" id="mAccount"/>
-                <input type="password" placeholder="密碼 Password" id="mPassword"/>
-                <a href="#"><sapn class="forgetPWD">忘記密碼?</span></a>
+                <input type="text" placeholder="帳號 Account" id="mAccount" />
+                <input type="password" placeholder="密碼 Password" id="mPassword" />
+                <a href="#">
+                    <sapn class="forgetPWD">忘記密碼?</span>
+                </a>
                 <button class="btnSignInUp" id="mButtonClick">登入</button>
             </form>
         </div>
-        
+
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                   <img src="./Images/diversity.png" class="memberImg" width="100">
+                    <img src="./Images/diversity.png" class="memberImg" width="100">
                     <h2>Welcome Back!</h2>
                     <p>登入會員即可獲得相關藝文訊息</p>
                     <button class="btnSignInUp " id="signIn">一般會員登入</button>
-                    
+
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h3>需要上架新活動嗎?</h3>
@@ -124,7 +130,7 @@
             </div>
         </div>
     </div>
-   
+
     <footer class="tag">
         <div class="container">
             <div class="row">

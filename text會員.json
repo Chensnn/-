@@ -2,7 +2,7 @@
     {
         "mId":"1",
         "mName":"陳思穎",
-        "mGender":"女",
+        "mGender":"women",
         "mAddress":"台南市北區",
         "mEmail":"onlottlr@gamil.com",
         "mPhone":"0933348239",
@@ -14,7 +14,7 @@
     {
         "mId":"2",
         "mName":"王小明",
-        "mGender":"男",
+        "mGender":"male",
         "mAddress":"台北市大安區",
         "mEmail":"kaka@gamil.com",
         "mPhone":"0922454982",
@@ -26,7 +26,7 @@
     {
         "mId":"3",
         "mName":"李小白",
-        "mGender":"男",
+        "mGender":"male",
         "mAddress":"台南市安南區",
         "mEmail":"mike@gamil.com",
         "mPhone":"0911437854",

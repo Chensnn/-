@@ -1,3 +1,4 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
 * {
     font-family: 'Noto Sans TC', sans-serif;
 }
@@ -12,17 +13,25 @@ h4 {
     left: -290px;
     top: 10px;
     color: #818274;
+    letter-spacing: 9px;
+    font-weight: 100;
+}
+.fi-br-comment-alt{
+    position: relative;
+    right: 10px;
 }
 
 /* 左邊頭像區文字 */
 .upload_img span {
     position: relative;
-    bottom: -221px;
-    right: -10px;
+    bottom: -222px;
+    right: -6px;
     color: #403F3D;
     background: linear-gradient(-47deg, rgb(202, 217, 162), rgb(242, 204, 181));
-    padding: 2px 8px;
-    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+    padding: 4px 10px;
+    border-radius: 10px;
+    letter-spacing: 1px;
 }
 
 /* 頭像區 */
@@ -62,7 +71,8 @@ h4 {
 .inFoSection input[type=text],
 .inFoSection input[type=tel],
 .inFoSection input[type=password],
-.inFoSection input[type=email] {
+.inFoSection input[type=email],
+.inFoSection input[type=date] {
     width: 600px;
     display: inline-block;
     padding: 7px;
@@ -72,6 +82,7 @@ h4 {
     border-radius: 2px;
     box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
     font-size: 14px;
+    letter-spacing: 2px;
 }
 
 .inFoSection input[type=email] {
@@ -81,7 +92,8 @@ h4 {
 .inFoSection input[type=text]:focus,
 .inFoSection input[type=tel]:focus,
 .inFoSection input[type=password]:focus,
-.inFoSection input[type=email]:focus {
+.inFoSection input[type=email]:focus,
+.inFoSection input[type=date] {
     outline: none;
 }
 

@@ -11,7 +11,7 @@ signInButton.addEventListener('click', () => {
 });
 
 
-
+//==============================測試登入===================================
 const mAccountInput = document.querySelector('#mAccount')
 const mPasswordInput = document.querySelector('#mPassword')
 const mButtonClick = document.querySelector('#mButtonClick')
@@ -27,7 +27,7 @@ function msubmitBtn() {
 	mAccount = submitAccount;
 	mPassword = submitPassword;
 
-	console.log(`${mAccount} ${mPassword}`)
+	// console.log(`${mAccount} ${mPassword}`)
 
 	// ==========================================================
 
@@ -40,19 +40,33 @@ function msubmitBtn() {
 
 				if(mAccount == element.mAccount && mPassword == element.mPassword){
 					
-					// window.location.href="./登入後的畫面.html";
+					
 					window.location.href="./登入後的畫面.html";
-					// alert(`${element.mName}`)
 					window.localStorage.setItem('user',element.mName);
+					window.localStorage.setItem('userPhoto',element.mImage);
+					window.localStorage.setItem('userGender',element.mGender);
+					window.localStorage.setItem('userBirthDate',element.mBirthday);
+					window.localStorage.setItem('userPhone',element.mPhone);
+					window.localStorage.setItem('userAddress',element.mAddress);
+					window.localStorage.setItem('userEmail',element.mEmail);
+					window.localStorage.setItem('userAccount',element.mAccount);
+					window.localStorage.setItem('userPassword',element.mPassword);
 
-				}else{
-					// alert('帳號密碼錯誤')
+					
+
+				}
+				else if(mAccount != element.mAccount || mPassword != element.mPassword)
+				{
+					
+					Swal.fire({
+						text: '帳號或密碼錯誤，請重新輸入',
+					})
 				}
 
 
 			});
 		})
-
+		
 }
 mButtonClick.addEventListener('click', msubmitBtn)
 

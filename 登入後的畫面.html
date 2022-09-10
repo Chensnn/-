@@ -85,7 +85,7 @@
                 <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
                 <li class="idSection">
                     <a href="./會員查看個人資訊頁面.html" title="點我查看個人資訊">
-                        <div class="idPhoto"><img src="./Images/woman.png"></div>
+                        <div class="idPhoto"><img src="#" id="idPhoto"></div>
                     </a><span id="memberName">陳思穎會員 你好</span>
                 </li>
             </ul>
@@ -339,6 +339,10 @@
     <script>
       const memberName = document.querySelector('#memberName')
       memberName.innerHTML = window.localStorage.getItem('user')+'會員 你好';
+
+      const idPhoto = document.querySelector('#idPhoto')
+      idPhoto.src = window.localStorage.getItem('userPhoto');
+
     </script>
 
 </body>
