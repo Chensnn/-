@@ -76,10 +76,10 @@ a{
 
 
 .divPic .heart{
-    width: 13px;
-    height: 13px;
+    width: 20px;
+    height: 20px;
     position: relative;
-    left:220px;
-    top:-10px;
+    left:210px;
+    top:-300px;
     cursor: pointer;
 }
