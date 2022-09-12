@@ -1,20 +1,21 @@
 
-   //藝文活動中部 All展覽 tExHibition db
-    fetch('./text.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (myJson) {
-              
-                const table = document.querySelector('#showInfoCentral')
+//藝文活動中部 All展覽 tExHibition db
+fetch('./text.json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
 
-                let html = ''
-                myJson.forEach(element => {
-                    html += `
+        const table = document.querySelector('#showInfoCentral')
+
+        let html = ''
+        myJson.forEach(element => {
+            html += `
                             <div class="container">
                                 <div class="column">
                                     <div class="divPic">
                                         <a href="#"><img src="${element.eImage1}"></a>
+                                        <img src="./Images/emptyheart.png" class="heart">
                                     </div>
                                     <div class="col-12">
                                         <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.eName}</p>
@@ -30,9 +31,14 @@
                                 </div>
                              </div>
                             `;
-                });
-                table.innerHTML += html;
-            });
+        });
+        table.innerHTML += html;
+
+        const heart = document.querySelector('.heart')
+        $(".heart").click(function () {
+            $(this).attr('src', './Images/heart.png');
+        });
+    });
 
 
 

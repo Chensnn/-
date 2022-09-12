@@ -16,6 +16,7 @@
                         <div class="column">
                             <div class="divPic">
                                 <a href="#"><img src="${element.eImage1}"></a>
+                                <img src="./Images/emptyheart.png" class="heart">
                             </div>
                             <div class="col-12">
                                 <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.eName}</p>
@@ -33,6 +34,11 @@
                     `;
         });
         table.innerHTML += html;
+
+        const heart = document.querySelector('.heart')
+        $(".heart").click(function () {
+            $(this).attr('src', './Images/heart.png');
+        });
     });
 
 
