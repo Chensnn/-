@@ -12,10 +12,7 @@ fetch('./text.我的收藏.json')
         let html = ''
 
         myJson.forEach(element => {
-
-
             html += `
-                
                 <tr>
                     <td>${element.eName}</td>
                     <td><img src="./Images/heart.png" class="heart"></td>
@@ -26,16 +23,11 @@ fetch('./text.我的收藏.json')
 
         const heart = document.querySelector('.heart')
 
-        heart.addEventListener('dblclick', () => {
+        heart.addEventListener('click', () => {
             heart.src = "./Images/emptyheart.png";
 
         })
-        heart.addEventListener('click', () => {
-            heart.src = "./Images/heart.png";
-        })
 
-        
 
     });
 
-    

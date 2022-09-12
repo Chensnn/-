@@ -25,7 +25,7 @@ fetch('./text.json')
                                         <p>結束日期<i class="fi fi-brands-patreon"></i>${element.eEndTime}</p>
                                         <p>展演時間<i class="fi fi-brands-patreon"></i>${element.eTime}</p>
                                         <p>展演票價<i class="fi fi-brands-patreon"></i>${element.ePrice}</p>
-                                        <p>購票連結<i class="fi fi-brands-patreon"></i><a href="${element.購票連結}" title="前往購票">${element.購票連結}</a></p>
+                                        <p>購票連結<i class="fi fi-brands-patreon"></i><a href="${element.eLink}" title="前往購票">${element.eLink}</a></p>
                                         <hr>
                                     </div>
                                 </div>
@@ -52,6 +52,7 @@ function showHeart(el) {
 
     const heart = document.querySelector('.heart')
     heart.src = "./Images/heart.png";
+    console.log(el);
 
 }
 

@@ -26,7 +26,7 @@ fetch('./text.json')
                             <p>${element.eEndTime}</p>
                             <p>${element.eVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
-                            <p><a href="${element.購票連結}" title="連結售票網站">購票入口</a></p>
+                            <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ fetch('./text.json')
                             <p>${element.eEndTime}</p>
                             <p>${element.eVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
-                            <p><a href="${element.購票連結}" title="連結售票網站">購票入口</a></p>
+                            <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@ fetch('./text.json')
                             <p>${element.eEndTime}</p>
                             <p>${element.eVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
-                            <p><a href="${element.購票連結}" title="連結售票網站">購票入口</a></p>
+                            <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@ fetch('./text.json')
                             <p>${element.eEndTime}</p>
                             <p>${element.eVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
-                            <p><a href="${element.購票連結}" title="連結售票網站">購票入口</a></p>
+                            <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
                         </div>
                     </div>
                 </div>

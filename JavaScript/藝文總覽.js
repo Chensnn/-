@@ -22,7 +22,7 @@ fetch('./text.json')
                                 <p>${element.eIntroduce}</p>
                             </div>
                         </div>
-                        <a href="${element.購票連結}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
+                        <a href="${element.eLink}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
                     </div>
                 </figure>
             </div>`
@@ -122,7 +122,7 @@ function sectionText() {
                                         <p>${element.eIntroduce}</p>
                                     </div>
                                 </div>
-                                <a href="${element.購票連結}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
+                                <a href="${element.eLink}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
                             </div>
                         </figure>
                     </div>`
@@ -175,7 +175,7 @@ function sectionText() {
                                             <p>${element.eIntroduce}</p>
                                         </div>
                                     </div>
-                                     <a href="${element.購票連結}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
+                                     <a href="${element.eLink}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
                                 </div>
                             </figure>
                         </div>`
