@@ -1,7 +1,7 @@
 // 北中東南各四筆資料  tExHibition db
 
 // ====================================================================================北
-fetch('./text.json')
+fetch(' http://20.249.62.237/api/ExHibition/?id=1')
     .then(function (response) {
         return response.json();
     })
@@ -21,10 +21,10 @@ fetch('./text.json')
                     </div>
                     <div class="flip-card-back">
                         <div class="card-back-text">
-                            <h5>${element.eName}</br>${element.eVenue}</h5>
+                            <h5>${element.eName}</br>${element.vVenue}</h5>
                             <p>${element.eStartTime}</p>
                             <p>${element.eEndTime}</p>
-                            <p>${element.eVenue}</p>
+                            <p>${element.vVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
                         </div>
@@ -40,7 +40,7 @@ fetch('./text.json')
     });
 // ====================================================================================中
 
-fetch('./text.json')
+fetch(' http://20.249.62.237/api/ExHibition/?id=2')
     .then(function (response) {
         return response.json();
     })
@@ -60,10 +60,10 @@ fetch('./text.json')
                     </div>
                     <div class="flip-card-back">
                         <div class="card-back-text">
-                            <h5>${element.eName}</br>${element.eVenue}</h5>
+                            <h5>${element.eName}</br>${element.vVenue}</h5>
                             <p>${element.eStartTime}</p>
                             <p>${element.eEndTime}</p>
-                            <p>${element.eVenue}</p>
+                            <p>${element.vVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
                         </div>
@@ -80,7 +80,7 @@ fetch('./text.json')
 
 
 // ====================================================================================南
-fetch('./text.json')
+fetch(' http://20.249.62.237/api/ExHibition/?id=3')
     .then(function (response) {
         return response.json();
     })
@@ -100,10 +100,10 @@ fetch('./text.json')
                     </div>
                     <div class="flip-card-back">
                         <div class="card-back-text">
-                            <h5>${element.eName}</br>${element.eVenue}</h5>
+                            <h5>${element.eName}</br>${element.vVenue}</h5>
                             <p>${element.eStartTime}</p>
                             <p>${element.eEndTime}</p>
-                            <p>${element.eVenue}</p>
+                            <p>${element.vVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
                         </div>
@@ -119,7 +119,7 @@ fetch('./text.json')
     });
 
 // ====================================================================================東
-fetch('./text.json')
+fetch('http://20.249.62.237/api/ExHibition/?id=4')
     .then(function (response) {
         return response.json();
     })
@@ -139,10 +139,10 @@ fetch('./text.json')
                     </div>
                     <div class="flip-card-back">
                         <div class="card-back-text">
-                            <h5>${element.eName}</br>${element.eVenue}</h5>
+                            <h5>${element.eName}</br>${element.vVenue}</h5>
                             <p>${element.eStartTime}</p>
                             <p>${element.eEndTime}</p>
-                            <p>${element.eVenue}</p>
+                            <p>${element.vVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
                         </div>

@@ -1,6 +1,6 @@
 
 //藝文活動中部 All展覽 tExHibition db
-fetch('./text.json')
+fetch('http://20.249.62.237/api/ExHibition/?id=6')
     .then(function (response) {
         return response.json();
     })
@@ -19,7 +19,7 @@ fetch('./text.json')
                                     </div>
                                     <div class="col-12">
                                         <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.eName}</p>
-                                        <p>場館名稱<i class="fi fi-brands-patreon"></i>${element.eVenue}</p>
+                                        <p>場館名稱<i class="fi fi-brands-patreon"></i>${element.vVenue}</p>
                                         <p>展演類型<i class="fi fi-brands-patreon"></i>${element.eGenre}</p>
                                         <p>開始日期<i class="fi fi-brands-patreon"></i>${element.eStartTime}</p>
                                         <p>結束日期<i class="fi fi-brands-patreon"></i>${element.eEndTime}</p>
