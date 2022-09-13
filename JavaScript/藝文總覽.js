@@ -1,6 +1,6 @@
 
 // 總覽頁面點進去會有所有展覽(北中東南)的資料  tExHibition db
-fetch('./text.json')
+fetch('http://20.249.62.237/api/ExHibition')
     .then(function (response) {
         return response.json();
     })
@@ -22,7 +22,7 @@ fetch('./text.json')
                                 <p>${element.eIntroduce}</p>
                             </div>
                         </div>
-                        <a href="${element.eLink}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
+                        <a href="${element.eLink}" title="前往購票"><figcaption>${element.vVenue}</br>${element.eName}</figcaption></a>
                     </div>
                 </figure>
             </div>`
@@ -100,7 +100,7 @@ function sectionText() {
     console.log(`${areaclick} ${venueclick} ${genreclick}`);
 
 
-    fetch('./text.json')
+    fetch('http://20.249.62.237/api/ExHibition')
         .then(function (response) {
             return response.json();
         })
@@ -111,7 +111,7 @@ function sectionText() {
             let html = ''
             myJson.forEach(element => {
 
-                if (venueclick === element.eVenue && genreclick === element.eGenre) {
+                if (venueclick === element.vVenue && genreclick === element.eGenre) {
                     html += `
                     <div class="col-lg-3">
                         <figure>
@@ -122,7 +122,7 @@ function sectionText() {
                                         <p>${element.eIntroduce}</p>
                                     </div>
                                 </div>
-                                <a href="${element.eLink}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
+                                <a href="${element.eLink}" title="前往購票"><figcaption>${element.vVenue}</br>${element.eName}</figcaption></a>
                             </div>
                         </figure>
                     </div>`
@@ -155,7 +155,7 @@ function sectionText() {
         changeVenue(this.selectedIndex)
 
         // 4.清除完後恢復北中東南所有資料
-        fetch('./text.json')
+        fetch('http://20.249.62.237/api/ExHibition')
             .then(function (response) {
                 return response.json();
             })
@@ -175,7 +175,7 @@ function sectionText() {
                                             <p>${element.eIntroduce}</p>
                                         </div>
                                     </div>
-                                     <a href="${element.eLink}" title="前往購票"><figcaption>${element.eVenue}</br>${element.eName}</figcaption></a>
+                                     <a href="${element.eLink}" title="前往購票"><figcaption>${element.vVenue}</br>${element.eName}</figcaption></a>
                                 </div>
                             </figure>
                         </div>`
