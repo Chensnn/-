@@ -9,7 +9,16 @@ fetch('http://20.249.62.237/api/ExHibition')
         const table = document.querySelector('#showInfoBk')
 
         let html = ''
+        let subIntroduce = '';
         myJson.forEach(element => {
+
+
+            if (element.eIntroduce.length > 160) {
+                subIntroduce = element.eIntroduce.slice(0, 200)
+            } else {
+                subIntroduce = element.eIntroduce
+            }
+
             html += `
 
 
@@ -19,7 +28,7 @@ fetch('http://20.249.62.237/api/ExHibition')
                         <img src="${element.eImage1}">
                         <div class="overlay">
                             <div class="text">
-                                <p>${element.eIntroduce}</p>
+                                <p>${subIntroduce}</p>
                             </div>
                         </div>
                         <a href="${element.eLink}" title="前往購票"><figcaption>${element.vVenue}</br>${element.eName}</figcaption></a>
@@ -109,7 +118,15 @@ function sectionText() {
             const table = document.querySelector('#showInfoBk')
 
             let html = ''
+            let subIntroduce = '';
             myJson.forEach(element => {
+
+
+                if (element.eIntroduce.length > 160) {
+                    subIntroduce = element.eIntroduce.slice(0, 200)
+                } else {
+                    subIntroduce = element.eIntroduce
+                }
 
                 if (venueclick === element.vVenue && genreclick === element.eGenre) {
                     html += `
@@ -119,7 +136,7 @@ function sectionText() {
                                 <img src="${element.eImage1}">
                                 <div class="overlay">
                                     <div class="text">
-                                        <p>${element.eIntroduce}</p>
+                                        <p>${subIntroduce}</p>
                                     </div>
                                 </div>
                                 <a href="${element.eLink}" title="前往購票"><figcaption>${element.vVenue}</br>${element.eName}</figcaption></a>
@@ -164,7 +181,16 @@ function sectionText() {
                 const table = document.querySelector('#showInfoBk')
 
                 let text = ''
+                let subIntroduce = '';
                 myJson.forEach(element => {
+
+                    if (element.eIntroduce.length > 160) {
+                        subIntroduce = element.eIntroduce.slice(0, 200)
+                    } else {
+                        subIntroduce = element.eIntroduce
+                    }
+
+
                     text += `
                         <div class="col-lg-3">
                             <figure>
@@ -172,7 +198,7 @@ function sectionText() {
                                     <img src="${element.eImage1}">
                                     <div class="overlay">
                                         <div class="text">
-                                            <p>${element.eIntroduce}</p>
+                                            <p>${subIntroduce}</p>
                                         </div>
                                     </div>
                                      <a href="${element.eLink}" title="前往購票"><figcaption>${element.vVenue}</br>${element.eName}</figcaption></a>

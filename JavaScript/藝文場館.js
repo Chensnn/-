@@ -9,7 +9,7 @@ function OpenModal(el) {
     let element = document.getElementById('overlay')
     element.style.display = 'block'
     // console.log(el);  //可以得到按了第幾張圖片
-    fetch('./text場館.json')
+    fetch('http://20.249.62.237/api/Venue')
         .then(function (response) {
             return response.json();
         })
@@ -105,7 +105,7 @@ Closebox.addEventListener('click', function () {
 
 // ===================================================================================北部
 // 網頁載入先跑出圖片圖片有加一個click事件
-fetch('./text場館.json')
+fetch(' http://20.249.62.237/api/Venue/?id=1')
     .then(function (response) {
         return response.json();
     })
@@ -131,7 +131,7 @@ fetch('./text場館.json')
 
 // ===================================================================================中部
 
-fetch('./text場館.json')
+fetch(' http://20.249.62.237/api/Venue/?id=2')
     .then(function (response) {
         return response.json();
     })
@@ -156,7 +156,7 @@ fetch('./text場館.json')
 
 // ===================================================================================南部
 
-fetch('./text場館.json')
+fetch(' http://20.249.62.237/api/Venue/?id=3')
     .then(function (response) {
         return response.json();
     })
@@ -181,7 +181,7 @@ fetch('./text場館.json')
 
 // ===================================================================================東部
 
-fetch('./text場館.json')
+fetch('http://20.249.62.237/api/Venue/?id=4')
     .then(function (response) {
         return response.json();
     })
