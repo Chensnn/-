@@ -8,8 +8,14 @@ fetch('http://20.249.62.237/api/ExHibition/?id=6')
 
         const table = document.querySelector('#showInfoCentral')
 
-        let html = ''
+        let html = '';
+        let subStartDate='';
+        let subEndDate='';
         myJson.forEach(element => {
+            if(element.eStartTime.length>10 || element.eEndTime.length>10){
+                subStartDate = element.eStartTime.slice(0,10)
+                subEndDate = element.eEndTime.slice(0,10)
+            }
             html += `
                             <div class="container">
                                 <div class="column">
@@ -21,8 +27,8 @@ fetch('http://20.249.62.237/api/ExHibition/?id=6')
                                         <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.eName}</p>
                                         <p>場館名稱<i class="fi fi-brands-patreon"></i>${element.vVenue}</p>
                                         <p>展演類型<i class="fi fi-brands-patreon"></i>${element.eGenre}</p>
-                                        <p>開始日期<i class="fi fi-brands-patreon"></i>${element.eStartTime}</p>
-                                        <p>結束日期<i class="fi fi-brands-patreon"></i>${element.eEndTime}</p>
+                                        <p>開始日期<i class="fi fi-brands-patreon"></i>${subStartDate}</p>
+                                        <p>結束日期<i class="fi fi-brands-patreon"></i>${subEndDate}</p>
                                         <p>展演時間<i class="fi fi-brands-patreon"></i>${element.eTime}</p>
                                         <p>展演票價<i class="fi fi-brands-patreon"></i>${element.ePrice}</p>
                                         <p>購票連結<i class="fi fi-brands-patreon"></i><a href="${element.eLink}" title="前往購票">${element.eLink}</a></p>
