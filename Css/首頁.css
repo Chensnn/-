@@ -254,7 +254,7 @@ nav {
         transition: 0.5s;
         padding-top: 60px;
         font-family: 'Noto Sans TC', sans-serif;
-
+       
     }
 
     .sidenav a {
@@ -306,6 +306,12 @@ nav {
     .newsSection{
         background: #000000;
     }
+    .activity{
+        position: relative;
+        top:-130px;
+    }
+   
+    
 
 
 
@@ -360,6 +366,9 @@ li {
 
 }
 
+
+
+
 .activity {
     padding: 40px 40px;
     background: #fffff0;
@@ -380,17 +389,42 @@ li {
     transform: scale(1.2, 1.2);
 }
 
+/* Rwd時取消tag捲動 */
+@media screen and (max-width:576px) {
+
+    .tag {
+        opacity: 1;
+
+    }
+    
+    .tag.visible {
+        opacity: 1;
+
+    }
+}
+
+
+
 /* 最新活動資訊 */
 
 .activity .outer {
     background: white;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
     margin-bottom: 50px;
+    width: 250px;
+    height: 500px;
+}
+
+.activity .outer img {
+    width: 100%;
+    width: 250px;
+    height: 330px;
+
 }
 
 
 .activity .lower h3 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 12px;
     margin-top: 12px;
 }
@@ -401,6 +435,7 @@ li {
 
 .activity .lower {
     padding: 10px 20px 20px 20px;
+    position: relative;
 }
 
 .activity a {
@@ -411,9 +446,11 @@ li {
     text-decoration: none;
 }
 
-.activity span {
+.activity .lower span {
     font-size: 15px;
     color: #495057;
+    /* position: absolute;
+    margin-top: 10px; */
 }
 
 .activity .page-header {
@@ -426,6 +463,8 @@ li {
 .activity h3 {
     display: flex;
     justify-content: flex-start;
+    /* position: relative;
+    bottom:-5px; */
 }
 
 .activity .page-header a {
@@ -438,6 +477,24 @@ li {
     margin-bottom: 5px;
 
 }
+
+/* 最新活動資訊部分的的RWD */
+@media screen and (max-width:576px) {
+    .activity .outer {
+        width: 350px;
+        height: 550px;
+        display: flex;
+        justify-items: center;
+    }
+
+    .activity .outer img {
+        width: 100%;
+        width: 350px;
+        height: 400px;
+    }
+
+}
+
 
 
 /* 推薦場館 */

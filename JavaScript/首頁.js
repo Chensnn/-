@@ -18,38 +18,40 @@ $(document).on("scroll", function () {
 function doFirst() {
 
 
-    fetch('./text首頁.json')
+    fetch('http://20.249.62.237/api/ExHibition/?id=9')
         .then(function (response) {
             return response.json();
         })
         .then(function (myJson) {
-            console.log(myJson);
+            //console.log(myJson);
 
             const activity = document.querySelector('#activity')
 
-
             let html = ''
+
             myJson.forEach(element => {
 
+
                 html += `
-            <div class="col-6 col-md-3 col-sm-4 col-xs-6">
-                  <div class="outer">
-                    <a href="#">
-                        <div class="upper">
-                            <img src="${element.展演圖片}">
-                        </div>
-                        <div class="lower">
-                            <h3>${element.展演標題}</h3>
-                            <span><i class="fa-solid fa-location-dot"></i>${element.場館地點}</span>
-                            <br>
-                            <span><i class="fa-regular fa-clock"></i>${element.展演時間}</span>
-                        </div>
-                    </a>
-                </div>
-            </div>  `;
+        <div class=" col-md-3 col-sm-4">
+              <div class="outer">
+                <a href="${element.eLink}">
+                    <div class="upper">
+                        <img src="${element.eImage1}">
+                    </div>
+                    <div class="lower">
+                        <h3>${element.eName}</h3>
+                        <span><i class="fa-solid fa-location-dot"></i>${element.vVenue}</span>
+                        <br>
+                        <span><i class="fa-regular fa-clock"></i>${element.eStartTime}</span>
+                    </div>
+                </a>
+            </div>
+        </div>  `;
             });
             activity.innerHTML += html;
         });
+
 
     fetch('./text首頁場館.json')
         .then(function (response) {

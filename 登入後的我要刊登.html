@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>藝起來玩</title>
+    <title>我要刊登</title>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -25,19 +25,20 @@
 
     <!-- icon -->
     <script src="https://kit.fontawesome.com/a32b9111be.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./Css/首頁.css">
+    <link rel="stylesheet" href="./Css/我要刊登.css">
     <link rel="stylesheet" href="./Css/登入後的畫面.css">
-    <link rel="stylesheet" href="./Css/會員查看個人資訊頁面.css">
-    <link rel="stylesheet" href="./Css/註冊.css">
-    <link rel="stylesheet" href="./Css/會員修改及查看資料.css">
 
+  
 
+<a href=""></a>
 </head>
 
 <body>
 
-    <!-- sticky-top讓navbar固定在上方 nav-tabs是會有下底線 -->
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
+
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top ">
         <div class="container-fluid">
             <a class="navbar-brand " href="./登入後的畫面.html" title="藝起來玩">藝起來玩</a>
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
@@ -88,99 +89,138 @@
                         <div class="idPhoto"><img src="#" id="idPhoto"></div>
                     </a><span id="memberName">陳思穎會員 你好</span>
                 </li>
-                <li></li>
             </ul>
         </div>
     </nav>
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
 
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12 title">
-                <h4><i class="fi fi-br-comment-alt"></i>個人資料</h4>
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/Images/NUWA五色石.jpg" alt="Los Angeles">
+                <div class="carousel-caption">
+                    <h1>我要刊登</h1>
+                    <p>一起來交流，互相交朋友吧！</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/李友廷-冷身操.jpg" alt="Chicago">
+                <div class="carousel-caption">
+                    <h1>我要刊登</h1>
+                    <p>一起來交流，互相交朋友吧！</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/國語作業簿(廣告輪播).jpg" alt="New York">
+                <div class="carousel-caption">
+                    <h1>我要刊登</h1>
+                    <p>一起來交流，互相交朋友吧！</p>
+                </div>
             </div>
         </div>
-    </div>
-   
-    <div class="container">
-        <div class="row">
 
-            <label class="btn upload_img">
-                <div class="showImgPic">
-                    <img id="showImg" src="#" />
-                </div>
-                <input id="upload_img" style="display:none;" type="file" accept="image/gif, image/jpeg, image/png">
-                <i class="fi fi-br-portrait"></i><span>您的個人頭像</span>
-            </label>
-
-            <form action="#" method="post">
-                <div class="columns inFoSection">
-                    <div class="col-12">
-                        <label>姓名</label>
-                        <input type="text" id="name" readonly>
-                    </div>
-                    <div class="col-12 inFoGenderDiv">
-                        <label>性別</label>
-                        <input type="text" readonly>
-                        <div class="inFoGender">
-                            <input type="radio" name="gender" value="male" id="male"><span>男</span>
-                            <input type="radio" name="gender" value="women" id="women"><span>女</span>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <label for="date">生日</label>
-                        <input type="text" id="date" readonly>
-                    </div>
-                    <div class="col-12">
-                        <label for="phone">電話</label>
-                        <input type="text" id="phone" >
-                    </div>
-                    <div class="col-12">
-                        <label for="address">地址</label>
-                        <input type="text" id="address">
-                    </div>
-                    <div class="col-12">
-                        <label>Email</label>
-                        <input type="email" id="email" readonly>
-                    </div>
-                    <div class="col-12">
-                        <label>帳號</label>
-                        <input type="text" id="account" readonly>
-                    </div>
-                    <div class="col-12">
-                        <label for="pwd">密碼</label>
-                        <input type="text" id="pwd">
-                    </div>
-                    <div class="col-12">
-                        <button id="returnInfo" type="submit" class="registerbtn">取消修改</button>
-                        <button id="updateInfo" type="submit" class="registerbtn">確認修改</button>
-                    </div>
-            </form>
-        </div>
-    </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
     </div>
 
-
-
-
-
-
-    <footer class="">
+    <section class="">
         <div class="container">
             <div class="row">
-                <div class="">
+                <div class="col title">
+                    <h2>票券交流版</h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="background">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label for="">文章標題</label>
+                        <input type="text" class="form-control" id=""
+                            placeholder="標題">
+                    </div>
+                    <div class="form-group">
+                        <label for="">姓名</label>
+                        <input type="text" class="form-control" id=""
+                            placeholder="請輸入姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="">活動名稱</label>
+                        <input type="text" class="form-control" id=""
+                            placeholder="請輸入活動名稱">
+                    </div>
+                    <div class="form-group">
+                        <label for="">選擇活動區域</label>
+                        <select class="form-control" id="">
+                            <option>北部</option>
+                            <option>中部</option>
+                            <option>南部</option>
+                            <option>東部</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">你想要徵票／售票？</label>
+                        <select class="form-control" id="">
+                            <option>徵票</option>
+                            <option>售票</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">有什麼想說的嗎？</label>
+                        <textarea class="form-control" id="" rows="8"></textarea>
+                    </div>
+
+                    <div class="alert alert-success" role="alert" id="success_message">謝謝您的填寫，祝你早日找到有緣人！</div>
+
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                          <button type="submit" class="btn btn-warning" >送出</button>
+                    </div>     
+                        
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="bottom">
                     <p>© 藝起來玩 版權所有</p>
                 </div>
+
             </div>
         </div>
     </footer>
 
-
-    <script src="./JavaScript/註冊.js"></script>
     <script src="./JavaScript/登入.js"></script>
-    <script src="./JavaScript/會員修改及查看資料.js"></script>
+    <script>
+        const memberName = document.querySelector('#memberName')
+        memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
+
+        const idPhoto = document.querySelector('#idPhoto')
+        idPhoto.src = window.localStorage.getItem('userPhoto');
+
+    </script>
+
+
 </body>
 
 </html>

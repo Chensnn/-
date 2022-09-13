@@ -172,8 +172,11 @@ figcaption {
         border-radius: 2px;
         justify-content: flex-start;
         align-items:flex-start;
-        margin:0px;
+        margin:60px auto 10px auto;
         padding: 5px;
+
+        position: relative;
+        top:-20px;
     }
     select {
         font-size: 7px;
