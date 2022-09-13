@@ -130,15 +130,16 @@ figcaption {
     transition: all .5s linear;
 }
 
-.btn-outline-dark:hover{
+.btn-outline-dark:hover {
     color: #403F3D;
     background-color: transparent;
     border: transparent;
 }
-.btn-outline-dark:focus{
+
+.btn-outline-dark:focus {
     box-shadow: 0 0 0 0.1rem rgba(52, 58, 64, 0.1);
 }
-  
+
 .btn-outline-dark span {
     position: relative;
     z-index: 1;
@@ -156,6 +157,48 @@ figcaption {
     left: 0;
     transition: all .6s ease;
 }
-.btn-outline-dark:hover::before{
+
+.btn-outline-dark:hover::before {
     width: 100%;
+}
+
+
+@media screen and (max-width: 576px) {
+
+
+    .selectbackground {
+        height: 50%;
+        box-shadow: 3px 3px 5px rgba(64, 63, 61, 0.3);
+        border-radius: 2px;
+        justify-content: flex-start;
+        align-items:flex-start;
+        margin:0px;
+        padding: 5px;
+    }
+    select {
+        font-size: 7px;
+        width: 100px;
+    }
+    .btn-outline-dark{
+        font-size: 8px;
+        padding: 2px 8px;
+        position: relative;
+        left:31px;
+        bottom:-20px;
+
+    }
+    .fi-sr-list {
+        /* visibility: hidden; */
+        display: none;
+    }
+    .selectbackground label {
+        font-size: 7px;
+        margin-left: 5px;
+    }
+
+    select:first-child{
+        margin-left: 20px;
+    }
+
+
 }

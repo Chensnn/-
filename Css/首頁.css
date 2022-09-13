@@ -300,6 +300,12 @@ nav {
     .setRwdNav {
         margin-bottom: 20px;
     }
+    #demo{
+        display: none;
+    }
+    .newsSection{
+        background: #000000;
+    }
 
 
 
@@ -359,6 +365,7 @@ li {
     background: #fffff0;
     margin-bottom: 80px;
     margin-top: 80px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.1);
 }
 
 
@@ -486,6 +493,8 @@ li {
     background: #fffff0;
     margin-bottom: 80px;
     margin-top: 80px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.1);
+
 }
 
 .message .page-header {
@@ -527,10 +536,11 @@ li {
 /* 背景主區塊 */
 .newsSection {
     width: 100%;
-    background: linear-gradient(9deg, rgb(242, 204, 181), rgb(240, 246, 224));
+    background: #fffff0;
     margin-bottom: 100px;
-    padding-bottom: 90px;
-    box-shadow: 1px 5px 50px #c1bfb9;
+    padding-bottom: 40px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.1);
+
 
 
 }
@@ -541,16 +551,14 @@ li {
     font-weight: 700;
     color: #403F3D;
     margin-bottom: 30px;
-    padding-top: 80px;
+    padding-top: 50px;
     text-align: left;
 }
 
 /* 標題下的底線 */
 .newsSection h3 hr {
-    border: 2px solid #fffff0;
-    background: #fffff0;
-    box-shadow: 0 0 8px 0 rgba(50, 48, 48, 0.3);
-    opacity: 0.4;
+    border: 2px solid #F2CCB5;
+    background: #F2CCB5;
 }
 
 /* 內文字區塊的連結 */
@@ -633,11 +641,11 @@ li {
 @media screen and (max-width:576px) {
     .announcement {
         font-size: 5px;
-        background-color: #b6c0b9;
+        background-color: transparent;
         border-radius: 2px;
         margin-bottom: 5px;
         padding: 3px 6px;
-        box-shadow: 1px 1px 3px #000000;
+        box-shadow: 3px 3px 5px rgba(64, 63, 61, 0.3);
         color: #403F3D;
     }
 
@@ -665,26 +673,29 @@ li {
         font-size: 1em;
         color: #403F3D;
         margin-bottom: 20px;
-        padding-top: 50px;
+        padding-top: 25px;
     }
 
     .newsSection {
         width: 100%;
         margin-bottom: 30px;
-        padding-bottom: 50px;
-        box-shadow: 1px 1px 10px #403F3D;
+        padding-bottom: 30px;
+        box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.1);
+
 
     }
 
     .fi-br-menu-burger {
         margin: 1px 1px 5px 5px;
+        position: relative;
+        top:2px;
     }
 
     .newsSection h3 a {
         font-size: 3px;
         font-weight: 400;
-
     }
+   
 
 
 }
