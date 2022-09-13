@@ -1,5 +1,6 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
 @import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
 
 *{
     color: #403F3D;
@@ -161,14 +162,12 @@ label {
 
 .bottom-Text h5 {
     color: #403F3D;
-    opacity: 0.5;
+    opacity: 0.4;
     margin-left: -30px;
+    font-weight: 300;
 }
 
-/* +++++*/
-.fi-rr-plus-small:hover {
-    color: #403F3D;
-}
+
 
 .fi-brands-patreon {
     font-size: 15px;
@@ -177,4 +176,18 @@ label {
     right: 5px;
     bottom: -2px;
     margin-left: 12px;
+}
+
+/* 愛心收藏 */
+.heart {
+    max-width: 20px;
+    max-height: 20px;
+    cursor: pointer;
+    position: relative;
+    top:170px;
+    right: -107px;
+}
+
+.fi-ss-bank{
+    color:rgba(202, 217, 162, 0.9);
 }

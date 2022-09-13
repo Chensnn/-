@@ -44,6 +44,9 @@ fetch('http://20.249.62.237/api/ExHibition/?id=6')
         $(".heart").click(function () {
             $(this).attr('src', './Images/heart.png');
         });
+        $(".heart").dblclick(function () {
+            $(this).attr('src', './Images/emptyheart.png');
+        });
     });
 
 

@@ -44,6 +44,9 @@
                 $(".heart").click(function () {
                     $(this).attr('src', './Images/heart.png');
                 });
+                $(".heart").dblclick(function () {
+                    $(this).attr('src', './Images/emptyheart.png');
+                });
             });
 
 

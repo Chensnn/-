@@ -23,6 +23,7 @@ function OpenModal(el) {
                 html +=
 
                     `<span><img src="${myJson[el - 1].vImage1}"></span>
+                    <img src="./Images/emptyheart.png" class="heart">
                     <p>場館名稱<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vVenue}</p>
                     <p>場館地區<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vArea}</p>
                     <p>聯絡方式<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vPhone}</p>
@@ -50,6 +51,14 @@ function OpenModal(el) {
 
             vVenueText.innerHTML = html;
 
+            const heart = document.querySelector('.heart')
+            $(".heart").click(function () {
+                $(this).attr('src', './Images/heart.png');
+            });
+            $(".heart").dblclick(function () {
+                $(this).attr('src', './Images/emptyheart.png');
+            });
+
             let selectDay = document.querySelector('.selectDay')
             let label = document.querySelector('label')
 
@@ -63,25 +72,25 @@ function OpenModal(el) {
 
                 switch (item) {
                     case "tab_Mon":
-                        label.innerHTML = `${myJson[el - 1].vMonday}`
+                        label.innerHTML = `${(myJson[el - 1].vMonday).slice(3)}`
                         break;
                     case "tab_Tue":
-                        label.innerHTML = `${myJson[el - 1].vTuesday}`
+                        label.innerHTML = `${(myJson[el - 1].vTuesday).slice(3)}`
                         break;
                     case "tab_Wed":
-                        label.innerHTML = `${myJson[el - 1].vWednesday}`
+                        label.innerHTML = `${(myJson[el - 1].vWednesday).slice(3)}`
                         break;
                     case "tab_Thr":
-                        label.innerHTML = `${myJson[el - 1].vThursday}`
+                        label.innerHTML = `${(myJson[el - 1].vThursday).slice(3)}`
                         break;
                     case "tab_Fri":
-                        label.innerHTML = `${myJson[el - 1].vFriday}`
+                        label.innerHTML = `${(myJson[el - 1].vFriday).slice(3)}`
                         break;
                     case "tab_Sat":
-                        label.innerHTML = `${myJson[el - 1].vSaturday}`
+                        label.innerHTML = `${(myJson[el - 1].vSaturday).slice(3)}`
                         break;
                     case "tab_Sun":
-                        label.innerHTML = `${myJson[el - 1].vSunday}`
+                        label.innerHTML = `${(myJson[el - 1].vSunday).slice(3)}`
                         break;
                     default:
                         label.innerHTML = ``

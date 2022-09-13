@@ -95,7 +95,7 @@
 /* 左邊精選的標題 */
 .bottom-Text {
     flex-direction: column;
-    border: 9px #F2CCB5;
+    border: 7px #F2CCB5;
     border-style: none none none solid;
     border-radius: 3px;
     margin-left: -30px;
