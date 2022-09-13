@@ -23,7 +23,7 @@ function OpenModal(el) {
                 html +=
 
                     `<span><img src="${myJson[el - 1].vImage1}"></span>
-                    <img src="./Images/emptyheart.png" class="heart">
+                    <div class="heartDiv"><img src="./Images/emptyheart.png" class="heart"></div>
                     <p>場館名稱<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vVenue}</p>
                     <p>場館地區<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vArea}</p>
                     <p>聯絡方式<i class="fi fi-brands-patreon"></i>${myJson[el - 1].vPhone}</p>
