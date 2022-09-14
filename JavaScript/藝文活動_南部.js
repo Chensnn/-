@@ -1,4 +1,32 @@
+let collectExHibition = '';
+let memberCollect = [];
+let filterMemberCollect=[];
 
+function heartID(el) {
+    //console.log(el);   //可以得到點的展覽ID
+    // 北部全部
+    fetch('http://20.249.62.237/api/ExHibition/?id=7')
+        .then(function (response) { 
+            return response.json()
+         })
+        .then(function (myJson) {
+            myJson.forEach(element => {
+                if (el == element.eId) {
+                    collectExHibition = element.eName
+
+                    //得到的值加進陣列
+                    memberCollect.push(collectExHibition)
+                    //篩選掉重複的值
+                    filterMemberCollect=  memberCollect.filter( (collectExHibition,pos)=>memberCollect.indexOf(collectExHibition) == pos);
+                    //得到user收藏的array
+                    console.log(filterMemberCollect.toString());  
+                   
+                }
+
+            })
+        })
+
+}
 //藝文活動南部 All展覽 tExHibition db
     fetch('http://20.249.62.237/api/ExHibition/?id=7')
             .then(function (response) {
@@ -21,7 +49,7 @@
                                 <div class="column">
                                     <div class="divPic">
                                         <a href="#"><img src="${element.eImage1}"></a>
-                                        <img src="./Images/emptyheart.png" class="heart">
+                                        <img src="./Images/emptyheart.png" class="heart" onclick="heartID(${element.eId})">
                                     </div>
                                     <div class="col-12">
                                         <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.eName}</p>
