@@ -30,7 +30,7 @@ function msubmitBtn() {
 	// console.log(`${mAccount} ${mPassword}`)
 
 	// ==========================================================
-
+	//會員API  http://20.249.62.237/api/Member
 	fetch("./text會員.json")
 		.then(function (response) {
 			return response.json();
@@ -44,13 +44,14 @@ function msubmitBtn() {
 					window.location.href="./登入後的畫面.html";
 					window.localStorage.setItem('user',element.mName);
 					window.localStorage.setItem('userPhoto',element.mImage);
-					window.localStorage.setItem('userGender',element.mGender);
+					window.localStorage.setItem('userGender',element.mGmder);
 					window.localStorage.setItem('userBirthDate',element.mBirthday);
 					window.localStorage.setItem('userPhone',element.mPhone);
 					window.localStorage.setItem('userAddress',element.mAddress);
 					window.localStorage.setItem('userEmail',element.mEmail);
 					window.localStorage.setItem('userAccount',element.mAccount);
 					window.localStorage.setItem('userPassword',element.mPassword);
+					window.localStorage.setItem('userFavorite',element.eName);
 
 					
 

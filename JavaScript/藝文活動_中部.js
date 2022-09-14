@@ -18,8 +18,10 @@ function heartID(el) {
                     memberCollect.push(collectExHibition)
                     //篩選掉重複的值
                     filterMemberCollect = memberCollect.filter((collectExHibition, pos) => memberCollect.indexOf(collectExHibition) == pos);
+
+
                     //得到user收藏的array
-                    console.log(filterMemberCollect.toString());
+                    // console.log(filterMemberCollect.toString());
 
                 }
 
@@ -27,6 +29,31 @@ function heartID(el) {
         })
 
 }
+
+function cancelHeartId(el) {
+    fetch('http://20.249.62.237/api/ExHibition/?id=6')
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (myJson) {
+            myJson.forEach(element => {
+
+                if (el == element.eId) {
+                    collectExHibition = element.eName
+                    // 這邊要作移除陣列
+                    filterMemberCollect = filterMemberCollect.filter(function (item) {
+                        return item !== collectExHibition
+                    })
+                    //得到user收藏的array  若有移除
+                    console.log(`${filterMemberCollect.toString()}`);
+                    // filterMemberCollect可以存入資料庫
+
+                }
+            })
+        })
+}
+
+
 
 
 //藝文活動中部 All展覽 tExHibition db
@@ -51,7 +78,7 @@ fetch('http://20.249.62.237/api/ExHibition/?id=6')
                                 <div class="column">
                                     <div class="divPic">
                                         <a href="#"><img src="${element.eImage1}"></a>
-                                        <img src="./Images/emptyheart.png" class="heart" onclick="heartID(${element.eId})">
+                                        <img src="./Images/emptyheart.png" class="heart" onclick="heartID(${element.eId})" ondblclick="cancelHeartId(${element.eId})">
                                     </div>
                                     <div class="col-12">
                                         <p>展演名稱<i class="fi fi-brands-patreon"></i>${element.eName}</p>
@@ -74,9 +101,9 @@ fetch('http://20.249.62.237/api/ExHibition/?id=6')
         $(".heart").click(function () {
             $(this).attr('src', './Images/heart.png');
         });
-        // $(".heart").dblclick(function () {
-        //     $(this).attr('src', './Images/emptyheart.png');
-        // });
+        $(".heart").dblclick(function () {
+            $(this).attr('src', './Images/emptyheart.png');
+        });
     });
 
 

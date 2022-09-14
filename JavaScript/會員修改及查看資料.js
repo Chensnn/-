@@ -15,14 +15,14 @@ name.value = window.localStorage.getItem('user');
 const male = document.querySelector('#male')
 const women = document.querySelector('#women')
 
-if (window.localStorage.getItem('userGender') == 'male') {
+if (window.localStorage.getItem('userGender') == '男') {
   male.checked = window.localStorage.getItem('userGender')
 } else {
   women.checked = window.localStorage.getItem('userGender')
 }
 
 const date = document.querySelector('#date')
-date.value = window.localStorage.getItem('userBirthDate');
+date.value = window.localStorage.getItem('userBirthDate').slice(0,10);
 
 const phone = document.querySelector('#phone')
 phone.value = window.localStorage.getItem('userPhone');

@@ -41,7 +41,7 @@ function doFirst() {
 //     gender = women.value
 //     alert(gender)
 //   }
-//    alert(date.value)
+//    alert(typeof date.value)
 //    alert(phone.value)
 //    alert(address.value)
 //    alert(email.value)

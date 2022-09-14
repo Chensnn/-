@@ -1,7 +1,7 @@
 
 
 
-fetch('./text.我的收藏.json')
+fetch('./text會員.json')
     .then(function (response) {
         return response.json();
     })
@@ -14,10 +14,10 @@ fetch('./text.我的收藏.json')
         let collect = [];
         let str = '';
         let strResult = '';
-
+         
         myJson.forEach(element => {
-
-            collect.push(element.eName);        //展覽放進陣列
+            
+            collect.push(window.localStorage.getItem('userFavorite'));        //展覽放進陣列
             str = collect.toString();           //陣列轉字串
             strResult = str.split(' ');         //作字串切割
 
