@@ -15,10 +15,11 @@ body {
     font-weight: 500;
     color: #403F3D;
 }
+
 /* navbar原本的灰底色 */
-.bg-light{
+.bg-light {
     background-color: #CAD9A2 !important;
-    
+
 }
 
 /* Logo文字大小 */
@@ -60,7 +61,7 @@ body {
 /* 滑鼠移到Navbar標題顏色 */
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
-    
+
     font-weight: 700;
     opacity: 0.8;
     color: #000000;
@@ -110,7 +111,7 @@ body {
     color: #403F3D;
     margin-left: 5px;
     margin-right: 6px;
-    
+
     font-size: 13px;
     font-weight: 300;
     text-decoration: none;
@@ -122,18 +123,21 @@ body {
     font-weight: 500;
     color: #CC8D1A;
 }
+
 .fi-sr-user:hover,
-.fi-sr-user-add:hover{
+.fi-sr-user-add:hover {
     color: #CC8D1A;
 }
+
 .loginReg {
     margin-right: -25px;
     margin-top: -80px;
     margin-bottom: -110px;
-    
-   
+
+
 
 }
+
 /* 登入icon */
 .fi-sr-user {
     font-size: 18px;
@@ -142,6 +146,7 @@ body {
     color: #403F3D;
 
 }
+
 /* 註冊icon */
 .fi-sr-user-add {
     font-size: 18px;
@@ -150,11 +155,13 @@ body {
     color: #403F3D;
 
 }
+
 /* 首頁右上角RWD*/
 @media screen and (max-width:576px) {
-    .loginReg{
+    .loginReg {
         display: none;
     }
+
     .navbar-light .navbar-brand {
         font-size: 18px;
         font-weight: 300;
@@ -166,42 +173,45 @@ body {
 }
 
 /* Search Button Icon */
-.fi-rs-search-alt{
+.fi-rs-search-alt {
     font-size: 22px;
-    color:#403F3D;
+    color: #403F3D;
     opacity: 0.8;
     margin-left: 10px;
-    
+
 }
-.loginReg button{
+
+.loginReg button {
     background: transparent;
     margin-right: 1px;
     border: none;
     margin-bottom: -15px;
 }
-.loginReg button:focus{
+
+.loginReg button:focus {
     outline: none;
     cursor: pointer;
 }
-.loginReg .fi-rs-search-alt:hover{
+
+.loginReg .fi-rs-search-alt:hover {
 
     cursor: pointer;
     opacity: 0.8;
-    color:#CC8D1A;
+    color: #CC8D1A;
 }
 
 /* 輸入框 */
-.searchInput{
+.searchInput {
     background-color: transparent;
     color: #403F3D;
     opacity: 0.9;
     border: 1px;
-    border-style: none none solid none ;
+    border-style: none none solid none;
     border-radius: 1px;
 
-    
+
     text-align: center;
-    font-size:15px;
+    font-size: 15px;
     padding: 3px;
     margin-bottom: 8px;
     margin-right: 5px;
@@ -209,7 +219,8 @@ body {
     padding-top: 1px;
 
 }
-.searchInput:focus{
+
+.searchInput:focus {
     outline: none;
 }
 
@@ -235,10 +246,12 @@ nav {
     margin-bottom: 40px;
     box-shadow: 1px 3px 30px #c1bfb9;
 }
+
 /* 因為一直跑版，用給rwd的class來調整nav距離，只有首頁要新增這個class*/
-.setRwdNav{
-    margin-bottom:-180px;
+.setRwdNav {
+    margin-bottom: -180px;
 }
+
 /* nav的RWd */
 @media screen and (max-width: 576px) {
 
@@ -254,7 +267,7 @@ nav {
         transition: 0.5s;
         padding-top: 60px;
         font-family: 'Noto Sans TC', sans-serif;
-       
+
     }
 
     .sidenav a {
@@ -300,18 +313,21 @@ nav {
     .setRwdNav {
         margin-bottom: 20px;
     }
-    #demo{
+
+    #demo {
         display: none;
     }
-    .newsSection{
+
+    .newsSection {
         background: #000000;
     }
-    .activity{
+
+    .activity {
         position: relative;
-        top:-130px;
+        top: -130px;
     }
-   
-    
+
+
 
 
 
@@ -396,7 +412,7 @@ li {
         opacity: 1;
 
     }
-    
+
     .tag.visible {
         opacity: 1;
 
@@ -745,14 +761,14 @@ li {
     .fi-br-menu-burger {
         margin: 1px 1px 5px 5px;
         position: relative;
-        top:2px;
+        top: 2px;
     }
 
     .newsSection h3 a {
         font-size: 3px;
         font-weight: 400;
     }
-   
+
 
 
 }
@@ -808,15 +824,30 @@ li {
     }
 }
 
-footer{
+footer {
     margin-top: 30px;
-    background-color: #CAD9A2;
-    
+    background-color: rgba(202, 217, 162, 0.9);
+    height: 80px;
+    position: relative;
+    bottom: -20px;
+
 
 }
 
-footer p{
-    margin-top: 10px;
+footer p {
+    margin-top: 25px;
+
 }
 
+.footer-text {
+    letter-spacing: 4px;
+    text-align: right;
+    position: relative;
+    bottom: -4px;
+}
 
+footer img {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px;
+}
