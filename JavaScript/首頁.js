@@ -60,7 +60,7 @@ function doFirst() {
         .then(function (myJson) {
             console.log(myJson);
 
-            const activity = document.querySelector('#place')
+            const place = document.querySelector('#place')
 
 
             let html = ''
@@ -76,7 +76,40 @@ function doFirst() {
             </a>
             </div>`;
             });
+
             place.innerHTML += html;
+
+        });
+
+    fetch('http://20.249.62.237/api/Ticket/?id=1')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            console.log(myJson);
+
+            const ticket = document.querySelector('#ticket')
+
+
+            let html = ''
+            myJson.forEach(element => {
+
+                html += `
+                <div class="col  col-md-4">
+                <div class="media border p-3">
+                    <div class="media-body">
+                        <a href="">
+                            <h4>${element.mName}<small><i>${element.Ttime}</i></small></h4>
+                            <p>${element.TContent}</p>
+                        </a>
+                    </div>
+                    <img src="./Images/woman.png" alt="" class="ml-3 mt-3 rounded-circle" style="width:60px;">
+                </div>
+            </div>`;
+
+            });
+
+            ticket.innerHTML += html;
 
         });
 
