@@ -42,6 +42,7 @@ function msubmitBtn() {
 					
 					
 					window.location.href="./登入後的畫面.html";
+					window.localStorage.setItem('userID',element.mId);
 					window.localStorage.setItem('user',element.mName);
 					window.localStorage.setItem('userPhoto',element.mImage);
 					window.localStorage.setItem('userGender',element.mGmder);
@@ -56,7 +57,7 @@ function msubmitBtn() {
 					
 
 				}
-				else if(mAccount != element.mAccount || mPassword != element.mPassword)
+				else if(mAccount !== element.mAccount || mPassword !== element.mPassword)
 				{
 					
 					Swal.fire({
