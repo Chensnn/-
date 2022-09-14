@@ -22,8 +22,8 @@ fetch(' http://20.249.62.237/api/ExHibition/?id=1')
                     <div class="flip-card-back">
                         <div class="card-back-text">
                             <h5>${element.eName}</br>${element.vVenue}</h5>
-                            <p>${element.eStartTime}</p>
-                            <p>${element.eEndTime}</p>
+                            <p>${(element.eStartTime).slice(0,10)}</p>
+                            <p>${(element.eEndTime).slice(0,10)}</p>
                             <p>${element.vVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
@@ -61,8 +61,8 @@ fetch(' http://20.249.62.237/api/ExHibition/?id=2')
                     <div class="flip-card-back">
                         <div class="card-back-text">
                             <h5>${element.eName}</br>${element.vVenue}</h5>
-                            <p>${element.eStartTime}</p>
-                            <p>${element.eEndTime}</p>
+                            <p>${(element.eStartTime).slice(0,10)}</p>
+                            <p>${(element.eEndTime).slice(0,10)}</p>
                             <p>${element.vVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
@@ -101,8 +101,8 @@ fetch(' http://20.249.62.237/api/ExHibition/?id=3')
                     <div class="flip-card-back">
                         <div class="card-back-text">
                             <h5>${element.eName}</br>${element.vVenue}</h5>
-                            <p>${element.eStartTime}</p>
-                            <p>${element.eEndTime}</p>
+                            <p>${(element.eStartTime).slice(0,10)}</p>
+                            <p>${(element.eEndTime).slice(0,10)}</p>
                             <p>${element.vVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
@@ -140,8 +140,8 @@ fetch('http://20.249.62.237/api/ExHibition/?id=4')
                     <div class="flip-card-back">
                         <div class="card-back-text">
                             <h5>${element.eName}</br>${element.vVenue}</h5>
-                            <p>${element.eStartTime}</p>
-                            <p>${element.eEndTime}</p>
+                            <p>${(element.eStartTime).slice(0,10)}</p>
+                            <p>${(element.eEndTime).slice(0,10)}</p>
                             <p>${element.vVenue}</p>
                             <h5><i class="fi fi-rr-download"></i></h5>
                             <p><a href="${element.eLink}" title="連結售票網站">購票入口</a></p>
