@@ -6,18 +6,22 @@ function cancelFavorite(el) {
         })
         .then(function (myJson) {
 
-            console.log(el);    //得到當下這筆的收藏fId
+            //console.log(el);    //得到當下這筆的收藏fId
 
             myJson.forEach(element => {
                 if (el == element.fId) {
                     console.log(element.eName);
+                    // console.log(deleteMemberCollect);
+                    // if(deleteMemberCollect.toString() == element.eName){
+                        
+                    // }
                     // 如果點的值是strResult其中之一
                     // 就把它刪掉
                     //console.log(strResult);  //先找出點的是哪個
 
-                    deleteMemberCollect = deleteMemberCollect.filter(function (item) {
-                        return item == strResult
-                    })
+                    // deleteMemberCollect = deleteMemberCollect.filter(function (item) {
+                    //     return item == strResult
+                    // })
 
                 }
 
@@ -68,6 +72,7 @@ fetch('./text會員.json')
                         <td>${strResult[i]}</td>
                         <td><img src="./Images/heart.png" class="heart" onclick="cancelFavorite(${element.fId})"></td>
                     </tr>`
+                    deleteMemberCollect+=strResult[i];
                 }
             }
            
