@@ -1,29 +1,31 @@
 let deleteMemberCollect = [];
+
+
 function cancelFavorite(el) {
     fetch('./text會員.json')
         .then(function (response) {
             return response.json();
         })
         .then(function (myJson) {
-
-            //console.log(el);    //得到當下這筆的收藏fId
+            
+           
+            //console.log(el);                              //得到當下這筆的收藏fId
+            console.log(deleteMemberCollect);               //type is object
 
             myJson.forEach(element => {
-                if (el == element.fId) {
-                    console.log(element.eName);
-                    // console.log(deleteMemberCollect);
-                    // if(deleteMemberCollect.toString() == element.eName){
-                        
-                    // }
-                    // 如果點的值是strResult其中之一
-                    // 就把它刪掉
-                    //console.log(strResult);  //先找出點的是哪個
 
-                    // deleteMemberCollect = deleteMemberCollect.filter(function (item) {
-                    //     return item == strResult
-                    // })
+                // if (el == element.fId) {                     
 
-                }
+                //1.先找出點的是哪個
+                //2.如果點的值是strResult其中之一
+                //3.就把它刪掉
+
+
+                // deleteMemberCollect = deleteMemberCollect.filter(function (item) {
+                //     return item == strResult
+                // })
+
+                // }
 
             })
 
@@ -67,15 +69,17 @@ fetch('./text會員.json')
             if (strResult.length > 1 && mId == element.mId) {                         //  確認有收藏才會印出
                 for (let i = 0; i < strResult.length; i++) {                          //  用迴圈跑出每個字串
 
-                    html += `
-                    <tr>
+                    html +=
+                        `<tr>
                         <td>${strResult[i]}</td>
                         <td><img src="./Images/heart.png" class="heart" onclick="cancelFavorite(${element.fId})"></td>
                     </tr>`
-                    deleteMemberCollect+=strResult[i];
+                    deleteMemberCollect = element.eName;
+                    // console.log(deleteMemberCollect);
+                    // console.log(element.eName);
                 }
             }
-           
+
         });
         tFavorite.innerHTML += html;
 

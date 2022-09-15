@@ -105,4 +105,8 @@
     position: relative;
     right: 10px;
 }
+footer{
+    position: absolute;
+    width: 100%;
+}
 
