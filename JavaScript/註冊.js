@@ -13,35 +13,38 @@ function readURL(input) {
     }
 }
 
+
+
 // 上傳註冊會員Info 要post的Api
-function doFirst() {
-    const submit = document.querySelector('#submit').value
-    const mName = document.querySelector('#mName').value
-    const gender = document.getElementsByName('gender').value
-    const male = document.querySelector('#male').value
-    const women = document.querySelector('#women').value
-    const date = document.querySelector('#date').value
-    const phone = document.querySelector('#phone').value
-    const address = document.querySelector('#address').value
-    const email = document.querySelector('#email').value
-    const account = document.querySelector('#account').value
-    const pwd = document.querySelector('#pwd').value
-    const upload_img = document.querySelector('#upload_img').value
+
+
+    const submit = document.querySelector('#submit')
+    const mName = document.querySelector('#mName')
+    const date = document.querySelector('#date')
+    const phone = document.querySelector('#phone')
+    const address = document.querySelector('#address')
+    const email = document.querySelector('#email')
+    const account = document.querySelector('#account')
+    const pwd = document.querySelector('#pwd')
+    const upload_img = document.querySelector('#upload_img')
 
     submit.addEventListener('click', () => {
 
+        let gender = $("[name='gender']:checked").val()
+
+        
+        let imgSrc = $('#showImg')[0].src
+        var path =  $('#upload_img').attr('src');
+        
+        
+        alert(imgSrc);
+        
+
+        
+
 
         //    alert(mName.value)
-        //    alert(male.value)
-        //   if(male.checked){
-        //     gender = male.value
-        //     alert(gender)
-        //   }
-        //   else{
-        //     gender = women.value
-        //     alert(gender)
-        //   }
-        //    alert(typeof date.value)
+        //    alert(date.value)
         //    alert(phone.value)
         //    alert(address.value)
         //    alert(email.value)
@@ -49,68 +52,33 @@ function doFirst() {
         //    alert(pwd.value)
 
 
+        // let _data = {
+        //     "mId": "36",
+        //     "mName": mName.value,
+        //     "mGmder":gender,
+        //     "mAddress": address.value,
+        //     "mEmail": email.value,
+        //     "mPhone": phone.value,
+        //     "mBirthday": date.value,
+        //     "mAccount": account.value,
+        //     "mPassword": pwd.value,
+        //     "mImage": "一直失敗抓不到會跳出亂碼",
+        // }
+
+        // fetch('http://20.249.62.237/api/Member', {
+        //     method: "POST",
+        //     body: JSON.stringify(_data),
+        //     headers: { "Content-type": "application/json; charset=UTF-8" }
+        // })
+        //     .then(response => response.json())
+        //     .then(json => console.log(json))
+        //     .catch(err => console.log(err));
+
 
 
     })
 
-    upload_img.addEventListener('change', () => {
-        console.log(upload_img);
-    })
-
-}
-
-        // data to be sent to the POST request
-        let _data = {
-            Name: "mName",
-            Gmder: "gender",
-            Address: "address",
-            Email: "email",
-            Phone: "phone",
-            Birthday: "date",
-            Account: "account",
-            Password: "pwd",
-            Image: "upload_img",
-        }
-
-        fetch('http://20.249.62.237/api/Member', {
-            method: "POST",
-            body: JSON.stringify(_data),
-            headers: { "Content-type": "application/json; charset=UTF-8" }
-        })
-            .then(response => response.json())
-            .then(json => console.log(json))
-            .catch(err => console.log(err));
 
 
 
-// const url = 'http://20.249.62.237/api/Member';
-// let headers = {
-//     "Content-Type": "application/json",
-//     "Accept": "application/json",
-// }
-
-// //以下是API文件中提及必寫的主體参數。而以下這個產品資料是六角學院提供的。
-// let body = {
-//     "Name": mName,
-//     "Gmder": gender,
-//     "Address": address,
-//     "Email": email,
-//     "Phone": phone,
-//     "Birthday": date,
-//     "Account": account,
-//     "Password": pwd,
-//     "Image": upload_img,
-// }
-
-// fetch(url, {
-//     method: "POST",
-//     headers: headers,
-//     body: JSON.stringify(body)
-// })
-//     .then(response => response.json())
-//     .then(json => console.log(json))
-
-
-
-window.addEventListener('load', doFirst);
 
