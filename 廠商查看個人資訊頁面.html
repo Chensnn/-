@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>藝起來玩</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -18,18 +17,28 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+
+    <!-- 導入Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/a32b9111be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Css/首頁.css">
-    <link rel="stylesheet" href="./Css/註冊.css">
-    
+    <link rel="stylesheet" href="./Css/登入後的畫面.css">
+    <link rel="stylesheet" href="./Css/會員查看個人資訊頁面.css">
+    <style>
+      
+    </style>
+
 </head>
 
 <body>
 
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light ">
+    <!-- sticky-top讓navbar固定在上方 nav-tabs是會有下底線 -->
+
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand " href="./首頁.html" title="藝起來玩">藝起來玩</a>
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
@@ -60,6 +69,7 @@
                             <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
                                 <li><a class="dropdown-item" href="./瀏覽訊息.html">瀏覽訊息</a></li>
                                 <li><a class="dropdown-item" href="./我要刊登.html">我要刊登</a></li>
+                                <li><a class="dropdown-item" href="./廠商刊登.html">廠商刊登</a></li>
                             </ul>
                         </div>
                     </li>
@@ -75,77 +85,84 @@
             <ul class="nav navbar-nav navbar-right loginReg">
                 <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
                 <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
-                <li><a href="./登入.html" title="Login"><i class="fi fi-sr-user"></i>登入</a></li>
-                <li><a href="./註冊.html" title="Register"><i class="fi fi-sr-user-add"></i>註冊</a></li>
+                <li class="idSection">
+                    <a href="./廠商查看個人資訊頁面.html" title="點我查看個人資訊">
+                        <div class="idPhoto"><img src="#" id="idPhoto"></div>
+                    </a><span id="memberName">陳思穎會員 你好</span>
+                </li>
             </ul>
         </div>
     </nav>
 
 
-    <form action="http://20.249.62.237/api/Member" method="post" enctype="multipart/form-data">
-        <div class="container backgroundDiv">
-            <h3>會員資料填寫</h3>
-            <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-12"
+                style="text-align:end; font-size: 10px; position: relative; right:-64px; top:-55px; letter-spacing: 2px; ">
+                點選頭像即可查看個人資訊
+            </div>
+        </div>
+    </div>
 
-            <i class="fi fi-rr-caret-down name"></i>
-            <label for="name" class="name"><b>姓名</b></label>
-            <input type="text" name="name" id="mName" placeholder="name" required>
 
-            <div class="gender">
-                <input type="radio" name="gender" value="男" id="male"><span>男</span>
-                <input type="radio" name="gender" value="女" id="women"><span>女</span>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 title">
+                <h3><i class="fi fi-ss-users"></i>廠商專區</h3>
             </div>
 
-            <i class="fi fi-rr-caret-down"></i>
-            <label for=""><b>性別</b></label>
-            <input type="text" readonly required>
+        </div>
+    </div>
 
-            <i class="fi fi-rr-caret-down"></i>
-            <label for="date"><b>生日</b></label>
-            <input type="date" name="date" id="date" required>
+    <div class="container">
+        <div class="row backgroundDiv">
+            <div class="col-6 memberInfo"><img src="./Images/會員個人資訊頁面bk.jpg">
+                <a href="./廠商修改及查看資料.html">
+                    <h3>修改及查看個人資料</h3>
+                </a>
+            </div>
+            <div class="col-6 membercollect organizer"><img src="./Images/會員個人資訊頁面bk.jpg">
+                <a href="./廠商刊登.html">
+                    <h3>我要刊登活動</h3>
+                </a>
+            </div>
+        </div>
+    </div>
 
-            <i class="fi fi-rr-caret-down"></i>
-            <label for="phone"><b>電話</b></label>
-            <input type="tel" id="phone" placeholder="phone" required>
 
-            <i class="fi fi-rr-caret-down"></i>
-            <label for="address"><b>地址</b></label>
-            <input type="text" id="address" placeholder="address" required>
 
-            <i class="fi fi-rr-caret-down"></i>
-            <label for="email"><b>Email</b></label>
-            <input type="text" name="email" id="email" placeholder="email" required>
 
-            <i class="fi fi-rr-caret-down"></i>
-            <label for="account"><b>帳號</b></label>
-            <input type="text" name="account" id="account" placeholder="account" required>
 
-            <i class="fi fi-rr-caret-down"></i>
-            <label for="pwd"><b>密碼</b></label>
-            <input type="password" name="pwd" id="pwd" placeholder="password" required>
-
-            
-            <label class="btn upload_img">
-                <i class="fi fi-rr-caret-down"></i>
-                <input id="upload_img" style="display:none;" type="file" accept="image/gif, image/jpeg, image/png">
-                <i class="fi fi-br-portrait"></i>上傳個人頭像
-                <div class="showImgPic">
-                     <img id="showImg" src=""/>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="footer-text">© 藝起來玩 版權所有 |</p>
                 </div>
-            </label>
-
-            <hr>
-            <button id="submit" type="submit" class="registerbtn">註冊會員 Register</button>
+                <div class="col-lg-6">
+                    <p>
+                        <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
+                        <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
+                        <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
+                        <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
+                    </p>
+                </div>
+            </div>
         </div>
-
-        <div class="container signin">
-            <p>已經有帳號了嗎?<a href="./登入.html">點此登入Sign In</a></p>
-        </div>
-    </form>
+    </footer>
 
 
-    <!-- 等DOM建好在讀取這份檔案 -->
-    <script src="./JavaScript/註冊.js"></script>
+
+    <script src="./JavaScript/登入.js"></script>
+    <script>
+        const memberName = document.querySelector('#memberName')
+        memberName.innerHTML = window.localStorage.getItem('user') + '廠商 你好';
+
+        const idPhoto = document.querySelector('#idPhoto')
+        idPhoto.src = window.localStorage.getItem('userPhoto');
+
+    </script>
+
 </body>
 
 </html>

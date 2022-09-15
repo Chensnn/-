@@ -29,6 +29,8 @@
 
     <link rel="stylesheet" href="./Css/首頁.css">
     <link rel="stylesheet" href="./Css/廠商刊登.css">
+    <link rel="stylesheet" href="./Css/登入後的畫面.css">
+
     
 
 </head>
@@ -67,11 +69,12 @@
                             <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
                                 <li><a class="dropdown-item" href="./瀏覽訊息.html">瀏覽訊息</a></li>
                                 <li><a class="dropdown-item" href="./我要刊登.html">我要刊登</a></li>
+                                <li><a class="dropdown-item" href="./廠商刊登.html">廠商刊登</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">藝文旅遊</a>
+                        <a class="nav-link" href="./藝文旅遊.html">藝文旅遊</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#">關於我們</a>
@@ -82,11 +85,15 @@
             <ul class="nav navbar-nav navbar-right loginReg">
                 <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
                 <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
-                <li><a href="./登入.html" title="Login"><i class="fi fi-sr-user"></i>登入</a></li>
-                <li><a href="./註冊.html" title="Register"><i class="fi fi-sr-user-add"></i>註冊</a></li>
+                <li class="idSection">
+                    <a href="./廠商查看個人資訊頁面.html" title="點我查看個人資訊">
+                        <div class="idPhoto"><img src="#" id="idPhoto"></div>
+                    </a><span id="memberName">陳思穎會員 你好</span>
+                </li>
             </ul>
         </div>
     </nav>
+
     <div id="demo" class="carousel slide" data-ride="carousel">
 
         <!-- Indicators -->
@@ -216,6 +223,15 @@
 
     <!-- 等DOM建立好再載入 -->
     <script src="./JavaScript/廠商刊登.js"></script>
+    <script src="./JavaScript/登入.js"></script>
+    <script>
+        const memberName = document.querySelector('#memberName')
+        memberName.innerHTML = window.localStorage.getItem('user') + '廠商 你好';
+
+        const idPhoto = document.querySelector('#idPhoto')
+        idPhoto.src = window.localStorage.getItem('userPhoto');
+
+    </script>
 
 
 </body>

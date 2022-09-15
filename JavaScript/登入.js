@@ -31,7 +31,7 @@ function msubmitBtn() {
 
 	// ==========================================================
 	//會員API  http://20.249.62.237/api/Member
-	fetch("./text會員.json")
+	fetch("http://20.249.62.237/api/Member")
 		.then(function (response) {
 			return response.json();
 		})
