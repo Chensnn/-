@@ -107,7 +107,7 @@
             <div class="col-12 title">
                 <h3><i class="fi fi-ss-users"></i>會員專區</h3>
             </div>
-            
+
         </div>
     </div>
 
@@ -134,15 +134,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <p class="footer-text">© 藝起來玩 版權所有 |</p> 
+                    <p class="footer-text">© 藝起來玩 版權所有 |</p>
                 </div>
                 <div class="col-lg-6">
-                  <p>
-                    <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
-                    <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
-                    <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
-                    <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
-                </p>
+                    <p>
+                        <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
+                        <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
+                        <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
+                        <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -151,15 +151,15 @@
 
 
     <script src="./JavaScript/登入.js"></script>
+   
+    <script src="./JavaScript/會員查看個人資訊頁面.js"></script>
     <script>
         const memberName = document.querySelector('#memberName')
-        memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
+memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
 
-        const idPhoto = document.querySelector('#idPhoto')
-        idPhoto.src = window.localStorage.getItem('userPhoto');
-
+const idPhoto = document.querySelector('#idPhoto')
+idPhoto.src = window.localStorage.getItem('userPhoto');
     </script>
-
 </body>
 
 </html>

@@ -121,19 +121,27 @@ h4 {
 .registerbtn {
     background: linear-gradient(-47deg, rgb(202, 217, 162), rgb(242, 204, 181));
     color: #403F3D;
-    padding: 16px 20px;
+    padding: 10px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 40%;
-    letter-spacing: 2px;
+    width: 45%;
+    letter-spacing: 8px;
     margin-top: 30px;
-    margin-left: 60px;
-    border-radius: 2px;
+    margin-left: 348px;
+    border-radius: 3px;
+    position: absolute;
 
 }
 
 .registerbtn:hover {
     transform: scale(1.1);
     transition: all 1s ease-out;
+}
+
+
+.returnBtn{
+    width: 20%;
+    position: relative;
+    right:-130px;
 }

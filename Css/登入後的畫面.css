@@ -1,5 +1,5 @@
 .idPhoto{
-    background-color: #fcfdfd;
+    /* background-color: #fcfdfd; */
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -10,8 +10,8 @@
     box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
 }
 .idPhoto img {
-    max-width: 30px;
-    min-height: 30px;
+    max-width: 35px;
+    min-height: 35px;
     border-radius: 50%;
 }
  .idSection{

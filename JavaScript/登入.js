@@ -16,8 +16,10 @@ const mAccountInput = document.querySelector('#mAccount')
 const mPasswordInput = document.querySelector('#mPassword')
 const mButtonClick = document.querySelector('#mButtonClick')
 
-// 先測試是否抓得到值
-function msubmitBtn() {
+
+mButtonClick.addEventListener('click', () => {
+	// 先測試是否抓得到值
+
 	let mAccount = "";
 	let mPassword = "";
 
@@ -38,39 +40,44 @@ function msubmitBtn() {
 		.then(function (myJson) {
 			myJson.forEach(element => {
 
-				if(mAccount == element.mAccount && mPassword == element.mPassword){
-					
-					
-					window.location.href="./登入後的畫面.html";
-					window.localStorage.setItem('userID',element.mId);
-					window.localStorage.setItem('user',element.mName);
-					window.localStorage.setItem('userPhoto',element.mImage);
-					window.localStorage.setItem('userGender',element.mGmder);
-					window.localStorage.setItem('userBirthDate',element.mBirthday);
-					window.localStorage.setItem('userPhone',element.mPhone);
-					window.localStorage.setItem('userAddress',element.mAddress);
-					window.localStorage.setItem('userEmail',element.mEmail);
-					window.localStorage.setItem('userAccount',element.mAccount);
-					window.localStorage.setItem('userPassword',element.mPassword);
-					window.localStorage.setItem('userFavorite',element.eName);
+				if (mAccount == element.mAccount && mPassword == element.mPassword) {
+
+
+					window.location.href = "./登入後的畫面.html";
+					window.localStorage.setItem('userID', element.mId);
+					window.localStorage.setItem('user', element.mName);
+					window.localStorage.setItem('userPhoto', element.mImage);
+					window.localStorage.setItem('userGender', element.mGmder);
+					window.localStorage.setItem('userBirthDate', element.mBirthday);
+					window.localStorage.setItem('userPhone', element.mPhone);
+					window.localStorage.setItem('userAddress', element.mAddress);
+					window.localStorage.setItem('userEmail', element.mEmail);
+					window.localStorage.setItem('userAccount', element.mAccount);
+					window.localStorage.setItem('userPassword', element.mPassword);
+					window.localStorage.setItem('userFavorite', element.eName);
 
 					
 
 				}
-				else if(mAccount !== element.mAccount || mPassword !== element.mPassword)
-				{
-					
+				else if (mAccount == "" || mPassword == "") {
+					Swal.fire({
+						text: '請輸入帳號及密碼',
+					})
+				}
+				else if (mAccount !== element.mAccount || mPassword !== element.mPassword) {
+
 					Swal.fire({
 						text: '帳號或密碼錯誤，請重新輸入',
 					})
+					$("#mAccount").val("");
+					$("#mPassword").val("");
 				}
 
 
 			});
 		})
-		
-}
-mButtonClick.addEventListener('click', msubmitBtn)
 
+
+})
 
 

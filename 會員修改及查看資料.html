@@ -19,6 +19,7 @@
 
 
 
+
     <!-- 導入Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -111,27 +112,28 @@
                 <div class="showImgPic">
                     <img id="showImg" src="#" />
                 </div>
-                <input id="upload_img" style="display:none;" type="file" accept="image/gif, image/jpeg, image/png">
+                <input id="upload_img" style="display:none;" type="file">
                 <i class="fi fi-br-portrait"></i><span>您的個人頭像</span>
             </label>
 
-            <form action="#" method="post">
+            <form action="http://20.249.62.237/api/Member" method="post">
+                <input type="hidden" name="_method" value="PUT">
                 <div class="columns inFoSection">
                     <div class="col-12">
                         <label>姓名</label>
-                        <input type="text" id="name" readonly>
+                        <input type="text" id="name">
                     </div>
                     <div class="col-12 inFoGenderDiv">
                         <label>性別</label>
-                        <input type="text" readonly>
+                        <input type="text">
                         <div class="inFoGender">
-                            <input type="radio" name="gender" value="male" id="male"><span>男</span>
-                            <input type="radio" name="gender" value="women" id="women"><span>女</span>
+                            <input type="radio" name="gender" value="男" id="male"><span>男</span>
+                            <input type="radio" name="gender" value="女" id="women"><span>女</span>
                         </div>
                     </div>
                     <div class="col-12">
                         <label for="date">生日</label>
-                        <input type="text" id="date" readonly>
+                        <input type="date" id="date">
                     </div>
                     <div class="col-12">
                         <label for="phone">電話</label>
@@ -143,22 +145,23 @@
                     </div>
                     <div class="col-12">
                         <label>Email</label>
-                        <input type="email" id="email" readonly>
+                        <input type="email" id="email">
                     </div>
                     <div class="col-12">
                         <label>帳號</label>
-                        <input type="text" id="account" readonly>
+                        <input type="text" id="account">
                     </div>
                     <div class="col-12">
                         <label for="pwd">密碼</label>
-                        <input type="text" id="pwd">
+                        <input type="text" id="pwd" autocomplete="off">
                     </div>
                     <div class="col-12">
-                        <button id="returnInfo" type="submit" class="registerbtn">取消修改</button>
                         <button id="updateInfo" type="submit" class="registerbtn">確認修改</button>
                     </div>
             </form>
+
         </div>
+        <button id="returnInfo" class="registerbtn returnBtn">取消修改</button>
     </div>
     </div>
 
@@ -187,11 +190,11 @@
 
 
 
-    
-    <script src="./JavaScript/會員修改及查看資料.js"></script>
-    <script src="./JavaScript/登入.js"></script>
+
+
+    <!-- <script src="./JavaScript/登入.js"></script> -->
     <script src="./JavaScript/註冊.js"></script>
-    
+    <script src="./JavaScript/會員修改及查看資料.js"></script>
 </body>
 
 </html>
