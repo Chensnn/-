@@ -9,14 +9,14 @@
 }
 
 form {
-    width: 90%;
-    margin-left: 260px;
+    width: 100%;
+    /* margin-left: 260px; */
 }
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 70%;
+    width: 100%;
     border: 0px solid #Cad9a2;
     background: linear-gradient(-47deg, rgb(202, 217, 162), rgb(242, 204, 181));
 }
@@ -51,6 +51,19 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 footer{
-    position: absolute;
+    position: relative;
     width: 100%;
+}
+.fi-ss-users-alt{
+    margin-right:8px ;
+}
+.fi-ss-angle-circle-right{
+    margin-right: 5px;
+    color: rgb(205, 22, 22);
+    position: relative;
+    top:2px;
+}
+.title{
+    margin-top: 20px;
+    margin-bottom: 10px;
 }

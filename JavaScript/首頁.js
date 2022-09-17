@@ -27,10 +27,14 @@ function doFirst() {
 
             const activity = document.querySelector('#activity')
 
+            let SubStartTime = ''
             let html = ''
 
             myJson.forEach(element => {
 
+                if (element.eStartTime.length > 10) {
+                    SubStartTime = element.eStartTime.slice(0, 10)
+                }
 
                 html += `
         <div class=" col-md-3 col-sm-4">
@@ -43,7 +47,7 @@ function doFirst() {
                         <h3>${element.eName}</h3>
                         <span><i class="fa-solid fa-location-dot"></i>${element.vVenue}</span>
                         <br>
-                        <span><i class="fa-regular fa-clock"></i>${element.eStartTime}</span>
+                        <span><i class="fa-regular fa-clock"></i>${SubStartTime}</span>
                     </div>
                 </a>
             </div>
@@ -53,7 +57,7 @@ function doFirst() {
         });
 
 
-    fetch('./text首頁場館.json')
+    fetch('http://20.249.62.237/api/Venue/?id=5')
         .then(function (response) {
             return response.json();
         })
@@ -70,9 +74,9 @@ function doFirst() {
             <div class="col-6 col-md-2 col-sm-6 col-xs-6 card ">
             <a href="#">
                 <div>
-                    <img src="${element.場館圖片}"...">
+                    <img src="${element.vImage1}"...">
                 </div>
-                <h4>${element.場館名稱}</h4>
+                <h4>${element.vVenue}</h4>
             </a>
             </div>`;
             });
@@ -81,29 +85,30 @@ function doFirst() {
 
         });
 
-    fetch('http://20.249.62.237/api/Ticket/?id=1')
+    fetch('http://20.249.62.237/api/JoinTicket')
         .then(function (response) {
             return response.json();
         })
         .then(function (myJson) {
-            console.log(myJson);
+            //console.log(myJson);
 
             const ticket = document.querySelector('#ticket')
 
-
+            
             let html = ''
             myJson.forEach(element => {
+
 
                 html += `
                 <div class="col  col-md-4">
                 <div class="media border p-3">
                     <div class="media-body">
-                        <a href="">
-                            <h4>${element.mName}<small><i>${element.Ttime}</i></small></h4>
-                            <p>${element.TContent}</p>
+                        <a href="./瀏覽訊息.html">
+                            <h4>${element.name}<small><i>${element.time}</i></small></h4>
+                            <p>${element.content}</p>
                         </a>
                     </div>
-                    <img src="./Images/woman.png" alt="" class="ml-3 mt-3 rounded-circle" style="width:60px;">
+                    <img src="${element.image}" alt="" class="ml-3 mt-3 rounded-circle">
                 </div>
             </div>`;
 

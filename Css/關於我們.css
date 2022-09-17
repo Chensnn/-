@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+/* 公告icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+/* 三條線icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
+/* login Reg Icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+/* li icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
+
+
+
+.circle {
+    background-color: #fee7d3;
+    border-radius: 50%;
+    /* cursor: pointer; */
+    height: 200px;
+    /* pointer-events: none; */
+    position: absolute;
+    width: 200px;
+
+}
+
+.name p {
+
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 210px;
+    margin-left: 70px;
+    /* text-align: center; */
+    position: absolute;
+
+}
+
+
+.circle:hover {
+    transform: translateY(0) scale(1.2);
+}
+
+
+/* navbar原本的灰底色 */
+.bg-light {
+    background-color: #CAD9A2 !important;
+
+}
+
+/* Logo文字大小 */
+.navbar-brand {
+    font-size: 1.75em;
+    margin-top: 3px;
+    margin-bottom: -15px;
+    margin-right: -20px;
+}
+
+/* Logo的文字顏色 */
+.navbar-light .navbar-brand {
+
+    font-weight: 700;
+    color: #403F3D;
+}
+
+/* 滑鼠移到Logo後的文字顏色 */
+/* .navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus {
+    color: #9DA695;
+} */
+
+/* Navbar標題顏色 */
+.navbar-light .navbar-nav .nav-link {
+    color: #403F3D;
+    padding-right: 1px;
+    padding-left: 1px;
+    margin-left: 70px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+
+}
+
+/* 滑鼠移到Navbar標題顏色 */
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+
+    font-weight: 700;
+    opacity: 0.8;
+    color: #000000;
+}
+
+/* nav的RWd */
+@media screen and (max-width: 576px) {
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(100px);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        font-family: 'Noto Sans TC', sans-serif;
+
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 300;
+        color: #403F3D;
+        display: block;
+        transition: 0.5s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 45px;
+        color: #fcfdfd;
+    }
+
+    .sidenav h6 {
+        margin-left: 40px;
+        letter-spacing: 10px;
+        font-weight: 500;
+    }
+
+    .fi-br-copy {
+        margin-right: 10px;
+    }
+
+    .closeIcon span {
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .setRwdNav {
+        margin-bottom: 20px;
+    }
+
+    #demo {
+        display: none;
+    }
+
+    .newsSection {
+        background: #000000;
+    }
+
+    .activity {
+        position: relative;
+        top: -130px;
+    }
+
+}
+
+/* 超過就隱藏 */
+@media screen and (min-width:577px) {
+    .sidenav {
+        visibility: hidden;
+    }
+
+    .closeIcon {
+        visibility: hidden;
+    }
+}
+
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 下拉選單 */
+.dropdown-item {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #403F3D;
+    letter-spacing: 0.1rem;
+}
+
+/* 滑鼠碰到點選時 */
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #403F3D;
+    text-decoration: none;
+    background-color: #CAD9A2;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 確定按下後 */
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #403F3D;
+    text-decoration: none;
+    background-color: #CAD9A2;
+}
+
+
+/* 首頁右上角 Login/Reg/input/Button */
+.loginReg a {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #403F3D;
+    margin-left: 5px;
+    margin-right: 6px;
+
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+    opacity: 0.9;
+
+}
+
+.loginReg a:hover {
+    font-weight: 500;
+    color: #CC8D1A;
+}
+
+.fi-sr-user:hover,
+.fi-sr-user-add:hover {
+    color: #CC8D1A;
+}
+
+.loginReg {
+    margin-right: -25px;
+    margin-top: -80px;
+    margin-bottom: -110px;
+
+
+
+}
+
+/* 登入icon */
+.fi-sr-user {
+    font-size: 18px;
+    opacity: 0.8;
+    margin: 7px;
+    color: #403F3D;
+
+}
+
+/* 註冊icon */
+.fi-sr-user-add {
+    font-size: 18px;
+    opacity: 0.8;
+    margin: 7px;
+    color: #403F3D;
+
+}
+
+/* Search Button Icon */
+.fi-rs-search-alt {
+    font-size: 22px;
+    color: #403F3D;
+    opacity: 0.8;
+    margin-left: 10px;
+
+}
+
+.loginReg button {
+    background: transparent;
+    margin-right: 1px;
+    border: none;
+    margin-bottom: -15px;
+}
+
+.loginReg button:focus {
+    outline: none;
+    cursor: pointer;
+}
+
+.loginReg .fi-rs-search-alt:hover {
+
+    cursor: pointer;
+    opacity: 0.8;
+    color: #CC8D1A;
+}
+
+.bg {
+    background-color: #CAD9A2 !important;
+}
+
+/* 輸入框 */
+.searchInput {
+    background-color: transparent;
+    color: #403F3D;
+    opacity: 0.9;
+    border: 1px;
+    border-style: none none solid none;
+    border-radius: 1px;
+
+
+    text-align: center;
+    font-size: 15px;
+    padding: 3px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    padding-bottom: 0px;
+    padding-top: 1px;
+
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 600;
+}
+
+p,
+a,
+input,
+label,
+textarea,
+span,
+ul,
+li {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+
+}
+
+footer {
+    margin-top: 30px;
+    background-color: rgba(202, 217, 162, 0.9);
+    height: 60px;
+    position: relative;
+    bottom: -20px;
+
+}
+
+footer p {
+    margin-top: 15px;
+
+}
+
+.footer-text {
+    letter-spacing: 4px;
+    text-align: right;
+    position: relative;
+    bottom: -2px;
+    left: 19px;
+}
+
+footer img {
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.content {
+   
+}
+
+.content span {
+    display: flex;
+    word-wrap: nowrap;
+}
+
+.content p {
+    line-height: 40px;
+    color: #403F3D;
+}
+.content h5{
+    margin-left: 5px;
+}
+
+.content h5{
+    margin-bottom: 10px;
+
+}
+
+.content li{
+    line-height: 40px;
+    color: #403F3D;
+}
+
+.about {
+    padding: 40px 40px;
+    background: linear-gradient(-47deg, rgb(202, 217, 162), rgb(242, 204, 181));
+    margin-bottom: 50px;
+    margin-top: 300px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.1);
+    
+}
+
+
+.team {
+    padding: 40px 40px;
+    background: linear-gradient(-47deg, rgb(202, 217, 162), rgb(242, 204, 181));
+    margin-bottom: 50px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.1)
+}
+
+
+.team h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.about h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+

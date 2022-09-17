@@ -1,178 +1,77 @@
-$(function () {
-  $('#table').bootstrapTable({
-    data: [
-      {
-        'name': '鄭琬玲',
-        'image': 'https://robohash.org/68.186.255.198.png',
-        'area': '南部',
-        'title': '透南風演唱會',
-        'state': '售票',
-        'content': '跟男友分手，忍痛售一張五百的票',
-        'time': '2022/08/20',
-      },
-      {
-        'name': '陳思穎',
-        'title': '滅火器專場',
-        'area': '北部',
-        'image': 'https://robohash.org/18.146.255.198.png',
-        'state': '售票',
-        'content': '喜歡搖滾樂的看進來～',
-        'time': '2022/08/20',
-      },
-      {
-        'name': '陳莘元',
-        'title': '五月天專場',
-        'area': '中部',
-        'image': 'https://robohash.org/63.186.255.198.png',
-        'state': '售票',
-        'content': '與你分享的快樂勝過獨自擁有',
-        'time': '2022/08/20',
-      },
-      {
-        'name': '賴俊偉',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/68.186.155.198.png',
-        'state': '徵票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Mike',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/68.186.255.198.png',
-        'state': '售票',
-        'content': '史上最強樂團，血肉果汁機，帶你殺翻現場',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Tim',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/18.146.255.198.png',
-        'state': '售票',
-        'content': '哎呀呀喔 愛的抱抱',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Jorge',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/63.186.255.198.png',
-        'state': '售票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Luke',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/68.186.155.198.png',
-        'state': '售票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Mike',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/68.186.255.198.png',
-        'state': '售票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Tim',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/18.146.255.198.png',
-        'state': '售票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Jorge',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/63.186.255.198.png',
-        'state': '售票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Luke',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/68.186.155.198.png',
-        'state': '徵票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Mike',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/68.186.255.198.png',
-        'state': '售票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Tim',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/18.146.255.198.png',
-        'state': '徵票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Jorge',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/63.186.255.198.png',
-        'state': '售票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      },
-      {
-        'name': 'Luke',
-        'title': '瘦子告別單身',
-        'area': '東部',
-        'image': 'https://robohash.org/68.186.155.198.png',
-        'state': '徵票',
-        'content': '嘿Yo，這是頑童你知道的！',
-        'time': '2022/08/20',
-      }
-    ]
-  })
+
+
+fetch('http://20.249.62.237/api/Ticket')
+.then(function (response) {
+  return response.json();
 })
+.then(function (myJson) {
 
-fetch('./text訊息.json')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function customViewFormatter(myJson) {
+  const table = document.querySelector('#ticket')
 
-    var template = $('#profileTemplate').html()
-    var view = ''
-    $.each(myJson, function (i, row) {
-      view += template.replace('%NAME%', row.name)
-        .replace('%title%', row.title)
-        .replace('%area%', row.area)
-        .replace('%IMAGE%', row.image)
-        .replace('%state%', row.state)
-        .replace('%content%', row.content)
-        .replace('%time%', row.time);
-    })
+  let subtime = ''
+  let html = ''
+  myJson.forEach(element => {
 
-    return `<div class="row mx-0">${view}</div>`
+    if (element.Ttime.length > 10) {
+      subtime = element.Ttime.slice(0, 10)
+    }
+    html += `
+          
+          <tr>
+          <th scope="row">${element.mName}</th>
+          <td>${element.Ttitle}</td>
+          <td>${element.TState}</td>
+          <td>${element.TContent}</td>
+          <td>${subtime}</td>
+          </tr>
 
-  })
+          
+          `
+  });
+  table.innerHTML += html;
+});
 
+(function (document) {
+  // 'use strict';
 
+  // 建立 LightTableFilter
+  var LightTableFilter = (function (Arr) {
 
+      var _input;
 
+      // 資料輸入事件處理函數
+      function _onInputEvent(e) {
+          _input = e.target;
+          var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+          Arr.forEach.call(tables, function (table) {
+              Arr.forEach.call(table.tBodies, function (tbody) {
+                  Arr.forEach.call(tbody.rows, _filter);
+              });
+          });
+      }
 
+      // 資料篩選函數，顯示包含關鍵字的列，其餘隱藏
+      function _filter(row) {
+          var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+          row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
 
+      return {
+          // 初始化函數
+          init: function () {
+              var inputs = document.getElementsByClassName('light-table-filter');
+              Arr.forEach.call(inputs, function (input) {
+                  input.oninput = _onInputEvent;
+              });
+          }
+      };
+  })(Array.prototype);
+
+  // 網頁載入完成後，啟動 LightTableFilter
+  document.addEventListener('readystatechange', function () {
+      if (document.readyState === 'complete') {
+          LightTableFilter.init();
+      }
+  });
+
+})(document);

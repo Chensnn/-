@@ -1,4 +1,5 @@
-fetch("http://20.249.62.237/api/Member")
+let mId = window.localStorage.getItem('userID');
+fetch(`http://20.249.62.237/api/Member/${mId}`)
 		.then(function (response) {
 			return response.json();
 		})

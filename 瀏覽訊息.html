@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我要刊登</title>
+    <title>瀏覽訊息</title>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -126,8 +126,8 @@
             </div>
         </div>
 
-         <!-- Left and right controls -->
-         <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
         <a class="carousel-control-next" href="#demo" data-slide="next">
@@ -149,82 +149,45 @@
                 </div>
             </div>
         </div>
-        <table id="table" data-search="true" data-pagination="true" data-page-size="6"
-                    data-show-custom-view="true" data-custom-view="customViewFormatter"
-                    data-show-custom-view-button="true">
-                    <thead>
-                        <tr>
-                            <th data-field="name">刊登者</th>
-                            <th data-field="state">徵/售票</th>
-                            <th data-field="content">刊登內容</th>
-                            <th data-field="time">刊登時間</th>
-                        </tr>
-                    </thead>
-                </table>
 
-                <template id="profileTemplate">
-                    <div class="col-4 mt-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-12 col-lg-8 col-md-6">
-                                        <h3 class="mb-0 text-truncated">%NAME%</h3>
-                                        <p class="lead">%time%</p>
-                                        <p>
-                                            %content%
-                                        </p>
-                                        <p>
-                                            <span class="badge badge-info tags">徵票</span>
-                                            <span class="badge badge-info tags">售票</span>
-                                        </p>
-                                    </div>
-                                    <div class="col-12 col-lg-4 col-md-6 text-center">
-                                        <img src="%IMAGE%" alt="" class="mx-auto rounded-circle img-fluid"
-                                            style="height: 120px;">
-                                        <br>
-                                        <ul class="list-inline ratings text-center" title="Ratings">
-                                            <li class="list-inline-item"><a href="#"><span
-                                                        class="fa fa-star"></span></a>
-                                            </li>
-                                            <li class="list-inline-item"><a href="#"><span
-                                                        class="fa fa-star"></span></a>
-                                            </li>
-                                            <li class="list-inline-item"><a href="#"><span
-                                                        class="fa fa-star"></span></a>
-                                            </li>
-                                            <li class="list-inline-item"><a href="#"><span
-                                                        class="fa fa-star"></span></a>
-                                            </li>
-                                            <li class="list-inline-item"><a href="#"><span
-                                                        class="fa fa-star"></span></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </template>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control light-table-filter" placeholder="請輸入關鍵字" aria-label="Recipient's username"
+                aria-describedby="button-addon2"  data-table="order-table">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">搜尋</button>
+        </div>
+
+        <table class="table table-striped table-bordered order-table">
+            <thead>
+                <tr>
+                    <th scope="col">刊登者</th>
+                    <th scope="col">文章標題</th>
+                    <th scope="col">徵/售票</th>
+                    <th scope="col">刊登內容</th>
+                    <th scope="col">刊登時間</th>
+                </tr>
+            </thead>
+            <tbody id="ticket">
+                <!-- 假資料先放著 -->
+                <!-- <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
     </section>
 
-    <footer>
+    <footer class="">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <p class="footer-text">© 藝起來玩 版權所有 |</p> 
-                </div>
-                <div class="col-lg-6">
-                  <p>
-                    <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
-                    <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
-                    <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
-                    <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
-                </p>
+                <div class="">
+                    <p>© 藝起來玩 版權所有</p>
                 </div>
             </div>
         </div>
     </footer>
-
 
 
 </body>

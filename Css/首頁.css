@@ -28,6 +28,7 @@ body {
     margin-top: 3px;
     margin-bottom: -15px;
     margin-right: -20px;
+    
 }
 
 /* Logo的文字顏色 */
@@ -35,6 +36,7 @@ body {
 
     font-weight: 700;
     color: #403F3D;
+    letter-spacing: 8px;
 }
 
 /* 滑鼠移到Logo後的文字顏色 */
@@ -538,6 +540,30 @@ li {
 
 }
 
+/* 場館img調整 */
+
+.card img{
+    width: 200px;
+    height: 200px;
+    width: 100%; 
+} 
+
+/* 最新活動資訊部分的的RWD */
+@media screen and (max-width:576px) {
+    .activity .outer {
+        width: 350px;
+        height: 550px;
+        display: flex;
+        justify-items: center;
+    }
+
+    .activity .outer img {
+        width: 100%;
+        width: 350px;
+        height: 400px;
+    }
+
+}
 
 
 /* 推薦場館 */
@@ -880,4 +906,9 @@ footer img {
     max-width: 25px;
     max-height: 25px;
     margin-right: 10px;
+}
+#ticket img{
+    width: 100px;
+    height: 100px;
+    
 }

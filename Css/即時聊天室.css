@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+/* 公告icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+/* 三條線icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+/* login Reg Icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+/* 訊息icon */
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
+
+body {
+    background-color: #fcfdfd;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    color: #403F3D;
+}
+/* navbar原本的灰底色 */
+.bg-light{
+    background-color: #CAD9A2 !important;
+    
+}
+
+/* Logo文字大小 */
+.navbar-brand {
+    font-size: 1.75em;
+    margin-top: 3px;
+    margin-bottom: -15px;
+    margin-right: -20px;
+}
+
+/* Logo的文字顏色 */
+.navbar-light .navbar-brand {
+
+    font-weight: 700;
+    color: #403F3D;
+}
+
+/* 滑鼠移到Logo後的文字顏色 */
+/* .navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus {
+    color: #9DA695;
+} */
+
+/* Navbar標題顏色 */
+.navbar-light .navbar-nav .nav-link {
+    color: #403F3D;
+    padding-right: 1px;
+    padding-left: 1px;
+    margin-left: 70px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+
+}
+
+/* 滑鼠移到Navbar標題顏色 */
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    
+    font-weight: 700;
+    opacity: 0.8;
+    color: #000000;
+}
+
+/* nav的RWd */
+@media screen and (max-width: 576px) {
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(100px);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        font-family: 'Noto Sans TC', sans-serif;
+       
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 300;
+        color: #403F3D;
+        display: block;
+        transition: 0.5s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 45px;
+        color: #fcfdfd;
+    }
+
+    .sidenav h6 {
+        margin-left: 40px;
+        letter-spacing: 10px;
+        font-weight: 500;
+    }
+
+    .fi-br-copy {
+        margin-right: 10px;
+    }
+
+    .closeIcon span {
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .setRwdNav {
+        margin-bottom: 20px;
+    }
+    #demo{
+        display: none;
+    }
+    .newsSection{
+        background: #000000;
+    }
+    .activity{
+        position: relative;
+        top:-130px;
+    }
+       
+}
+
+/* 超過就隱藏 */
+@media screen and (min-width:577px) {
+    .sidenav {
+        visibility: hidden;
+    }
+
+    .closeIcon {
+        visibility: hidden;
+    }
+}
+
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 下拉選單 */
+.dropdown-item {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #403F3D;
+    letter-spacing: 0.1rem;
+}
+
+/* 滑鼠碰到點選時 */
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #403F3D;
+    text-decoration: none;
+    background-color: #CAD9A2;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 確定按下後 */
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #403F3D;
+    text-decoration: none;
+    background-color: #CAD9A2;
+}
+
+
+/* 首頁右上角 Login/Reg/input/Button */
+.loginReg a {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #403F3D;
+    margin-left: 5px;
+    margin-right: 6px;
+    
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+    opacity: 0.9;
+
+}
+
+.loginReg a:hover {
+    font-weight: 500;
+    color: #CC8D1A;
+}
+.fi-sr-user:hover,
+.fi-sr-user-add:hover{
+    color: #CC8D1A;
+}
+.loginReg {
+    margin-right: -25px;
+    margin-top: -80px;
+    margin-bottom: -110px;
+    
+   
+
+}
+/* 登入icon */
+.fi-sr-user {
+    font-size: 18px;
+    opacity: 0.8;
+    margin: 7px;
+    color: #403F3D;
+
+}
+/* 註冊icon */
+.fi-sr-user-add {
+    font-size: 18px;
+    opacity: 0.8;
+    margin: 7px;
+    color: #403F3D;
+
+}
+
+/* Search Button Icon */
+.fi-rs-search-alt{
+    font-size: 22px;
+    color:#403F3D;
+    opacity: 0.8;
+    margin-left: 10px;
+    
+}
+.loginReg button{
+    background: transparent;
+    margin-right: 1px;
+    border: none;
+    margin-bottom: -15px;
+}
+.loginReg button:focus{
+    outline: none;
+    cursor: pointer;
+}
+.loginReg .fi-rs-search-alt:hover{
+
+    cursor: pointer;
+    opacity: 0.8;
+    color:#CC8D1A;
+}
+
+.bg{
+    background-color: #CAD9A2 !important ;
+}
+
+/* 輸入框 */
+.searchInput{
+    background-color: transparent;
+    color: #403F3D;
+    opacity: 0.9;
+    border: 1px;
+    border-style: none none solid none ;
+    border-radius: 1px;
+
+    
+    text-align: center;
+    font-size:15px;
+    padding: 3px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    padding-bottom: 0px;
+    padding-top: 1px;
+
+}
+.searchInput:focus{
+    outline: none;
+}
+
+.chatroom{
+    background: #fffff0;
+} 
+
+body{
+    background: #fffff0;
+} 
+
+.btn-info {
+    color: #fff;
+    background-color: #F2CCB5;
+    border-color: #F2CCB5;
+}
+
+.btn-info:hover {
+    color: #fff;
+    background-color: #e1bca4;
+    border-color: #e1bca4;
+}
+
+.mobile {
+    box-shadow: 5px 5px 0 #768693;
+    height: 2000px;
+    overflow: auto;
+    width: 1200px;
+    margin: 20px auto;
+    border: 0 solid #2c3e50;
+    border-width: 45px 15px 60px;
+    color: #474c57;
+    border-radius: 20px;
+  }
+
+
+

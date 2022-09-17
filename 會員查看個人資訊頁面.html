@@ -105,7 +105,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 title">
-                <h3><i class="fi fi-ss-users"></i>會員專區</h3>
+                <h3><i class="fi fi-ss-users-alt"></i>會員專區</h3>
             </div>
 
         </div>
@@ -123,6 +123,13 @@
                     <h3>查看我的收藏</h3>
                 </a>
             </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row logoutImg">
+            <img src="./Images/logout.png" title="登出會員" id="logoutImg">
         </div>
     </div>
 
@@ -150,15 +157,22 @@
 
 
 
-    <script src="./JavaScript/登入.js"></script>
-   
+
+
     <script src="./JavaScript/會員查看個人資訊頁面.js"></script>
     <script>
         const memberName = document.querySelector('#memberName')
-memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
+        memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
 
-const idPhoto = document.querySelector('#idPhoto')
-idPhoto.src = window.localStorage.getItem('userPhoto');
+        const idPhoto = document.querySelector('#idPhoto')
+        idPhoto.src = window.localStorage.getItem('userPhoto');
+
+        const logoutImg = document.querySelector('#logoutImg')
+        logoutImg.addEventListener('click',()=>{
+            confirm('確定要登出嗎?')
+            localStorage.clear()
+            window.location.href="./首頁.html"
+        })
     </script>
 </body>
 

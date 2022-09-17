@@ -235,9 +235,53 @@
 
 
     <script>
+        const memberName = document.querySelector('#memberName')
+        memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
 
+        const idPhoto = document.querySelector('#idPhoto')
+        idPhoto.src = window.localStorage.getItem('userPhoto');
+
+        const name = document.querySelector('#name')
+        name.value = window.localStorage.getItem('user');
+
+        document.getElementById('submit').addEventListener('click',function(e)
+        {
+            var r = confirm("確定要新增嗎?");
+            if (r == true) {
+
+                e.preventDefault()
+
+            fetch(' http://20.249.62.237/api/Ticket',{
+                method:'POST',
+                headers:
+                {
+                    "Content-Type": "application/json;charset=utf-8"
+                },
+                body:JSON.stringify(
+                    {
+                        "mId": "1",
+                        "mName": document.getElementById('name').value,
+                        "Ttitle": document.getElementById('title').value,
+                        "TArea": document.getElementById('area').value,
+                        "TSate": document.getElementById('state').value,
+                        "Tcontent": document.getElementById('content').value,
+                        "Ttime": "1998/4/2",
+                    }
+                )
+            })
+            .then(function (response) {
+            return response.text();
+            })
+            .then(function (body) {
+            console.log(body);
+            })
+
+        }         
+    });
+
+    </script>
+    <script>
         // rwd的Js
-
         function openNav() {
             document.getElementById("mySidenav").style.width = "100%";
         }
@@ -245,7 +289,6 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
-
     </script>
 </body>
 

@@ -30,9 +30,9 @@
     <link rel="stylesheet" href="./Css/我要刊登.css">
     <link rel="stylesheet" href="./Css/登入後的畫面.css">
 
-  
 
-<a href=""></a>
+
+
 </head>
 
 <body>
@@ -150,68 +150,62 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                <form>
-                    <div class="form-group">
-                        <label for="">文章標題</label>
-                        <input type="text" class="form-control" id=""
-                            placeholder="標題">
-                    </div>
-                    <div class="form-group">
-                        <label for="">姓名</label>
-                        <input type="text" class="form-control" id=""
-                            placeholder="請輸入姓名">
-                    </div>
-                    <div class="form-group">
-                        <label for="">活動名稱</label>
-                        <input type="text" class="form-control" id=""
-                            placeholder="請輸入活動名稱">
-                    </div>
-                    <div class="form-group">
-                        <label for="">選擇活動區域</label>
-                        <select class="form-control" id="">
-                            <option>北部</option>
-                            <option>中部</option>
-                            <option>南部</option>
-                            <option>東部</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="">你想要徵票／售票？</label>
-                        <select class="form-control" id="">
-                            <option>徵票</option>
-                            <option>售票</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="">有什麼想說的嗎？</label>
-                        <textarea class="form-control" id="" rows="8"></textarea>
-                    </div>
+                    <form action="http://20.249.62.237/api/Ticket" method="post">
+                        <div class="form-group">
+                            <label for="">姓名</label>
+                            <input type="text" class="form-control" id="name" placeholder="" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="">文章標題</label>
+                            <input type="text" class="form-control" id="title" placeholder="標題">
+                        </div>
 
-                    <div class="alert alert-success" role="alert" id="success_message">謝謝您的填寫，祝你早日找到有緣人！</div>
+                        <div class="form-group">
+                            <label for="">選擇活動區域</label>
+                            <select class="form-control" id="area">
+                                <option>北部</option>
+                                <option>中部</option>
+                                <option>南部</option>
+                                <option>東部</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">你想要徵票／售票？</label>
+                            <select class="form-control" id="state">
+                                <option>徵票</option>
+                                <option>售票</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">有什麼想說的嗎？</label>
+                            <textarea class="form-control" id="content" rows="8"></textarea>
+                        </div>
 
-                    <div class="form-group">
-                        <label class="control-label"></label>
-                          <button type="submit" class="btn btn-warning" >送出</button>
-                    </div>     
-                        
-                </form>
+                        <div class="alert alert-success" role="alert" id="success_message">謝謝您的填寫，祝你早日找到有緣人！</div>
+
+                        <div class="form-group">
+                            <label class="control-label"></label>
+                            <button type="submit" class="btn btn-warning" id="submit">送出</button>
+                        </div>
+
+                    </form>
+                </div>
             </div>
-        </div>
     </section>
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <p class="footer-text">© 藝起來玩 版權所有 |</p> 
+                    <p class="footer-text">© 藝起來玩 版權所有 |</p>
                 </div>
                 <div class="col-lg-6">
-                  <p>
-                    <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
-                    <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
-                    <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
-                    <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
-                </p>
+                    <p>
+                        <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
+                        <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
+                        <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
+                        <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -221,11 +215,57 @@
 
     <script src="./JavaScript/登入.js"></script>
     <script>
+
         const memberName = document.querySelector('#memberName')
         memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
 
+        const name = document.querySelector('#name')
+        name.value = window.localStorage.getItem('user');
+
+
+        let mId = window.localStorage.getItem('userID');
+
+
         const idPhoto = document.querySelector('#idPhoto')
         idPhoto.src = window.localStorage.getItem('userPhoto');
+
+        document.getElementById('submit').addEventListener('click', function (e) {
+            var r = confirm("確定要新增嗎?");
+            if (r == true) {
+
+                e.preventDefault()
+
+                // alert(mId)
+                alert(name.value)
+
+                fetch(`http://20.249.62.237/api/Ticket/${mId}`, {
+                    method: 'POST',
+                    headers:
+                    {
+                        "Content-Type": "application/json;charset=utf-8"
+                    },
+                    body: JSON.stringify(
+                        {
+                            "mId": mId,   //注意要給
+                            "TName": "測試",
+                            "mName": document.getElementById('name').value,
+                            "Ttitle": document.getElementById('title').value,
+                            "TArea": document.getElementById('area').value,
+                            "TState": document.getElementById('state').value,
+                            "TContent": document.getElementById('content').value,
+                            "Ttime": "2022/9/20",
+                        }
+                    )
+                })
+                    .then(function (response) {
+                        return response.text();
+                    })
+                    .then(function (body) {
+                        console.log(body);
+                    })
+
+            }
+        });
 
     </script>
 

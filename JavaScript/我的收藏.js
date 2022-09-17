@@ -71,7 +71,7 @@ fetch('./text會員.json')
 
                     html +=
                         `<tr>
-                        <td>${strResult[i]}</td>
+                        <td><i class="fi fi-ss-angle-circle-right"></i>${strResult[i]}</td>
                         <td><img src="./Images/heart.png" class="heart" onclick="cancelFavorite(${element.fId})"></td>
                     </tr>`
                     deleteMemberCollect = element.eName;

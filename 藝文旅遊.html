@@ -8,8 +8,6 @@
     <title>藝文旅遊</title>
 
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -20,7 +18,9 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
-
+    <!-- leaflet地圖 -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
 
 
 
@@ -293,7 +293,6 @@
 
             <div class="container">
                 <div class="forcast" v-if="now_area">
-
                     <div class="place">
                         <i class="fi fi-rr-location-alt"></i>
                         <h3>{{now_area.place}}</h3>
@@ -301,32 +300,31 @@
 
                     <div class="row">
                         <div class="col-3 flex-nowrap photo">
-                                <a v-bind:href="this.now_area.href[0]">
-                                    <!-- <i class="fi fi-sr-map-marker"></i> -->
-                                    <img v-bind:src="this.now_area.imgURL[0]" alt="">
-                                    <p>{{now_area.Attractions[0]}}</p>
-                                </a>
+                            <a v-bind:href="this.now_area.href[0]">
+                                <img v-bind:src="this.now_area.imgURL[0]" alt="">
+                                <p>{{now_area.Attractions[0]}}</p>
+                            </a>
+
                         </div>
 
                         <div class="col-3 flex-nowrap photo">
-                                <a v-bind:href="this.now_area.href[1]">
-                                    <!-- <i class="fi fi-sr-map-marker"></i> -->
-                                    <img v-bind:src="this.now_area.imgURL[1]" alt="">
-                                    <p id="place1">{{now_area.Attractions[1]}}</p>
-                                </a>
-                            
+                            <a v-bind:href="this.now_area.href[1]">
+                                <img v-bind:src="this.now_area.imgURL[1]" alt="">
+                                <p id="place1">{{now_area.Attractions[1]}}</p>
+                            </a>
+
                         </div>
 
                         <div class="col-3 flex-nowrap photo">
-                                <a v-bind:href="this.now_area.href[2]">
-                                    <img v-bind:src="this.now_area.imgURL[2]" alt="">  
-                                    <p id="place2">{{now_area.Attractions[2]}}</p>
-                                </a>
+                            <a v-bind:href="this.now_area.href[2]">
+                                <img v-bind:src="this.now_area.imgURL[2]" alt="">
+                                <p id="place2">{{now_area.Attractions[2]}}</p>
+                            </a>
+
                         </div>
 
-                        <div class="col-3 flex-nowrap photo" >
-                             <a v-bind:href="this.now_area.href[3]">
-                                <!-- <i class="fi fi-sr-map-marker"></i> -->
+                        <div class="col-3 flex-nowrap photo">
+                            <a v-bind:href="this.now_area.href[3]">
                                 <img v-bind:src="this.now_area.imgURL[3]" alt="">
                                 <p id="place3">{{now_area.Attractions[3]}}</p>
                             </a>
@@ -336,224 +334,496 @@
             </div>
         </div>
 
+        <section class="food">
+            <div class="container">
+                <div class="row">
+                    <i class="fi fi-rr-restaurant"></i>
+                    <h2>美食景點地圖</h2>
+                </div>
+            </div>
+            <div id="map">
+                <div id="put-markers">
+                    <div id="zoom-in">
+                        <div id="zoom-out"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
 
-    <script>
+        <script>
 
-        var place_data = [
-            {
-                tag: "taipei_city",
-                place: "臺北市",
-                Attractions: ["木柵動物園", "台北霞海城隍廟", "北投圖書館", "松山文化園區"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/木柵動物園.jpg','./Images/台北霞海城隍廟.jpg','./Images/北投圖書館.jpg','./Images/松山文化園區.jpg']
-            },
+            var place_data = [
+                {
+                    tag: "taipei_city",
+                    place: "臺北市",
+                    Attractions: ["木柵動物園", "台北霞海城隍廟", "北投圖書館", "松山文化園區"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/木柵動物園.jpg', './Images/台北霞海城隍廟.jpg', './Images/北投圖書館.jpg', './Images/松山文化園區.jpg'],
+                    food: []
+                },
 
-            {
-                tag: "new_taipei_city",
-                place: "新北市",
-                Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "林本源園邸"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/黃金博物館.jpg','./Images/十三行博物館.jpg','./Images/鶯歌陶瓷博物館.jpg','./Images/林本源園邸.jpg']
-            },
+                {
+                    tag: "new_taipei_city",
+                    place: "新北市",
+                    Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "林本源園邸"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/黃金博物館.jpg', './Images/十三行博物館.jpg', './Images/鶯歌陶瓷博物館.jpg', './Images/林本源園邸.jpg']
+                },
 
-            {
-                tag: "taichung_city",
-                place: "台中市",
-                Attractions: ["彩虹眷村", "國立自然科學博物館", "國立台灣美術館", "逢甲夜市"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "taichung_city",
+                    place: "台中市",
+                    Attractions: ["后豐鐵馬道", "國立自然科學博物館", "國立台灣美術館", "逢甲夜市"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/后豐鐵馬道.jpg', './Images/國立自然科學博物館.jpg', './Images/國立台灣美術館.jpg', './Images/逢甲夜市.jpg']
+                },
 
-            {
-                tag: "tainan_city",
-                place: "臺南市",
-                Attractions: ["漁光島", "赤崁樓", "安平古堡", "奇美博物館"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "tainan_city",
+                    place: "臺南市",
+                    Attractions: ["漁光島", "赤崁樓", "安平古堡", "奇美博物館"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/漁光島.jpg', './Images/赤崁樓.jpg', './Images/安平古堡.jpg', './Images/奇美博物館.jpg']
+                },
 
-            {
-                tag: "kaohsiung_city",
-                place: "高雄市",
-                Attractions: ["逍遙園", "駁二藝術特區", "龍虎塔", "壽山動物園"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "kaohsiung_city",
+                    place: "高雄市",
+                    Attractions: ["逍遙園", "駁二藝術特區", "龍虎塔", "壽山動物園"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/逍遙園.jpg', './Images/駁二藝術特區.jpg', './Images/龍虎塔.jpg', './Images/壽山動物園.jpg']
+                },
 
-            {
-                tag: "keelung_city",
-                place: "基隆市",
-                Attractions: ["國立海洋科技博物館", "仁愛市場", "正濱漁港", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "keelung_city",
+                    place: "基隆市",
+                    Attractions: ["國立海洋科技博物館", "仁愛市場", "正濱漁港", "基隆廟口"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/國立海洋科技博物館.jpg', './Images/仁愛市場.jpg', './Images/正濱漁港.jpg', './Images/基隆廟口.jpg']
+                },
 
-            {
-                tag: "taoyuan_country",
-                place: "桃園市",
-                Attractions: ["大溪老街", "石門水庫", "Xpark水族館", "中壢夜市"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "taoyuan_country",
+                    place: "桃園市",
+                    Attractions: ["大溪老街", "石門水庫", "Xpark水族館", "中壢夜市"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/大溪老街.jpg', './Images/石門水庫.jpg', './Images/Xpark水族館.jpg', './Images/中壢夜市.jpg']
+                },
 
-            {
-                tag: "hsinchu_city",
-                place: "新竹市",
-                Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "hsinchu_city",
+                    place: "新竹市",
+                    Attractions: ["南寮漁港", "新竹市美術館", "東門城", "新竹城隍廟"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/南寮漁港.jpg', './Images/新竹市美術館.jpeg', './Images/東門城.jpeg', './Images/新竹城隍廟.jpeg']
+                },
 
-            {
-                tag: "hsinchu_country",
-                place: "新竹縣",
-                Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "hsinchu_country",
+                    place: "新竹縣",
+                    Attractions: ["六福村", "司馬庫斯", "姜阿新洋樓", "綠世界生態農場"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/六福村.jpg', './Images/司馬庫斯.jpg', './Images/姜阿新洋樓.jpg', './Images/綠世界生態農場.jpg']
+                },
 
-            {
-                tag: "miaoli_country",
-                place: "苗栗縣",
-                Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "miaoli_country",
+                    place: "苗栗縣",
+                    Attractions: ["龍騰斷橋", "飛牛牧場", "南庄老街", "泰安溫泉"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/龍騰斷橋.jpg', './Images/飛牛牧場.jpg', './Images/南庄老街.jpg', './Images/泰安溫泉.jpg']
+                },
 
-            {
-                tag: "changhua_country",
-                place: "彰化縣",
-                Attractions: ["日月潭", "清境農場", "鶯歌陶瓷博物館", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "changhua_country",
+                    place: "彰化縣",
+                    Attractions: ["鹿港老街", "八卦山", "扇形車庫", "田尾公路花園"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/鹿港老街.jpg', './Images/八卦山.jpg', './Images/扇形車庫.jpg', './Images/田尾公路花園.jpg']
+                },
 
-            {
-                tag: "nantou_country",
-                place: "南投縣",
-                Attractions: ["日月潭", "清境農場", "九族文化村", "溪頭自然教育園區"],
-                href:['https://www.sunmoonlake.gov.tw/zh-tw','https://www.cingjing.gov.tw/','https://www.nine.com.tw/','https://www.exfo.ntu.edu.tw/xitou/'],
-                imgURL:['./Images/日月潭.jpg','./Images/清境農場.jpg','./Images/九族文化村.jpg','./Images/溪頭自然園區.jpg']
-            },
+                {
+                    tag: "nantou_country",
+                    place: "南投縣",
+                    Attractions: ["日月潭", "清境農場", "九族文化村", "溪頭自然教育園區"],
+                    href: ['https://www.sunmoonlake.gov.tw/zh-tw', 'https://www.cingjing.gov.tw/', 'https://www.nine.com.tw/', 'https://www.exfo.ntu.edu.tw/xitou/'],
+                    imgURL: ['./Images/日月潭.jpg', './Images/清境農場.jpg', './Images/九族文化村.jpg', './Images/溪頭自然園區.jpg']
+                },
 
-            {
-                tag: "yunlin_country",
-                place: "雲林縣",
-                Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "yunlin_country",
+                    place: "雲林縣",
+                    Attractions: ["劍湖山遊樂園", "北港朝天宮", "古坑綠色隧道", "澄霖沉香味道森林館"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/劍湖山遊樂園.jpg', './Images/北港朝天宮.jpg', './Images/古坑綠色隧道.jpg', './Images/澄霖沉香味道森林館.jpg']
+                },
 
-            {
-                tag: "chiayi_city",
-                place: "嘉義市",
-                Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "chiayi_city",
+                    place: "嘉義市",
+                    Attractions: ["檜意生活村", "阿里山國家公園", "奮起湖老街", "國家故宮南院"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/檜意生活村.jpg', './Images/阿里山國家公園.jpg', './Images/奮起湖老街.jpg', './Images/國家故宮南院.jpg']
+                },
 
-            {
-                tag: "chiayi_country",
-                place: "嘉義縣",
-                Attractions: ["檜意生活村", "阿里山國家公園", "奮起湖老街", "國家故宮南院"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "chiayi_country",
+                    place: "嘉義縣",
+                    Attractions: ["檜意生活村", "阿里山國家公園", "奮起湖老街", "國家故宮南院"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/檜意生活村.jpg', './Images/阿里山國家公園.jpg', './Images/奮起湖老街.jpg', './Images/國家故宮南院.jpg']
+                },
 
-            {
-                tag: "pingtung_country",
-                place: "屏東縣",
-                Attractions: ["鵝鑾鼻燈塔", "墾丁國家森林遊樂區", "烏鬼洞", "屏東觀光夜市"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "pingtung_country",
+                    place: "屏東縣",
+                    Attractions: ["鵝鑾鼻燈塔", "墾丁國家森林遊樂區", "泗林綠色隧道", "屏東觀光夜市"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/鵝鑾鼻燈塔.jpg', './Images/墾丁國家森林遊樂區.jpg', './Images/泗林綠色隧道.jpg', './Images/屏東觀光夜市.jpg']
+                },
 
-            {
-                tag: "yilan_country",
-                place: "宜蘭縣",
-                Attractions: ["羅東夜市", "太平山", "蘭陽博物館", "外澳沙灘"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/羅東夜市.jpg','./Images/太平山.jpg','./Images/蘭陽博物館.jpg','./Images/外澳沙灘.jpg']
-            },
+                {
+                    tag: "yilan_country",
+                    place: "宜蘭縣",
+                    Attractions: ["羅東夜市", "太平山", "蘭陽博物館", "外澳沙灘"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/羅東夜市.jpg', './Images/太平山.jpg', './Images/蘭陽博物館.jpg', './Images/外澳沙灘.jpg']
+                },
 
-            {
-                tag: "hualien_country",
-                place: "花蓮縣",
-                Attractions: ["七星潭", "石梯坪", "遠雄海洋公園", "牛山呼庭"],
-                href:['https://www.taiwan.net.tw/m1.aspx?sNo=0001124&id=9488','https://www.eastcoast-nsa.gov.tw/zh-tw/Attractions/Detail/12','https://www.farglory-oceanpark.com.tw/','https://travel.yam.com/article/98923'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "hualien_country",
+                    place: "花蓮縣",
+                    Attractions: ["七星潭", "石梯坪", "遠雄海洋公園", "牛山呼庭"],
+                    href: ['https://www.taiwan.net.tw/m1.aspx?sNo=0001124&id=9488', 'https://www.eastcoast-nsa.gov.tw/zh-tw/Attractions/Detail/12', 'https://www.farglory-oceanpark.com.tw/', 'https://travel.yam.com/article/98923'],
+                    imgURL: ['./Images/七星潭.jpg', './Images/石梯坪.jpg', './Images/遠雄海洋公園.jpg', './Images/牛山呼庭.jpg']
+                },
 
-            {
-                tag: "taitung_country",
-                place: "台東縣",
-                Attractions: ["知本溫泉", "卑南遺址", "多良車站", "鐵花村音樂聚落"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "taitung_country",
+                    place: "台東縣",
+                    Attractions: ["知本溫泉", "卑南遺址", "多良車站", "鐵花村音樂聚落"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/知本溫泉.jpg', './Images/卑南遺址.jpg', './Images/多良車站.jpg', './Images/鐵花村.jpg']
+                },
 
-            {
-                tag: "penghu_country",
-                place: "澎湖縣",
-                Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "penghu_country",
+                    place: "澎湖縣",
+                    Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/七星潭.jpg', './Images/石梯坪.jpg', './Images/遠雄海洋公園.jpg', './Images/牛山呼庭.jpg']
+                },
 
-            {
-                tag: "kinmen_country",
-                place: "金門縣",
-                Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
+                {
+                    tag: "kinmen_country",
+                    place: "金門縣",
+                    Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/七星潭.jpg', './Images/石梯坪.jpg', './Images/遠雄海洋公園.jpg', './Images/牛山呼庭.jpg']
+                },
 
-            {
-                tag: "lienchiang_country",
-                place: "連江縣",
-                Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
-                href:['https://www.zoo.gov.taipei/','http://www.tpecitygod.org/','https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4','https://www.songshanculturalpark.org/'],
-                imgURL:['./Images/七星潭.jpg','./Images/石梯坪.jpg','./Images/遠雄海洋公園.jpg','./Images/牛山呼庭.jpg']
-            },
-        ];
-
-
-        var vm = new Vue({
-            el: '#app',
-            data: {
-                filter: "",
-                place_data: place_data,
-
-            },
-            computed: {
-
-                now_area: function () {
-                    var vobj = this;
-                    var result = this.place_data.filter(function (obj) {
-                        return obj.tag == vobj.filter;
-                    });
+                {
+                    tag: "lienchiang_country",
+                    place: "連江縣",
+                    Attractions: ["黃金博物館", "十三行博物館", "鶯歌陶瓷博物館", "基隆廟口"],
+                    href: ['https://www.zoo.gov.taipei/', 'http://www.tpecitygod.org/', 'https://tpml.gov.taipei/News_Content.aspx?n=4F66F55F388033A7&s=8D29886CA91B88A4', 'https://www.songshanculturalpark.org/'],
+                    imgURL: ['./Images/七星潭.jpg', './Images/石梯坪.jpg', './Images/遠雄海洋公園.jpg', './Images/牛山呼庭.jpg']
+                },
+            ];
 
 
-                    if (result.length == 0) {
-                        return null;
-                    }
-                    return result[0];
-
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    filter: "",
+                    place_data: place_data,
 
                 },
-            }
-        });
+                computed: {
 
-        $("path").mousemove(function (e) {
-            var tagName = $(this).attr("data-name");
-            vm.filter = tagName;
+                    now_area: function () {
+                        var vobj = this;
+                        var result = this.place_data.filter(function (obj) {
+                            return obj.tag == vobj.filter;
+                        });
 
-        });
 
-    </script>
+                        if (result.length == 0) {
+                            return null;
+                        }
+                        return result[0];
+
+
+                    },
+                }
+            });
+
+            $("path").mousemove(function (e) {
+                var tagName = $(this).attr("data-name");
+                vm.filter = tagName;
+
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+
+                // 主要參考文件：https://leafletjs.com/examples/quick-start/
+                let center = [23.0093991, 120.2166406]; // 預設中心點為成功大學
+
+                // 跟使用者要位置
+                // 使用者同意給位置，center 設為使用者座標
+                function successGPS(position) {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    center = [lat, lng];
+                    triggerLeaflet()
+                };
+                function errorGPS() {
+                    window.alert('無法判斷您的所在位置，無法使用此功能。預設地點將為 國立成功大學');
+                    triggerLeaflet()
+                }
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(successGPS, errorGPS);
+                } else {
+                    window.alert('您的裝置不具備GPS，無法使用此功能');
+                    triggerLeaflet()
+                }
+
+                // 執行 Leaflet
+                function triggerLeaflet() {
+
+                    // *** 放置地圖
+                    let zoom = 17; // 0-18
+                    let map = L.map('map').setView(center, zoom);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '© OpenStreetMap', // 商用時必須要有版權出處
+                        zoomControl: true, // 是否秀出 - + 按鈕
+                    }).addTo(map);
+
+
+
+                    // *** 放置標記 + 客製標記
+                    // 客製標記 https://leafletjs.com/reference-1.7.1.html#icon
+                    const customIcon = L.icon({
+                        iconUrl: 'https://cdn4.iconfinder.com/data/icons/universal-7/614/17_-_Location-256.png',
+                        iconSize: [42, 42],
+                    });
+
+                    const marker = L.marker(center, {
+                        icon: customIcon,
+                        title: '', 
+                        opacity: 1.0
+                    }).addTo(map);
+
+
+                    // 客製化美食marker
+                    const foodIcon = L.icon({
+                        iconUrl: './Images/food.png',
+                        iconSize: [30, 30],
+                    })
+
+                    // 客製化景點marker
+                    const attractionsIcon = L.icon({
+                        iconUrl: "./Images/attractions.png",
+                        iconSize: [30, 30],
+                    })
+
+                    // 客製化景點marker
+                    const drinkIcon = L.icon({
+                        iconUrl: "./Images/drink.png",
+                        iconSize: [30, 30],
+                    })
+
+
+
+                    //製造許多美食icon
+                    L.marker([22.9971683, 120.216256], { icon: foodIcon }).addTo(map).bindPopup("<b>Jamys潛艇堡專賣店</b>");
+                    L.marker([22.9967832, 120.2147969], { icon: foodIcon }).addTo(map).bindPopup("<b>日曜日オムライス</b>");
+                    L.marker([22.9949484, 120.2138142], { icon: foodIcon }).addTo(map).bindPopup("<b>暖食堂 歐姆蛋包飯.烏龍麵.小米酒專門店/b>");
+                    L.marker([22.9949484, 120.2138142], { icon: foodIcon }).addTo(map).bindPopup("<b>台南-CHADOR</b>");
+                    L.marker([22.9949484, 120.2138142], { icon: foodIcon }).addTo(map).bindPopup("<b>前鋒廚房</b>");
+                    L.marker([22.9948805, 120.2139616], { icon: foodIcon }).addTo(map).bindPopup("<b>黑工號嫩仙草</b>");
+                    L.marker([22.9944786, 120.2111189], { icon: foodIcon }).addTo(map).bindPopup("<b>騷烤家</b>");
+                    L.marker([22.9906588, 120.2164826], { icon: foodIcon }).addTo(map).bindPopup("<b>ChuChu Pâtisserie 啾啾法式甜點</b>");
+                    L.marker([22.9883871, 120.2142316], { icon: foodIcon }).addTo(map).bindPopup("<b>荒井佳子</b>");
+                    L.marker([22.9892471, 120.1712881], { icon: foodIcon }).addTo(map).bindPopup("<b>屋裏的湯</b>");
+                    L.marker([22.9888518, 120.1736566], { icon: foodIcon }).addTo(map).bindPopup("<b>新永華夜市</b>");
+                    L.marker([22.9873665, 120.1846627], { icon: foodIcon }).addTo(map).bindPopup("<b>台南市文南路東山鴨頭</b>");
+                    L.marker([22.9899865, 120.1942076], { icon: foodIcon }).addTo(map).bindPopup("<b>阿鳳浮水虱目魚羹</b>");
+                    L.marker([22.9826947, 120.2169505], { icon: foodIcon }).addTo(map).bindPopup("<b>深藍咖啡館</b>");
+                    L.marker([22.9832794, 120.2169469], { icon: foodIcon }).addTo(map).bindPopup("<b>月波moon wave</b>");
+                    L.marker([22.9826947, 120.2169505], { icon: foodIcon }).addTo(map).bindPopup("<b>深藍咖啡館</b>");
+                    L.marker([22.9841797, 120.2146771], { icon: foodIcon }).addTo(map).bindPopup("<b>KADOYA喫茶店</b>");
+                    L.marker([22.9857581, 120.2119889], { icon: foodIcon }).addTo(map).bindPopup("<b>溫點 온점</b>");
+                    L.marker([22.9903664, 120.2009765], { icon: foodIcon }).addTo(map).bindPopup("<b>塔妞蛋塔工坊</b>");
+                    L.marker([22.9895458,120.2081232], { icon: foodIcon }).addTo(map).bindPopup("<b>太陽牌冰品</b>");
+                    L.marker([22.9885178, 120.2044402], { icon: foodIcon }).addTo(map).bindPopup("<b>檨仔林阿全碗粿</b>");
+                    L.marker([22.9902664, 120.2007875], { icon: foodIcon }).addTo(map).bindPopup("<b>友愛牛肉湯 </b>");
+                    L.marker([22.9908294, 120.1993579], { icon: foodIcon }).addTo(map).bindPopup("<b>Dor,留手工義大利麵</b>");
+                    L.marker([22.9915104,120.1969183], { icon: foodIcon }).addTo(map).bindPopup("<b>小杜意麵</b>");
+                    L.marker([22.9899117, 120.1957646], { icon: foodIcon }).addTo(map).bindPopup("<b>阿堂鹹粥</b>");
+                    L.marker([22.9909629, 120.1976391], { icon: foodIcon }).addTo(map).bindPopup("<b>草包生煎</b>");
+                    L.marker([22.9909469, 120.1981482], { icon: foodIcon }).addTo(map).bindPopup("<b>新迦拿鍋燒專賣店</b>");
+                    L.marker([22.989752, 120.1982061], { icon: foodIcon }).addTo(map).bindPopup("<b>喧宵いざかや</b>");
+                    L.marker([22.9892825, 120.1968669], { icon: foodIcon }).addTo(map).bindPopup("<b>你我他之家</b>");
+                    L.marker([22.9896231, 120.1964684], { icon: foodIcon }).addTo(map).bindPopup("<b>醇涎坊古早味鍋燒意麵</b>");
+                    L.marker([22.9891967, 120.1951288], { icon: foodIcon }).addTo(map).bindPopup("<b>六千泓佐土產牛肉</b>");
+                    L.marker([22.9893002, 120.1949657], { icon: foodIcon }).addTo(map).bindPopup("<b>入街</b>");
+
+
+
+
+
+                    //製造許多景點icon
+                    L.marker([22.9941404, 120.2135992], { icon: attractionsIcon }).addTo(map).bindPopup("<b>臺南知事官邸</b>");
+                    L.marker([22.9942906, 120.214082], { icon: attractionsIcon }).addTo(map).bindPopup("<b>西竹圍之丘文創園區</b>");
+                    L.marker([22.9883673, 120.2000983], { icon: attractionsIcon }).addTo(map).bindPopup("<b>臺南市美術館2館</b>");
+                    L.marker([22.9830782, 120.19506], { icon: attractionsIcon }).addTo(map).bindPopup("<b>水交社文化園區</b>");
+                    L.marker([22.9852458, 120.1898773], { icon: attractionsIcon }).addTo(map).bindPopup("<b>藍晒圖文創園區</b>");
+                    L.marker([22.9979262, 120.163526], { icon: attractionsIcon }).addTo(map).bindPopup("<b>安平老街</b>");
+                    L.marker([22.9747562, 120.2193765], { icon: attractionsIcon }).addTo(map).bindPopup("<b>臺南市立文化中心</b>");
+                    L.marker([22.9796627, 120.2200085], { icon: attractionsIcon }).addTo(map).bindPopup("<b>原臺南州立農事試驗場宿舍群</b>");
+                    L.marker([22.9873322, 120.195021, 17], { icon: attractionsIcon }).addTo(map).bindPopup("<b>客家文化會館</b>");
+                    L.marker([22.9858292, 120.1873928, 15.7], { icon: attractionsIcon }).addTo(map).bindPopup("<b>黑橋牌香腸博物館</b>");
+                    L.marker([22.9926147, 120.1879246, 15.96], { icon: attractionsIcon }).addTo(map).bindPopup("<b>河樂廣場The Spring</b>");
+                    L.marker([22.996565, 120.193888, 15.44], { icon: attractionsIcon }).addTo(map).bindPopup("<b>赤崁樓</b>");
+                    L.marker([22.9866593,120.2031202], { icon: attractionsIcon }).addTo(map).bindPopup("<b>南門電影書院</b>");
+
+                    //製造許多飲料店icon
+                    L.marker([22.9931849, 120.211614], { icon: drinkIcon }).addTo(map).bindPopup("<b>跳舞的羊咖啡豆專賣店</b>");
+                    L.marker([22.9942267, 120.2169308], { icon: drinkIcon }).addTo(map).bindPopup("<b>東洲黑糖奶舖</b>");
+                    L.marker([22.9936943, 120.2167251], { icon: drinkIcon }).addTo(map).bindPopup("<b>波哥茶飲</b>");
+                    L.marker([22.9961176, 120.1657443], { icon: drinkIcon }).addTo(map).bindPopup("<b>Meller 墨樂咖啡</b>");
+                    L.marker([22.9899182, 120.1983695], { icon: drinkIcon }).addTo(map).bindPopup("<b>万茶川日本茶專賣店</b>");
+                    L.marker([22.9876347, 120.1981103], { icon: drinkIcon }).addTo(map).bindPopup("<b>Mini Earth Men波哥創意茶飲</b>");
+                    L.marker([22.9870811,120.2070179], { icon: drinkIcon }).addTo(map).bindPopup("<b>阿烏咖啡</b>");
+                    L.marker([22.9911873, 120.1993776, 18.3], { icon: drinkIcon }).addTo(map).bindPopup("<b>雙全紅茶</b>");
+                    L.marker([22.9909149, 120.1991978], { icon: drinkIcon }).addTo(map).bindPopup("<b>Chun純薏仁。甜點</b>");
+                    L.marker([22.9909629, 120.1976391, 18.3], { icon: drinkIcon }).addTo(map).bindPopup("<b>PIANO，PIANO</b>");
+                    L.marker([22.9900921, 120.1967128, 17], { icon: drinkIcon }).addTo(map).bindPopup("<b>藥師的私房紅茶</b>");
+                    L.marker([22.9969349, 120.2015548, 17.52], { icon: drinkIcon }).addTo(map).bindPopup("<b>Bar TCRC 前科累累俱樂部</b>");
+                    L.marker([22.9965334, 120.2029636, 19.86], { icon: drinkIcon }).addTo(map).bindPopup("<b>双生綠豆沙牛奶</b>");
+                    L.marker([22.9866593,120.2031202], { icon: drinkIcon }).addTo(map).bindPopup("<b>曉咖啡</b>");
+                    L.marker([22.9866593,120.2031202], { icon: drinkIcon }).addTo(map).bindPopup("<b>迦南水果店</b>");
+
+
+
+                    // 放置 markers
+                    const btnPutMarkers = document.getElementById('put-markers');
+                    btnPutMarkers.addEventListener('click', e => {
+                        e.preventDefault();
+                        for (let i = 0; i < 10; i++) {
+                            let lng_first = center[1] + (0.0005 * i);
+                            let location = [center[0], lng_first];
+                            let marker = L.marker(location, { icon: customIcon }).addTo(map);
+                        }
+                        e.target.classList.add('disabled')
+                    })
+
+
+
+                    // *** 標記上放泡泡
+                    marker.bindPopup("<b>您現在的位置</b>").openPopup();
+                    // foodMarker.bindPopup("<b>你現在在這個位置</b><br>I am a popup.").openPopup();
+
+
+
+                    // *** 標記上放 tooltip
+                    marker.bindTooltip("嗨！歡迎你", {
+                        direction: 'bottom', // right、left、top、bottom、center。default: auto
+                        sticky: true, // true 跟著滑鼠移動。default: false
+                        permanent: false, // 是滑鼠移過才出現，還是一直出現
+                        opacity: 1.0
+                    }).openTooltip();
+
+
+
+                    // *** map click 事件
+                    const popup = L.popup();
+                    function onMapClick(e) {
+                        let lat = e.latlng.lat; // 緯度
+                        let lng = e.latlng.lng; // 經度
+                        popup
+                            .setLatLng(e.latlng)
+                            .setContent(`緯度：${lat}<br/>經度：${lng}`)
+                            .openOn(map);
+                    }
+                    map.on('click', onMapClick);
+
+
+
+                    // ***  zoom in, zoom out
+                    zoomIn(map);
+                    zoomOut(map);
+
+
+
+                    // *** 使用其它圖層（新增在地圖內）
+                    // 圖層來源：https://leaflet-extras.github.io/leaflet-providers/preview/
+                    // 使用來源：https://stackoverflow.com/questions/33759578/how-to-change-base-layer-using-js-and-leaflet-layers-control
+                    var baselayers = {
+                        'OpenStreetMap.Mapnik': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+                        'OpenStreetMap.DE': L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png'),
+                        'OpenStreetMap.CH': L.tileLayer('https://tile.osm.ch/switzerland/{z}/{x}/{y}.png'),
+                        'OpenStreetMap.France': L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'),
+                        'OpenStreetMap.HOT': L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'),
+                        'OpenStreetMap.BZH': L.tileLayer('https://tile.openstreetmap.bzh/br/{z}/{x}/{y}.png'),
+                        'OpenTopoMap': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png')
+                    };
+                    var overlays = {};
+                    L.control.layers(baselayers, overlays).addTo(map);
+                    baselayers['OpenStreetMap.Mapnik'].addTo(map);
+
+
+
+                    // *** 使用其它圖層（地圖外的按鈕）
+                    changeLayer(map)
+                    console.log('dddd')
+                }
+
+                // zoom in
+                function zoomIn(map) {
+                    const btnZoom = document.getElementById('zoom-in');
+                    btnZoom.addEventListener('click', e => {
+                        e.preventDefault();
+                        map.zoomIn(1);
+                    })
+                }
+
+                // zoom out
+                function zoomOut(map) {
+                    const btnZoom = document.getElementById('zoom-out');
+                    btnZoom.addEventListener('click', e => {
+                        e.preventDefault();
+                        map.zoomOut(1);
+                    })
+                }
+
+                // 使用其它圖層（地圖外的按鈕）
+                function changeLayer(map) {
+                    const btnLayers = document.querySelectorAll('.js-change-layer');
+                    Array.prototype.forEach.call(btnLayers, btn => {
+                        btn.addEventListener('click', e => {
+                            e.preventDefault();
+                            let layer = e.target.dataset.layer; // 取得 data-layer 的值
+                            L.tileLayer(layer).addTo(map)
+                        })
+                    })
+                }
+
+
+                //Leaflet.markercluster－群聚Markers展開縮起
+                let markersLayer = new L.MarkerClusterGroup();
+
+
+            })
+
+
+        </script>
+
 
 
 

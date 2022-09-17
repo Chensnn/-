@@ -40,7 +40,7 @@ mButtonClick.addEventListener('click', () => {
 		.then(function (myJson) {
 			myJson.forEach(element => {
 
-				if (mAccount == element.mAccount && mPassword == element.mPassword) {
+				if (mAccount == element.mAccount && mPassword == element.mPassword && mAccount !== "" && mPassword !== "") {
 
 
 					window.location.href = "./登入後的畫面.html";
@@ -56,7 +56,7 @@ mButtonClick.addEventListener('click', () => {
 					window.localStorage.setItem('userPassword', element.mPassword);
 					window.localStorage.setItem('userFavorite', element.eName);
 
-					
+					return false;
 
 				}
 				else if (mAccount == "" || mPassword == "") {
@@ -76,6 +76,24 @@ mButtonClick.addEventListener('click', () => {
 
 			});
 		})
+
+
+		// let mId = window.localStorage.getItem('userID');
+		// let _data = {
+		// 	"mId": mId,
+		// }
+
+
+
+		// fetch('http://20.249.62.237/api/PostTicket', {
+		// 	method: "POST",
+		// 	body: JSON.stringify(_data),
+		// 	headers: { "Content-type": "application/json; charset=UTF-8" }
+		// })
+		// 	.then(response => response.json())
+		// 	.then(json => console.log(json))
+		// 	.catch(err => console.log(err));
+		// 	 console.log(mId);
 
 
 })

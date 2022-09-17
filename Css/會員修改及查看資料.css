@@ -50,6 +50,15 @@ h4 {
     color: #403F3D;
 }
 
+/* 頭像區icon */
+.fi-sr-mode-landscape {
+    color: #403F3D;
+    margin-right: 2px;
+    position: relative;
+    top: 224px;
+    color: #403F3D;
+}
+
 /* 頭像區img處理 */
 .showImgPic {
     position: relative;
@@ -83,6 +92,34 @@ h4 {
     box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
     font-size: 14px;
     letter-spacing: 2px;
+}
+
+.inFoSection textarea {
+    width: 600px;
+    display: inline-block;
+    padding: 7px;
+    margin: 5px 0 15px 18px;
+    border: none;
+    background: #E6DDCB;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+    font-size: 14px;
+    letter-spacing: 2px;
+
+}
+
+.inFoSection select {
+    width: 600px;
+    display: inline-block;
+    padding: 7px;
+    margin: 5px 0 15px 18px;
+    border: none;
+    background: #E6DDCB;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+    font-size: 14px;
+    letter-spacing: 2px;
+
 }
 
 .inFoSection input[type=email] {
