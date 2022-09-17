@@ -64,7 +64,7 @@ mButtonClick.addEventListener('click', () => {
 						text: '請輸入帳號及密碼',
 					})
 				}
-				else if (mAccount !== element.mAccount || mPassword !== element.mPassword) {
+				else if (mAccount !== element.mAccount && mPassword !== element.mPassword) {
 
 					Swal.fire({
 						text: '帳號或密碼錯誤，請重新輸入',

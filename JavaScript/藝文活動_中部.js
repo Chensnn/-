@@ -1,10 +1,12 @@
 let collectExHibition = '';
 let memberCollect = [];
 let filterMemberCollect = [];
-
+let userID = window.localStorage.getItem('userID')
+let userName = window.localStorage.getItem('user');
+let _data ={};
 function heartID(el) {
     //console.log(el);   //可以得到點的展覽ID
-    // 北部全部
+    // 中部全部
     fetch('http://20.249.62.237/api/ExHibition/?id=6')
         .then(function (response) {
             return response.json()
@@ -13,20 +15,35 @@ function heartID(el) {
             myJson.forEach(element => {
                 if (el == element.eId) {
                     collectExHibition = element.eName
-
-                    //得到的值加進陣列
-                    memberCollect.push(collectExHibition)
-                    //篩選掉重複的值
-                    filterMemberCollect = memberCollect.filter((collectExHibition, pos) => memberCollect.indexOf(collectExHibition) == pos);
-
-
+                    //================================================================================
+                    // console.log(collectExHibition);
+                    // //得到的值加進陣列
+                    // memberCollect.push(collectExHibition)
+                    // //篩選掉重複的值
+                    // filterMemberCollect = memberCollect.filter((collectExHibition, pos) => memberCollect.indexOf(collectExHibition) == pos);
                     //得到user收藏的array
                     // console.log(filterMemberCollect.toString());
-
+                    //=================================================================================
+                    _data = {
+                        "mId": userID,
+                        "mName": userName,
+                        "eId": el,
+                        "eName": collectExHibition
+                    }
                 }
-
             })
         })
+
+   
+
+    fetch('http://20.249.62.237/api/Favorite', {
+        method: "POST",
+        body: JSON.stringify(_data),
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+    })
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .catch(err => console.log(err));
 
 }
 
@@ -51,6 +68,7 @@ function cancelHeartId(el) {
                 }
             })
         })
+
 }
 
 
