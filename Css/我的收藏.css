@@ -50,20 +50,19 @@ tr:nth-child(even) {
     height: 15px;
     cursor: pointer;
 }
-footer{
-    position: relative;
-    width: 100%;
+
+.fi-ss-users-alt {
+    margin-right: 8px;
 }
-.fi-ss-users-alt{
-    margin-right:8px ;
-}
-.fi-ss-angle-circle-right{
+
+.fi-ss-angle-circle-right {
     margin-right: 5px;
     color: rgb(205, 22, 22);
     position: relative;
-    top:2px;
+    top: 2px;
 }
-.title{
+
+.title {
     margin-top: 20px;
     margin-bottom: 10px;
 }

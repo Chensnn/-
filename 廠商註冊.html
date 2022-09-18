@@ -22,17 +22,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./Css/首頁.css">
-    <link rel="stylesheet" href="./Css/註冊.css">
 
+    <link rel="stylesheet" href="./Css/註冊.css">
+    <link rel="stylesheet" href="./Css/首頁.css">
     <link rel="icon" href="./Images/Museum free icon.png" type="image/x-icon" />
 
+
+    <style>
+        .content{
+            padding-bottom: 70px;
+        }
+    </style>
 
 </head>
 
 <body>
-
-
     <div class="wrapper">
         <div class="content">
 
@@ -89,27 +93,15 @@
             </nav>
 
 
-            <form action="http://20.249.62.237/api/Member" method="post">
+            <form action="http://20.249.62.237/api/Organizer" method="post">
                 <div class="container backgroundDiv">
-                    <h3>會員資料填寫</h3>
+                    <h3>廠商資料資料填寫</h3>
                     <hr>
 
                     <i class="fi fi-rr-caret-down name"></i>
-                    <label for="name" class="name"><b>姓名</b></label>
-                    <input type="text" name="name" id="mName" placeholder="name" required autocomplete="off">
+                    <label for="name" class="name"><b>廠商名稱</b></label>
+                    <input type="text" name="name" id="oName" placeholder="name" required autocomplete="off">
 
-                    <div class="gender">
-                        <input type="radio" name="gender" value="男" id="male"><span>男</span>
-                        <input type="radio" name="gender" value="女" id="women"><span>女</span>
-                    </div>
-
-                    <i class="fi fi-rr-caret-down"></i>
-                    <label for=""><b>性別</b></label>
-                    <input type="text" readonly>
-
-                    <i class="fi fi-rr-caret-down"></i>
-                    <label for="date"><b>生日</b></label>
-                    <input type="date" name="date" id="date">
 
                     <i class="fi fi-rr-caret-down"></i>
                     <label for="phone"><b>電話</b></label>
@@ -131,26 +123,14 @@
                     <label for="pwd"><b>密碼</b></label>
                     <input type="password" name="pwd" id="pwd" placeholder="password" autocomplete="off">
 
-
-                    <label class="btn upload_img">
-                        <i class="fi fi-rr-caret-down"></i>
-                        <input id="upload_img" style="display:none;" type="file">
-                        <i class="fi fi-br-portrait"></i>上傳個人頭像
-                        <div class="showImgPic">
-                            <img id="showImg" src="" />
-                        </div>
-                    </label>
-
                     <hr>
-                    <button id="submit" type="submit" class="registerbtn">註冊會員 Register</button>
+                    <button id="submit" type="submit" class="registerbtn">廠商註冊 Register</button>
                 </div>
 
                 <div class="container signin">
                     <p>已經有帳號了嗎?<a href="./登入.html">點此登入Sign In</a></p>
-                    <a href="./廠商註冊.html"><p>廠商註冊</a></p></a>
                 </div>
             </form>
-
 
 
             <footer>
@@ -163,8 +143,7 @@
                             <p>
                                 <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
                                 <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
-                                <a href="https://twitter.com/?lang=zh-Hant"><img
-                                        src="./Images/Twitter free icon.png"></a>
+                                <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
                                 <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
                             </p>
                         </div>
@@ -175,8 +154,9 @@
         </div>
     </div>
 
+
     <!-- 等DOM建好在讀取這份檔案 -->
-    <script src="./JavaScript/註冊.js"></script>
+    <script src="./JavaScript/廠商註冊.js"></script>
 </body>
 
 </html>

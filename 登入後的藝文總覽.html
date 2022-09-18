@@ -31,185 +31,194 @@
     <link rel="stylesheet" href="./Css/藝文總覽.css">
     <link rel="stylesheet" href="./Css/登入後的畫面.css">
 
+    <link rel="icon" href="./Images/Museum free icon.png" type="image/x-icon" />
+
+
     <!-- <link rel="icon" type="image/x-icon" href="./Images/A.png"> -->
 
+    <style>
+        .content {
+            padding-bottom: 90px
+        }
+    </style>
 
 
 </head>
 
 <body>
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top ">
-        <div class="container-fluid">
-            <a class="navbar-brand " href="./登入後的畫面.html" title="藝起來玩">藝起來玩</a>
-            <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./登入後的畫面.html">首頁</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTravel"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                藝文地圖
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownTravel">
-                                <li><a class="dropdown-item" href="./登入後的藝文總覽.html">藝文總覽</a></li>
-                                <li><a class="dropdown-item" href="./登入後的藝文場館.html">藝文場館</a></li>
-                                <li><a class="dropdown-item" href="./登入後的藝文活動.html">藝文活動</a></li>
-                            </ul>
+
+    <div class="wrapper">
+        <div class="content">
+            <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top ">
+                <div class="container-fluid">
+                    <a class="navbar-brand " href="./登入後的畫面.html" title="藝起來玩">藝起來玩</a>
+                    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./登入後的畫面.html">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTravel"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        藝文地圖
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownTravel">
+                                        <li><a class="dropdown-item" href="./登入後的藝文總覽.html">藝文總覽</a></li>
+                                        <li><a class="dropdown-item" href="./登入後的藝文場館.html">藝文場館</a></li>
+                                        <li><a class="dropdown-item" href="./登入後的藝文活動.html">藝文活動</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTicket"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        票券交流
+                                    </a>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
+                                        <li><a class="dropdown-item" href="./登入後的瀏覽訊息.html">瀏覽訊息</a></li>
+                                        <li><a class="dropdown-item" href="./登入後的我要刊登.html">我要刊登</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./登入後的藝文旅遊.html">藝文旅遊</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./登入後的關於我們.html">關於我們</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <ul class="nav navbar-nav navbar-right loginReg">
+                        <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
+                        <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
+                        <li class="idSection">
+                            <a href="./會員查看個人資訊頁面.html" title="點我查看個人資訊">
+                                <div class="idPhoto"><img src="#" id="idPhoto"></div>
+                            </a><span id="memberName">陳思穎會員 你好</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="">
+                <div id="demo" class="carousel slide " data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#" data-slide-to="0" class="active"></li>
+                        <li data-target="#" data-slide-to="1"></li>
+                        <li data-target="#" data-slide-to="2"></li>
+                        <li data-target="#" data-slide-to="3"></li>
+                        <li data-target="#" data-slide-to="4"></li>
+                        <li data-target="#" data-slide-to="5"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="#" title="李友廷《冷身操》2022 LIVE TOUR"> <img src="./Images/李友廷-冷身操.jpg"></a>
+                            <div class="carousel-caption">
+                                <h2>藝文總覽</h2>
+                                <p>藝起來看展吧</p>
+                            </div>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTicket"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                票券交流
-                            </a>
-
-                            <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
-                                <li><a class="dropdown-item" href="./登入後的瀏覽訊息.html">瀏覽訊息</a></li>
-                                <li><a class="dropdown-item" href="./登入後的我要刊登.html">我要刊登</a></li>
-                            </ul>
+                        <div class="carousel-item">
+                            <a href="#" title="2022國語作業簿：台北歡樂耶誕城"> <img src="./Images/國語作業簿(廣告輪播).jpg"></a>
+                            <div class="carousel-caption">
+                                <h2>藝文總覽</h2>
+                                <p>藝起來看展吧</p>
+                            </div>
                         </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./登入後的藝文旅遊.html">藝文旅遊</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./登入後的關於我們.html">關於我們</a>
-                    </li>
-                </ul>
-
-            </div>
-            <ul class="nav navbar-nav navbar-right loginReg">
-                <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
-                <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
-                <li class="idSection">
-                    <a href="./會員查看個人資訊頁面.html" title="點我查看個人資訊">
-                        <div class="idPhoto"><img src="#" id="idPhoto"></div>
-                    </a><span id="memberName">陳思穎會員 你好</span>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-    <div class="">
-        <div id="demo" class="carousel slide " data-ride="carousel">
-            <ul class="carousel-indicators">
-                <li data-target="#" data-slide-to="0" class="active"></li>
-                <li data-target="#" data-slide-to="1"></li>
-                <li data-target="#" data-slide-to="2"></li>
-                <li data-target="#" data-slide-to="3"></li>
-                <li data-target="#" data-slide-to="4"></li>
-                <li data-target="#" data-slide-to="5"></li>
-            </ul>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="#" title="李友廷《冷身操》2022 LIVE TOUR"> <img src="./Images/李友廷-冷身操.jpg"></a>
-                    <div class="carousel-caption">
-                        <h2>藝文總覽</h2>
-                        <p>藝起來看展吧</p>
+                        <div class="carousel-item">
+                            <a href="#" title="高流系：超營養學分"><img src="./Images/高流系.png"></a>
+                            <div class="carousel-caption">
+                                <h2>藝文總覽</h2>
+                                <p>藝起來看展吧</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#" title="蔡健雅 Tanya’s Live《DEPART to RETURN》"><img src="./Images/蔡健雅(廣告).jpg"></a>
+                            <div class="carousel-caption">
+                                <h2>藝文總覽</h2>
+                                <p>藝起來看展吧</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#" title="爛泥發芽2022台北場"><img src="./Images/爛泥發芽.jpg"></a>
+                            <div class="carousel-caption">
+                                <h2>藝文總覽</h2>
+                                <p>藝起來看展吧</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#" title="《 NUWA五色石 》蘭花刀 New Album Release 2022 Tour"><img
+                                    src="./Images/NUWA五色石.jpg"></a>
+                            <div class="carousel-caption">
+                                <h2>藝文總覽</h2>
+                                <p>藝起來看展吧</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <a href="#" title="2022國語作業簿：台北歡樂耶誕城"> <img src="./Images/國語作業簿(廣告輪播).jpg"></a>
-                    <div class="carousel-caption">
-                        <h2>藝文總覽</h2>
-                        <p>藝起來看展吧</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <a href="#" title="高流系：超營養學分"><img src="./Images/高流系.png"></a>
-                    <div class="carousel-caption">
-                        <h2>藝文總覽</h2>
-                        <p>藝起來看展吧</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <a href="#" title="蔡健雅 Tanya’s Live《DEPART to RETURN》"><img src="./Images/蔡健雅(廣告).jpg"></a>
-                    <div class="carousel-caption">
-                        <h2>藝文總覽</h2>
-                        <p>藝起來看展吧</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <a href="#" title="爛泥發芽2022台北場"><img src="./Images/爛泥發芽.jpg"></a>
-                    <div class="carousel-caption">
-                        <h2>藝文總覽</h2>
-                        <p>藝起來看展吧</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <a href="#" title="《 NUWA五色石 》蘭花刀 New Album Release 2022 Tour"><img src="./Images/NUWA五色石.jpg"></a>
-                    <div class="carousel-caption">
-                        <h2>藝文總覽</h2>
-                        <p>藝起來看展吧</p>
-                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-    </div>
 
 
-    <div class="container ">
-        <div class="row selectbackground">
-            <div>
-                <i class="fi fi-sr-list"></i>
-                <label for="">地區</label>
-                <select id="selectSection" onchange="changeVenue(this.selectedIndex)">
-                    <!-- <option selected disabled>請選擇地區</option> -->
-                </select>
-            </div>
-            <div>
-                <i class="fi fi-sr-list"></i>
-                <label for="">展覽類型</label>
-                <select id="selectGenre">
-                    <!-- <option selected disabled>請選擇展覽類型</option> -->
-                    <option value="樂團表演">樂團表演</option>
-                    <option value="演唱會">演唱會</option>
-                    <option value="歌劇欣賞">歌劇欣賞</option>
-                    <option value="劇團演出">劇團演出</option>
-                    <option value="藝文講座">藝文講座</option>
-                    <option value="創意市集">創意市集</option>
-                    <option value="相聲">相聲</option>
-                    <option value="音樂會">音樂會</option>
-                    <option value="舞台劇">舞台劇</option>
-                    <option value="音樂祭">音樂祭</option>
-                    <option value="美術類">美術類</option>
-                    <option value="布袋戲">布袋戲</option>
-                    <option value="藝文靜態展覽">藝文靜態展覽</option>
-                </select>
-            </div>
-            <div>
-                <i class="fi fi-sr-list"></i>
-                <label for="">場館名稱</label>
-                <select id="selectVenue"></select>
-            </div>
-            <!-- <div>
+            <div class="container ">
+                <div class="row selectbackground">
+                    <div>
+                        <i class="fi fi-sr-list"></i>
+                        <label for="">地區</label>
+                        <select id="selectSection" onchange="changeVenue(this.selectedIndex)">
+                            <!-- <option selected disabled>請選擇地區</option> -->
+                        </select>
+                    </div>
+                    <div>
+                        <i class="fi fi-sr-list"></i>
+                        <label for="">展覽類型</label>
+                        <select id="selectGenre">
+                            <!-- <option selected disabled>請選擇展覽類型</option> -->
+                            <option value="樂團表演">樂團表演</option>
+                            <option value="演唱會">演唱會</option>
+                            <option value="歌劇欣賞">歌劇欣賞</option>
+                            <option value="劇團演出">劇團演出</option>
+                            <option value="藝文講座">藝文講座</option>
+                            <option value="創意市集">創意市集</option>
+                            <option value="相聲">相聲</option>
+                            <option value="音樂會">音樂會</option>
+                            <option value="舞台劇">舞台劇</option>
+                            <option value="音樂祭">音樂祭</option>
+                            <option value="美術類">美術類</option>
+                            <option value="布袋戲">布袋戲</option>
+                            <option value="藝文靜態展覽">藝文靜態展覽</option>
+                        </select>
+                    </div>
+                    <div>
+                        <i class="fi fi-sr-list"></i>
+                        <label for="">場館名稱</label>
+                        <select id="selectVenue"></select>
+                    </div>
+                    <!-- <div>
                 <input type="date" class="form-control" id="startTime">
             </div>
             <div>
                 <input type="date" class="form-control" id="endTime">
             </div> -->
-            <div>
-                <button class="btn btn-outline-dark" id="clearbtn"><span>瀏覽全部展覽</span></button>
+                    <div>
+                        <button class="btn btn-outline-dark" id="clearbtn"><span>瀏覽全部展覽</span></button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
 
-
-    <div class="container showInfoBk">
-        <div class="row" id="showInfoBk">
-            <!-- <div class="col-lg-3">
+            <div class="container showInfoBk">
+                <div class="row" id="showInfoBk">
+                    <!-- <div class="col-lg-3">
                     <figure>
                         <div class="imgCard">
                             <img src="./Images/韋禮安.jpg">
@@ -224,39 +233,40 @@
                         </div>
                     </figure>
                 </div> -->
-        </div>
-    </div>
-
-
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p class="footer-text">© 藝起來玩 版權所有 |</p> 
-                </div>
-                <div class="col-lg-6">
-                  <p>
-                    <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
-                    <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
-                    <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
-                    <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
-                </p>
                 </div>
             </div>
-        </div>
-    </footer>
 
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="footer-text">© 藝起來玩 版權所有 |</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>
+                                <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
+                                <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
+                                <a href="https://twitter.com/?lang=zh-Hant"><img
+                                        src="./Images/Twitter free icon.png"></a>
+                                <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
 
     <!-- 要放這邊 -->
     <script src="./JavaScript/藝文總覽.js"></script>
     <script src="./JavaScript/登入.js"></script>
     <script>
-      const memberName = document.querySelector('#memberName')
-      memberName.innerHTML = window.localStorage.getItem('user')+'會員 你好';
+        const memberName = document.querySelector('#memberName')
+        memberName.innerHTML = window.localStorage.getItem('user') + '會員 你好';
 
-      const idPhoto = document.querySelector('#idPhoto')
-      idPhoto.src = window.localStorage.getItem('userPhoto');
+        const idPhoto = document.querySelector('#idPhoto')
+        idPhoto.src = window.localStorage.getItem('userPhoto');
 
     </script>
 </body>

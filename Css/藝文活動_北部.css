@@ -14,8 +14,8 @@
 /* 圖片縮放 */
 .divPic img {
     width: 100%;
-    width: 200px;
-    height: 300px;
+    /* width: 200px; */
+    height: 100%;
 }
 
 /* 資料的說明文字*/

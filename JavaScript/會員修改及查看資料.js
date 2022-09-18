@@ -60,8 +60,7 @@ const updateInfo = document.querySelector('#updateInfo')    //更新資料btn
 // 更新資料
 updateInfo.addEventListener('click', () => {
 
-
-
+  
   const mName = document.querySelector('#name')
   let mGmder = $("[name='gender']:checked").val()
   const mBirthday = document.querySelector('#date')

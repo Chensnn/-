@@ -2,12 +2,12 @@ let deleteMemberCollect = [];
 let _data = {};
 
 function cancelFavorite(el) {
-    _data = {fId:el}
+    _data = { fId: el }
 
     fetch(`http://20.249.62.237/api/Favorite`, {
         method: "DELETE",
         body: JSON.stringify(_data),
-        headers: {'content-type': 'application/json'},
+        headers: { 'content-type': 'application/json' },
     })
         .then(function (response) {
             return response.json();
@@ -17,10 +17,6 @@ function cancelFavorite(el) {
 
             //console.log(el);                              //得到當下這筆的收藏fId
             console.log(deleteMemberCollect);               //type is object
-
-           
-
-
         })
 
 }

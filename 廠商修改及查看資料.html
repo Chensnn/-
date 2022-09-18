@@ -25,169 +25,177 @@
 
     <!-- icon -->
     <script src="https://kit.fontawesome.com/a32b9111be.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./Css/首頁.css">
-    <link rel="stylesheet" href="./Css/登入後的畫面.css">
+    
+    
     <link rel="stylesheet" href="./Css/會員查看個人資訊頁面.css">
     <link rel="stylesheet" href="./Css/註冊.css">
-    <link rel="stylesheet" href="./Css/會員修改及查看資料.css">
+    <link rel="stylesheet" href="./Css/廠商修改及查看資料.css">
+    <link rel="stylesheet" href="./Css/首頁.css">
+    <link rel="stylesheet" href="./Css/登入後的廠商畫面.css">
+    <link rel="icon" href="./Images/Museum free icon.png" type="image/x-icon" />
 
+    <style>
+        .content{
+            padding-bottom: 130px;
+        }
+    </style>
 
 </head>
 
 <body>
 
-    <!-- sticky-top讓navbar固定在上方 nav-tabs是會有下底線 -->
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand " href="./首頁.html" title="藝起來玩">藝起來玩</a>
-            <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./首頁.html">首頁</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTravel"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                藝文地圖
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownTravel">
-                                <li><a class="dropdown-item" href="./藝文總覽.html">藝文總覽</a></li>
-                                <li><a class="dropdown-item" href="./藝文場館.html">藝文場館</a></li>
-                                <li><a class="dropdown-item" href="./藝文活動.html">藝文活動</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTicket"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                票券交流
-                            </a>
+    <div class="wrapper">
+        <div class="content">
 
-                            <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
-                                <li><a class="dropdown-item" href="./瀏覽訊息.html">瀏覽訊息</a></li>
-                                <li><a class="dropdown-item" href="./我要刊登.html">我要刊登</a></li>
-                                <li><a class="dropdown-item" href="./廠商刊登.html">廠商刊登</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./藝文旅遊.html">藝文旅遊</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">關於我們</a>
-                    </li>
-                </ul>
+            <!-- sticky-top讓navbar固定在上方 nav-tabs是會有下底線 -->
+            <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand " href="./首頁.html" title="藝起來玩">藝起來玩</a>
+                    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./首頁.html">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTravel"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        藝文地圖
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownTravel">
+                                        <li><a class="dropdown-item" href="./藝文總覽.html">藝文總覽</a></li>
+                                        <li><a class="dropdown-item" href="./藝文場館.html">藝文場館</a></li>
+                                        <li><a class="dropdown-item" href="./藝文活動.html">藝文活動</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTicket"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        票券交流
+                                    </a>
 
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
+                                        <li><a class="dropdown-item" href="./瀏覽訊息.html">瀏覽訊息</a></li>
+                                        <li><a class="dropdown-item" href="./我要刊登.html">我要刊登</a></li>
+                                        <li><a class="dropdown-item" href="./廠商刊登.html">廠商刊登</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./藝文旅遊.html">藝文旅遊</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./關於我們.html">關於我們</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <ul class="nav navbar-nav navbar-right loginReg">
+                        <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
+                        <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
+                        <li class="idSection">
+                            <a href="./廠商查看個人資訊頁面.html" title="點我查看個人資訊">
+                                <div class="idPhoto">
+                                    <img src="./Images/Profile User free icon.png" id="idPhoto">
+                                </div>
+                            </a><span id="OrganizerName">陳思穎會員 你好</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 title">
+                        <h4><i class="fi fi-br-comment-alt"></i>個人資料</h4>
+                    </div>
+                </div>
             </div>
-            <ul class="nav navbar-nav navbar-right loginReg">
-                <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
-                <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
-                <li class="idSection">
-                    <a href="./廠商查看個人資訊頁面.html" title="點我查看個人資訊">
-                        <div class="idPhoto"><img src="#" id="idPhoto"></div>
-                    </a><span id="memberName">陳思穎會員 你好</span>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
+            <div class="container">
+                <div class="row">
 
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12 title">
-                <h4><i class="fi fi-br-comment-alt"></i>個人資料</h4>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-
-            <label class="btn upload_img">
+                    <!-- 廠商沒頭貼 -->
+                    <!-- <label class="btn upload_img">
                 <div class="showImgPic">
                     <img id="showImg" src="#" />
                 </div>
                 <input id="upload_img" style="display:none;" type="file" accept="image/gif, image/jpeg, image/png">
                 <i class="fi fi-br-portrait"></i><span>您的個人頭像</span>
-            </label>
+            </label> -->
 
-            <form action="#" method="post">
-                <div class="columns inFoSection">
-                    <div class="col-12">
-                        <label>姓名</label>
-                        <input type="text" id="name" readonly>
-                    </div>
-                    <div class="col-12 inFoGenderDiv">
-                        <label>性別</label>
-                        <input type="text" readonly>
-                        <div class="inFoGender">
-                            <input type="radio" name="gender" value="male" id="male"><span>男</span>
-                            <input type="radio" name="gender" value="women" id="women"><span>女</span>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <label for="date">生日</label>
-                        <input type="text" id="date" readonly>
-                    </div>
-                    <div class="col-12">
-                        <label for="phone">電話</label>
-                        <input type="text" id="phone">
-                    </div>
-                    <div class="col-12">
-                        <label for="address">地址</label>
-                        <input type="text" id="address">
-                    </div>
-                    <div class="col-12">
-                        <label>Email</label>
-                        <input type="email" id="email" readonly>
-                    </div>
-                    <div class="col-12">
-                        <label>帳號</label>
-                        <input type="text" id="account">
-                    </div>
-                    <div class="col-12">
-                        <label for="pwd">密碼</label>
-                        <input type="text" id="pwd" autocomplete="off">
-                    </div>
-                    <div class="col-12">
-                        <button id="updateInfo" type="submit" class="registerbtn">確認修改</button>
-                    </div>
-            </form>
+                    <form action="#" method="post">
+                        <div class="columns inFoSection">
+                            <div class="col-12">
+                                <label>廠商名稱</label>
+                                <input type="text" id="oName" readonly>
+                            </div>
+                            <div class="col-12">
+                                <label for="phone">電話</label>
+                                <input type="text" id="phone">
+                            </div>
+                            <div class="col-12">
+                                <label for="address">地址</label>
+                                <input type="text" id="address">
+                            </div>
+                            <div class="col-12">
+                                <label>Email</label>
+                                <input type="email" id="email" readonly>
+                            </div>
+                            <div class="col-12">
+                                <label>帳號</label>
+                                <input type="text" id="account">
+                            </div>
+                            <div class="col-12">
+                                <label for="pwd">密碼</label>
+                                <input type="text" id="pwd" autocomplete="off">
+                            </div>
+                            <div class="col-12">
+                                <button id="updateInfo" type="submit" class="registerbtn">確認修改</button>
+                            </div>
+                    </form>
 
-        </div>
-        <button id="returnInfo" class="registerbtn returnBtn">取消修改</button>
-    </div>
-    </div>
-
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p class="footer-text">© 藝起來玩 版權所有 |</p>
                 </div>
-                <div class="col-lg-6">
-                    <p>
-                        <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
-                        <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
-                        <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
-                        <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
-                    </p>
-                </div>
+                <button id="returnInfo" class="registerbtn returnBtn">取消修改</button>
             </div>
         </div>
-    </footer>
 
-   
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="footer-text">© 藝起來玩 版權所有 |</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>
+                            <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
+                            <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
+                            <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
+                            <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    </div>
+
     <script src="./JavaScript/廠商修改及查看資料.js"></script>
     <script src="./JavaScript/登入.js"></script>
-    <script src="./JavaScript/註冊.js"></script>
-    
+    <!-- <script src="./JavaScript/廠商註冊.js"></script> -->
 
+
+    <script>
+        const Organizer = document.querySelector('#oName')  //廠商名稱
+        Organizer.innerHTML = window.localStorage.getItem('Organizer');
+    </script>
 
 </body>
 

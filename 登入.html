@@ -28,126 +28,136 @@
     <link rel="stylesheet" href="./Css/登入.css">
     <link rel="stylesheet" href="./Css/首頁.css">
     <script src="./JavaScript/首頁.js"></script>
+    <link rel="icon" href="./Images/Museum free icon.png" type="image/x-icon" />
 
 
+
+    <style>
+        .content {
+            padding-bottom: 120px
+        }
+    </style>
 
 </head>
 
 <body>
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand " href="./首頁.html" title="藝起來玩">藝起來玩</a>
-            <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./首頁.html">首頁</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTravel"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                藝文地圖
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownTravel">
-                                <li><a class="dropdown-item" href="./藝文總覽.html">藝文總覽</a></li>
-                                <li><a class="dropdown-item" href="./藝文場館.html">藝文場館</a></li>
-                                <li><a class="dropdown-item" href="./藝文活動.html">藝文活動</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTicket"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                票券交流
-                            </a>
+    <div class="wrapper">
+        <div class="content">
+            <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand " href="./首頁.html" title="藝起來玩">藝起來玩</a>
+                    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./首頁.html">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTravel"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        藝文地圖
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownTravel">
+                                        <li><a class="dropdown-item" href="./藝文總覽.html">藝文總覽</a></li>
+                                        <li><a class="dropdown-item" href="./藝文場館.html">藝文場館</a></li>
+                                        <li><a class="dropdown-item" href="./藝文活動.html">藝文活動</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTicket"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        票券交流
+                                    </a>
 
-                            <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
-                                <li><a class="dropdown-item" href="./瀏覽訊息.html">瀏覽訊息</a></li>
-                                <li><a class="dropdown-item" href="./我要刊登.html">我要刊登</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./藝文旅遊.html">藝文旅遊</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./關於我們.html">關於我們</a>
-                    </li>
-                </ul>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
+                                        <li><a class="dropdown-item" href="./瀏覽訊息.html">瀏覽訊息</a></li>
+                                        <li><a class="dropdown-item" href="./我要刊登.html">我要刊登</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./藝文旅遊.html">藝文旅遊</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./關於我們.html">關於我們</a>
+                            </li>
+                        </ul>
 
-            </div>
-            <ul class="nav navbar-nav navbar-right loginReg">
-                <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
-                <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
-                <li><a href="./登入.html" title="Login"><i class="fi fi-sr-user"></i>登入</a></li>
-                <li><a href="./註冊.html" title="Register"><i class="fi fi-sr-user-add"></i>註冊</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-    <div class="background container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h2>廠商登入</h2>
-                <input type="text" placeholder="帳號 Account" />
-                <input type="password" placeholder="密碼 Password" class="pwdLogin" />
-                <a href="#">
-                    <sapn class="forgetPWD">忘記密碼?</span>
-                </a>
-                <button class="btnSignInUp"><a href="#">登入</a></button>
-            </form>
-        </div>
-
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h2>登入會員</h2>
-                <input type="text" placeholder="帳號 Account" id="mAccount" autocomplete="off" />
-                <input type="password" placeholder="密碼 Password" id="mPassword" />
-                <a href="#">
-                    <sapn class="forgetPWD">忘記密碼?</span>
-                </a>
-                <button class="btnSignInUp" id="mButtonClick"><a href="#">登入</a></button>
-            </form>
-        </div>
-
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <img src="./Images/diversity.png" class="memberImg" width="100">
-                    <h2>Welcome Back!</h2>
-                    <p>登入會員即可獲得相關藝文訊息</p>
-                    <button class="btnSignInUp " id="signIn">一般會員登入</button>
-
+                    </div>
+                    <ul class="nav navbar-nav navbar-right loginReg">
+                        <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
+                        <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
+                        <li><a href="./登入.html" title="Login"><i class="fi fi-sr-user"></i>登入</a></li>
+                        <li><a href="./註冊.html" title="Register"><i class="fi fi-sr-user-add"></i>註冊</a></li>
+                    </ul>
                 </div>
-                <div class="overlay-panel overlay-right">
-                    <h3>需要上架新活動嗎?</h3>
-                    <button class="btnSignInUp" id="signUp">廠商專區</button>
-                    <img src="./Images/mail.png" class="manufacturerImg" width="100">
+            </nav>
+
+            <div class="background container" id="container">
+                <div class="form-container sign-up-container">
+                    <form action="#">
+                        <h2>廠商登入</h2>
+                        <input type="text" placeholder="帳號 Account" id="oAccount" />
+                        <input type="password" placeholder="密碼 Password" class="pwdLogin" id="oPassword" />
+                        <a href="#">
+                            <sapn class="forgetPWD">忘記密碼?</span>
+                        </a>
+                        <button class="btnSignInUp"><a href="#" id="oButtonClick" >登入</a></button>
+                    </form>
+                </div>
+
+                <div class="form-container sign-in-container">
+                    <form action="#">
+                        <h2>登入會員</h2>
+                        <input type="text" placeholder="帳號 Account" id="mAccount" autocomplete="off" />
+                        <input type="password" placeholder="密碼 Password" id="mPassword" />
+                        <a href="#">
+                            <sapn class="forgetPWD">忘記密碼?</span>
+                        </a>
+                        <button class="btnSignInUp" id="mButtonClick"><a href="#">登入</a></button>
+                    </form>
+                </div>
+
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <img src="./Images/diversity.png" class="memberImg" width="100">
+                            <h2>Welcome Back!</h2>
+                            <p>登入會員即可獲得相關藝文訊息</p>
+                            <button class="btnSignInUp " id="signIn">一般會員登入</button>
+
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h3>需要上架新活動嗎?</h3>
+                            <button class="btnSignInUp" id="signUp">廠商專區</button>
+                            <img src="./Images/mail.png" class="manufacturerImg" width="100">
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="footer-text">© 藝起來玩 版權所有 |</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>
+                                <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
+                                <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
+                                <a href="https://twitter.com/?lang=zh-Hant"><img
+                                        src="./Images/Twitter free icon.png"></a>
+                                <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p class="footer-text">© 藝起來玩 版權所有 |</p>
-                </div>
-                <div class="col-lg-6">
-                    <p>
-                        <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
-                        <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
-                        <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
-                        <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="./JavaScript/登入.js"></script>
 </body>

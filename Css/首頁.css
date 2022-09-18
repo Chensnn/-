@@ -28,7 +28,7 @@ body {
     margin-top: 3px;
     margin-bottom: -15px;
     margin-right: -20px;
-    
+
 }
 
 /* Logo的文字顏色 */
@@ -256,7 +256,7 @@ nav {
 
 /* nav的RWd */
 @media screen and (max-width: 576px) {
-    
+
 
     .sidenav {
         height: 100%;
@@ -329,32 +329,33 @@ nav {
         position: relative;
         top: -80px;
     }
-    
+
     footer {
         min-height: 70px;
-        top:-35px;
+        top: -35px;
     }
-    
+
     footer p {
         margin-top: -10px;
         margin-left: 75px;
     }
+
     footer .footer-text {
-       
+
         font-size: 12px;
         text-align: left;
         position: relative;
-        top:10px;
+        top: 10px;
         left: -5px;
     }
-    
+
     footer img {
         max-width: 3px;
         max-height: 3px;
         margin-right: 2px;
         position: relative;
         left: 180px;
-        top:-43px;
+        top: -43px;
     }
 
 
@@ -542,11 +543,11 @@ li {
 
 /* 場館img調整 */
 
-.card img{
+.card img {
     width: 200px;
     height: 200px;
-    width: 100%; 
-} 
+    width: 100%;
+}
 
 /* 最新活動資訊部分的的RWD */
 @media screen and (max-width:576px) {
@@ -899,7 +900,7 @@ footer p {
     text-align: right;
     position: relative;
     bottom: -2px;
-    left:19px;
+    left: 19px;
 }
 
 footer img {
@@ -907,8 +908,33 @@ footer img {
     max-height: 25px;
     margin-right: 10px;
 }
-#ticket img{
+
+#ticket img {
     width: 100px;
     height: 100px;
-    
+
+}
+
+/* 9/18新增以下css */
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+.content {
+    padding-bottom: 60px
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
 }

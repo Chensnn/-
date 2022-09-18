@@ -30,6 +30,8 @@ mButtonClick.addEventListener('click', () => {
 	mPassword = submitPassword;
 
 	// console.log(`${mAccount} ${mPassword}`)
+	//==========================================================
+
 
 	// ==========================================================
 	//會員API  http://20.249.62.237/api/Member
@@ -78,24 +80,66 @@ mButtonClick.addEventListener('click', () => {
 		})
 
 
-		// let mId = window.localStorage.getItem('userID');
-		// let _data = {
-		// 	"mId": mId,
-		// }
 
 
-
-		// fetch('http://20.249.62.237/api/PostTicket', {
-		// 	method: "POST",
-		// 	body: JSON.stringify(_data),
-		// 	headers: { "Content-type": "application/json; charset=UTF-8" }
-		// })
-		// 	.then(response => response.json())
-		// 	.then(json => console.log(json))
-		// 	.catch(err => console.log(err));
-		// 	 console.log(mId);
 
 
 })
 
 
+
+//==============================測試廠商登入===================================
+const oAccountInput = document.querySelector('#oAccount')
+const oPasswordInput = document.querySelector('#oPassword')
+const oButtonClick = document.querySelector('#oButtonClick')
+
+// 先測試是否抓得到值
+function osubmitBtn() {
+	let oAccount = "";
+	let oPassword = "";
+
+	let submitAccount = oAccountInput.value;  //得到輸入的帳號
+	let submitPassword = oPasswordInput.value; //得到輸入的密碼
+
+	oAccount = submitAccount;
+	oPassword = submitPassword;
+
+	 console.log(`${oAccount} ${oPassword}`)
+
+	// ==========================================================
+
+	fetch("http://20.249.62.237/api/Organizer")
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (myJson) {
+			myJson.forEach(element => {
+
+				if(oAccount == element.oAccount && oPassword == element.oPassword){
+					
+					
+					window.location.href="./廠商刊登.html";
+					window.localStorage.setItem('oName',element.oName);
+					window.localStorage.setItem('oPhone',element.oPhone);
+					window.localStorage.setItem('oAddress',element.oAddress);
+					window.localStorage.setItem('oEmail',element.oEmail);
+					window.localStorage.setItem('oAccount',element.oAccount);
+					window.localStorage.setItem('oPassword',element.oPassword);
+
+				
+				}
+				
+				
+				else if(oAccount != element.oAccount || oPassword != element.oPassword)
+				{
+					
+					Swal.fire({
+						text: '帳號或密碼錯誤，請重新輸入',
+					})
+				}
+
+			});
+		})
+		
+}
+oButtonClick.addEventListener('click', osubmitBtn)

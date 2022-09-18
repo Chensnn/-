@@ -1,0 +1,155 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* 廠商資料 */
+h4 {
+    text-shadow: none;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    color: #818274;
+    letter-spacing: 9px;
+    font-weight: 100;
+}
+.fi-br-comment-alt{
+    position: relative;
+    right: 10px;
+}
+
+
+
+.inFoSection input[type=text],
+.inFoSection input[type=tel],
+.inFoSection input[type=password],
+.inFoSection input[type=email],
+.inFoSection input[type=date] {
+    width: 600px;
+    display: inline-block;
+    padding: 7px;
+    margin: 5px 0 15px 18px;
+    border: none;
+    background: #E6DDCB;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-left: 200px;
+}
+
+.inFoSection textarea {
+    width: 600px;
+    display: inline-block;
+    padding: 7px;
+    margin: 5px 0 15px 18px;
+    border: none;
+    background: #E6DDCB;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-left: 200px;
+
+}
+
+.inFoSection select {
+    width: 600px;
+    display: inline-block;
+    padding: 7px;
+    margin: 5px 0 15px 18px;
+    border: none;
+    background: #E6DDCB;
+    border-radius: 2px;
+    box-shadow: 5px 5px 10px rgba(64, 63, 61, 0.3);
+    font-size: 14px;
+    letter-spacing: 2px;
+
+}
+
+.inFoSection input[type=email] {
+    margin-left: 200px;
+}
+
+.inFoSection input[type=text]:focus,
+.inFoSection input[type=tel]:focus,
+.inFoSection input[type=password]:focus,
+.inFoSection input[type=email]:focus,
+.inFoSection input[type=date] {
+    outline: none;
+}
+
+/* radiobutton區 */
+.inFoGender {
+    position: relative;
+    right: -60px;
+    top: -45px
+}
+
+.inFoGender input[type=radio] {
+    margin-left: 8px;
+}
+
+.inFoGender span {
+    margin-right: 7px;
+    margin-left: -3px;
+}
+
+.inFoGenderDiv {
+    margin-bottom: -23px;
+}
+
+/* 註冊按鈕 */
+.registerbtn {
+    background: linear-gradient(-47deg, rgb(202, 217, 162), rgb(242, 204, 181));
+    color: #403F3D;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    letter-spacing: 8px;
+    margin-top: 30px;
+    margin-left: 200px;
+    border-radius: 3px;
+    position: absolute;
+
+}
+
+.registerbtn:hover {
+    transform: scale(1.1);
+    transition: all 1s ease-out;
+}
+
+
+.returnBtn{
+    width: 20%;
+    position: relative;
+    right:-390px;
+}
+
+label{
+   position: absolute;
+   left: 130px;
+}
+
+.idPhoto{
+    background-color: #CAD9A2; 
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    right: -55px;
+    margin-top: 4px;
+    margin-bottom: 4px; 
+    box-shadow: 0px 0px 0px ;
+}
+.idPhoto img {
+    /* max-width: 35px;
+    min-height: 35px; */
+    border-radius: 0%;
+    width: 0%; 
+    background: #CAD9A2;
+}
