@@ -119,12 +119,13 @@ function osubmitBtn() {
 					
 					
 					window.location.href="./廠商刊登.html";
-					window.localStorage.setItem('oName',element.oName);
-					window.localStorage.setItem('oPhone',element.oPhone);
-					window.localStorage.setItem('oAddress',element.oAddress);
-					window.localStorage.setItem('oEmail',element.oEmail);
-					window.localStorage.setItem('oAccount',element.oAccount);
-					window.localStorage.setItem('oPassword',element.oPassword);
+					window.localStorage.setItem('OrganizerID', element.oId);
+					window.localStorage.setItem('OrganizerName',element.oName);
+					window.localStorage.setItem('OrganizerPhone',element.oPhone);
+					window.localStorage.setItem('OrganizerAddress',element.oAddress);
+					window.localStorage.setItem('OrganizerEmail',element.oEmail);
+					window.localStorage.setItem('OrganizerAccount',element.oAccount);
+					window.localStorage.setItem('OrganizerPassword',element.oPassword);
 
 				
 				}

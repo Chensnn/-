@@ -1,6 +1,6 @@
 // 右上角的會員名字和照片
 const OrganizerName = document.querySelector('#OrganizerName')
-OrganizerName.innerHTML = window.localStorage.getItem('oName') + '廠商 你好';
+OrganizerName.innerHTML = window.localStorage.getItem('OrganizerName') + '廠商 你好';
 // const idPhoto = document.querySelector('#idPhoto')
 // idPhoto.src = window.localStorage.getItem('userPhoto');
 
@@ -15,7 +15,6 @@ const account1 = document.querySelector('#account')
 const pwd1 = document.querySelector('#pwd')
 
 showOrganizerDeatails();
-
 
 
 let oId = window.localStorage.getItem('OrganizerID');
@@ -62,10 +61,10 @@ updateInfo.addEventListener('click', () => {
     .then(function (response) {
 
       return response.json()
+
     })
     .then(json => console.log(json))
     .catch(err => console.log(err));
-
 
 
   // 2.抓取最新資料
@@ -81,7 +80,7 @@ updateInfo.addEventListener('click', () => {
 
         window.location.href = "./登入.html";
         window.localStorage.setItem('OrganizerID', element.oId);
-        window.localStorage.setItem('Organizer', element.oName);
+        window.localStorage.setItem('OrganizerName', element.oName);
         window.localStorage.setItem('OrganizerPhone', element.oPhone);
         window.localStorage.setItem('OrganizerAddress', element.oAddress);
         window.localStorage.setItem('OrganizerEmail', element.oEmail);
@@ -93,7 +92,7 @@ updateInfo.addEventListener('click', () => {
     })
 
 
-  name.value = window.localStorage.getItem('Organizer');
+  name.value = window.localStorage.getItem('OrganizerName');
   phone1.value = window.localStorage.getItem('OrganizerPhone');
   address1.value = window.localStorage.getItem('OrganizerAddress');
   email1.value = window.localStorage.getItem('OrganizerEmail');
@@ -124,7 +123,7 @@ function showOrganizerDeatails() {
 
 
         window.localStorage.setItem('OrganizerID', element.oId);
-        window.localStorage.setItem('Organizer', element.oName);
+        window.localStorage.setItem('OrganizerName', element.oName);
         window.localStorage.setItem('OrganizerPhone', element.oPhone);
         window.localStorage.setItem('OrganizerAddress', element.oAddress);
         window.localStorage.setItem('OrganizerEmail', element.oEmail);
@@ -137,7 +136,7 @@ function showOrganizerDeatails() {
 
     })
 
-  name.value = window.localStorage.getItem('Organizer');
+  name.value = window.localStorage.getItem('OrganizerName');
 
   phone1.value = window.localStorage.getItem('OrganizerPhone');
 

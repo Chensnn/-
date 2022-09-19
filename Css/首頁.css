@@ -912,7 +912,13 @@ footer img {
 #ticket img {
     width: 100px;
     height: 100px;
+}
 
+@media screen and (max-width:576px) {
+    #ticket img {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /* 9/18新增以下css */

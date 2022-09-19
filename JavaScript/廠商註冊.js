@@ -52,7 +52,7 @@ submit.addEventListener('click', () => {
 
                 window.location.href = "./登入.html";
                 window.localStorage.setItem('OrganizerID', element.oId);
-                window.localStorage.setItem('Organizer', element.oName);
+                window.localStorage.setItem('OrganizerName', element.oName);
                 window.localStorage.setItem('OrganizerPhone', element.oPhone);
                 window.localStorage.setItem('OrganizerAddress', element.oAddress);
                 window.localStorage.setItem('OrganizerEmail', element.oEmail);

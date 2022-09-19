@@ -100,7 +100,7 @@ function doFirst() {
 
 
                 html += `
-                <div class="col  col-md-4">
+                <div class="col-12 col-sm-4">
                 <div class="media border p-3">
                     <div class="media-body">
                         <a href="./瀏覽訊息.html">

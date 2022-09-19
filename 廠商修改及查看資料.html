@@ -17,6 +17,9 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
+    <!-- sweetAler -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 
     <!-- 導入Bootstrap -->
@@ -112,7 +115,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 title">
-                        <h4><i class="fi fi-br-comment-alt"></i>個人資料</h4>
+                        <h4><i class="fi fi-br-comment-alt"></i>廠商資料</h4>
                     </div>
                 </div>
             </div>
@@ -129,7 +132,7 @@
                 <i class="fi fi-br-portrait"></i><span>您的個人頭像</span>
             </label> -->
 
-                    <form action="#" method="post">
+                    <form action="http://20.249.62.237/api/Organizer/" method="post">
                         <div class="columns inFoSection">
                             <div class="col-12">
                                 <label>廠商名稱</label>
@@ -156,7 +159,7 @@
                                 <input type="text" id="pwd" autocomplete="off">
                             </div>
                             <div class="col-12">
-                                <button id="updateInfo" type="submit" class="registerbtn">確認修改</button>
+                                <button id="updateInfo" type="button" class="registerbtn">確認修改</button>
                             </div>
                     </form>
 
@@ -187,14 +190,16 @@
     </div>
     </div>
 
-    <script src="./JavaScript/廠商修改及查看資料.js"></script>
+    
     <script src="./JavaScript/登入.js"></script>
-    <!-- <script src="./JavaScript/廠商註冊.js"></script> -->
+    <script src="./JavaScript/廠商修改及查看資料.js"></script>
+    
 
 
     <script>
+        
         const Organizer = document.querySelector('#oName')  //廠商名稱
-        Organizer.innerHTML = window.localStorage.getItem('Organizer');
+        Organizer.innerHTML = window.localStorage.getItem('OrganizerName');
     </script>
 
 </body>

@@ -178,19 +178,15 @@
                             <form>
                                 <div class="form-group">
                                     <label for="">文章標題</label>
-                                    <input type="text" class="form-control" id="" placeholder="標題">
+                                    <input type="text" class="form-control" id="title" placeholder="標題">
                                 </div>
                                 <div class="form-group">
                                     <label for="">姓名</label>
-                                    <input type="text" class="form-control" id="" placeholder="請輸入姓名">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">活動名稱</label>
-                                    <input type="text" class="form-control" id="" placeholder="請輸入活動名稱">
+                                    <input type="text" class="form-control" id="name" placeholder="請輸入姓名">
                                 </div>
                                 <div class="form-group">
                                     <label for="">選擇活動區域</label>
-                                    <select class="form-control" id="">
+                                    <select class="form-control" id="area">
                                         <option>北部</option>
                                         <option>中部</option>
                                         <option>南部</option>
@@ -199,14 +195,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="">你想要徵票／售票？</label>
-                                    <select class="form-control" id="">
+                                    <select class="form-control" id="state">
                                         <option>徵票</option>
                                         <option>售票</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="">有什麼想說的嗎？</label>
-                                    <textarea class="form-control" id="" rows="8"></textarea>
+                                    <textarea class="form-control" id="content" rows="8"></textarea>
                                 </div>
 
                                 <div class="alert alert-success" role="alert" id="success_message">謝謝您的填寫，祝你早日找到有緣人！
@@ -261,7 +257,7 @@
 
                 e.preventDefault()
 
-                fetch(' http://20.249.62.237/api/Ticket', {
+                fetch('http://20.249.62.237/api/Ticket', {
                     method: 'POST',
                     headers:
                     {
