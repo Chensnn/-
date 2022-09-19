@@ -37,6 +37,10 @@
         .content {
             padding-bottom: 100px
         }
+        .OrganizerPhoto img{
+            margin-left: 68px;
+        }
+        
     </style>
 
 </head>
@@ -95,7 +99,7 @@
                         <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
                         <li class="idSection">
                             <a href="./廠商查看個人資訊頁面.html" title="點我查看個人資訊">
-                                <div class="idPhoto">
+                                <div class="idPhoto OrganizerPhoto">
                                     <img src="./Images/Profile User free icon.png" id="idPhoto">
                                 </div>
                             </a><span id="OrganizerName">陳思穎會員 你好</span>
@@ -277,7 +281,7 @@
     <script src="./JavaScript/登入.js"></script>
     <script>
         const OrganizerName = document.querySelector('#OrganizerName')
-        OrganizerName.innerHTML = window.localStorage.getItem('OrganizerName') + '廠商 你好';
+        OrganizerName.innerHTML = window.localStorage.getItem('OrganizerName') + '你好';
 
         // const idPhoto = document.querySelector('#idPhoto')
         // idPhoto.src = window.localStorage.getItem('userPhoto');

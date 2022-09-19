@@ -71,7 +71,7 @@
 
 // 右上角的會員名字和照片
 const OrganizerName = document.querySelector('#OrganizerName')
-OrganizerName.innerHTML = window.localStorage.getItem('OrganizerName') + '廠商 你好';
+OrganizerName.innerHTML = window.localStorage.getItem('OrganizerName') + ' 你好';
 
 $("#upload_img").change(function () {
 

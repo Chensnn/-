@@ -26,19 +26,22 @@
     <!-- icon -->
     <script src="https://kit.fontawesome.com/a32b9111be.js" crossorigin="anonymous"></script>
    
-    <link rel="stylesheet" href="./Css/登入後的廠商畫面.css">
+    
     <link rel="stylesheet" href="./Css/會員查看個人資訊頁面.css">
     <link rel="stylesheet" href="./Css/註冊.css">
     <link rel="stylesheet" href="./Css/首頁.css">
     <!-- 廠商和會員修改共用同一個CSS -->
     <link rel="stylesheet" href="./Css/會員修改及查看資料.css">
     <link rel="icon" href="./Images/Museum free icon.png" type="image/x-icon" />
-
+<link rel="stylesheet" href="./Css/登入後的廠商畫面.css">
 
 
     <style>
         .content {
             padding-bottom: 120px
+        }
+        .OrganizerPhoto img{
+            margin-left: -26px;
         }
     </style>
 
@@ -100,8 +103,8 @@
                         <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
                         <li class="idSection">
                             <a href="./廠商查看個人資訊頁面.html" title="點我查看個人資訊">
-                                <div class="idPhoto">
-                                    <!-- <img src="#" id="idPhoto"> -->
+                                <div class="idPhoto OrganizerPhoto">
+                                    <img src="./Images/Profile User free icon.png" id="idPhoto">
                                 </div>
                             </a><span id="memberName">陳思穎會員 你好</span>
                         </li>
@@ -195,10 +198,10 @@
 
     <script>
         const memberName = document.querySelector('#memberName')
-        memberName.innerHTML = window.localStorage.getItem('oName') + '廠商 你好';
+        memberName.innerHTML = window.localStorage.getItem('oName') + ' 你好';
 
-        const idPhoto = document.querySelector('#idPhoto')
-        idPhoto.src = window.localStorage.getItem('userPhoto');
+        // const idPhoto = document.querySelector('#idPhoto')
+        // idPhoto.src = window.localStorage.getItem('userPhoto');
 
         
     </script>

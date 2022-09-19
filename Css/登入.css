@@ -10,18 +10,20 @@
 
 /* 中間主區塊 */
 .background{
-	margin: auto; 
-	width: 700px;
-	height: 500px;
+	/* margin: auto;  */
+	/* width: 700px; */
+	/* height: 600px; */
+	margin:auto;
+	margin-top: 100px;
 	background-color: #fffff0;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
 				0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 60%;
+	width: 50%;
 	max-width: 100%;
-	min-height: 500px;
+	min-height: 600px;
 	
 }
 

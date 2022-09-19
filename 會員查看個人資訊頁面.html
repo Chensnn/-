@@ -25,10 +25,10 @@
 
     <!-- icon -->
     <script src="https://kit.fontawesome.com/a32b9111be.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./Css/首頁.css">
+    
     <link rel="stylesheet" href="./Css/登入後的畫面.css">
     <link rel="stylesheet" href="./Css/會員查看個人資訊頁面.css">
-
+<link rel="stylesheet" href="./Css/首頁.css">
     <link rel="icon" href="./Images/Museum free icon.png" type="image/x-icon" />
 
 
@@ -37,129 +37,132 @@
 <body>
 
     <!-- sticky-top讓navbar固定在上方 nav-tabs是會有下底線 -->
+    <div class="wrapper">
+        <div class="content">
+            <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand " href="./登入後的畫面.html" title="藝起來玩">藝起來玩</a>
+                    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./登入後的畫面.html">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTravel"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        藝文地圖
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownTravel">
+                                        <li><a class="dropdown-item" href="./登入後的藝文總覽.html">藝文總覽</a></li>
+                                        <li><a class="dropdown-item" href="./登入後的藝文場館.html">藝文場館</a></li>
+                                        <li><a class="dropdown-item" href="./登入後的藝文活動.html">藝文活動</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTicket"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        票券交流
+                                    </a>
 
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand " href="./登入後的畫面.html" title="藝起來玩">藝起來玩</a>
-            <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./登入後的畫面.html">首頁</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTravel"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                藝文地圖
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownTravel">
-                                <li><a class="dropdown-item" href="./登入後的藝文總覽.html">藝文總覽</a></li>
-                                <li><a class="dropdown-item" href="./登入後的藝文場館.html">藝文場館</a></li>
-                                <li><a class="dropdown-item" href="./登入後的藝文活動.html">藝文活動</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownTicket"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                票券交流
-                            </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
+                                        <li><a class="dropdown-item" href="./登入後的瀏覽訊息.html">瀏覽訊息</a></li>
+                                        <li><a class="dropdown-item" href="./登入後的我要刊登.html">我要刊登</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./登入後的藝文旅遊.html">藝文旅遊</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./登入後的關於我們.html">關於我們</a>
+                            </li>
+                        </ul>
 
-                            <ul class="dropdown-menu" aria-labelledby="dropdownTicket">
-                                <li><a class="dropdown-item" href="./登入後的瀏覽訊息.html">瀏覽訊息</a></li>
-                                <li><a class="dropdown-item" href="./登入後的我要刊登.html">我要刊登</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./登入後的藝文旅遊.html">藝文旅遊</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./登入後的關於我們.html">關於我們</a>
-                    </li>
-                </ul>
-
-            </div>
-            <ul class="nav navbar-nav navbar-right loginReg">
-                <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
-                <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
-                <li class="idSection">
-                    <a href="#" title="點我查看個人資訊">
-                        <div class="idPhoto"><img src="#" id="idPhoto"></div>
-                    </a><span id="memberName">陳思穎會員 你好</span>
-                </li>
-                <li></li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12"
-                style="text-align:end; font-size: 10px; position: relative; right:-64px; top:-55px; letter-spacing: 2px; ">
-                點選頭像即可查看個人資訊
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12 title">
-                <h3><i class="fi fi-ss-users-alt"></i>會員專區</h3>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row backgroundDiv">
-            <div class="col-6 memberInfo"><img src="./Images/會員個人資訊頁面bk.jpg">
-                <a href="./會員修改及查看資料.html">
-                    <h3>修改及查看個人資料</h3>
-                </a>
-            </div>
-            <div class="col-6 membercollect"><img src="./Images/會員個人資訊頁面bk.jpg">
-                <a href="./我的收藏.html">
-                    <h3>查看我的收藏</h3>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row logoutImg">
-            <img src="./Images/logout.png" title="登出會員" id="logoutImg">
-        </div>
-    </div>
-
-
-
-
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p class="footer-text">© 藝起來玩 版權所有 |</p>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right loginReg">
+                        <li><button type="submit"><i class="fi fi-rs-search-alt"></i></button></li>
+                        <li><input class="searchInput" type="text" placeholder="Search" size="8" /></li>
+                        <li class="idSection">
+                            <a href="#" title="點我查看個人資訊">
+                                <div class="idPhoto"><img src="#" id="idPhoto"></div>
+                            </a><span id="memberName">陳思穎會員 你好</span>
+                        </li>
+                        <li></li>
+                    </ul>
                 </div>
-                <div class="col-lg-6">
-                    <p>
-                        <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
-                        <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
-                        <a href="https://twitter.com/?lang=zh-Hant"><img src="./Images/Twitter free icon.png"></a>
-                        <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
-                    </p>
+            </nav>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12"
+                        style="text-align:end; font-size: 10px; position: relative; right:-64px; top:-55px; letter-spacing: 2px; ">
+                        點選頭像即可查看個人資訊
+                    </div>
                 </div>
             </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 title">
+                        <h3><i class="fi fi-ss-users-alt"></i>會員專區</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row backgroundDiv">
+                    <div class="col-6 memberInfo"><img src="./Images/會員個人資訊頁面bk.jpg">
+                        <a href="./會員修改及查看資料.html">
+                            <h3>修改及查看個人資料</h3>
+                        </a>
+                    </div>
+                    <div class="col-6 membercollect"><img src="./Images/會員個人資訊頁面bk.jpg">
+                        <a href="./我的收藏.html">
+                            <h3>查看我的收藏</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="row logoutImg">
+                    <img src="./Images/logout.png" title="登出會員" id="logoutImg">
+                </div>
+            </div>
+
+
+
+
+
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="footer-text">© 藝起來玩 版權所有 |</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>
+                                <a href="https://zh-tw.facebook.com/"><img src="./Images/Facebook free icon.png"></a>
+                                <a href="https://www.instagram.com/"><img src="./Images/Instagram free icon.png"></a>
+                                <a href="https://twitter.com/?lang=zh-Hant"><img
+                                        src="./Images/Twitter free icon.png"></a>
+                                <a href="https://line.me/zh-hant/"><img src="./Images/Line free icon.png"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
         </div>
-    </footer>
-
-
-
+    </div>
 
 
     <script src="./JavaScript/會員查看個人資訊頁面.js"></script>
@@ -171,10 +174,10 @@
         idPhoto.src = window.localStorage.getItem('userPhoto');
 
         const logoutImg = document.querySelector('#logoutImg')
-        logoutImg.addEventListener('click',()=>{
+        logoutImg.addEventListener('click', () => {
             confirm('確定要登出嗎?')
             localStorage.clear()
-            window.location.href="./首頁.html"
+            window.location.href = "./首頁.html"
         })
     </script>
 </body>

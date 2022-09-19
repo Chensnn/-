@@ -333,6 +333,8 @@ nav {
     footer {
         min-height: 70px;
         top: -35px;
+        position: relative;
+        top:100%;
     }
 
     footer p {
